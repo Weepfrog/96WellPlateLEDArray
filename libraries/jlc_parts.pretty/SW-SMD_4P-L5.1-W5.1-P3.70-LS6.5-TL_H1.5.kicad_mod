@@ -358,7 +358,7 @@
 		(uuid "9f3016c5-6527-4447-82c3-4c83d2a3689d")
 	)
 	(embedded_fonts no)
-	(model "jlc_parts.3dshapes/SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5.wrl"
+	(model "${KIPRJMOD}/../libraries/jlc_parts.3dshapes/SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

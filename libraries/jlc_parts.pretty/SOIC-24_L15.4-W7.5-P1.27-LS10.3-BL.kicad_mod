@@ -340,7 +340,7 @@
 		(uuid "87e7d0be-2477-40ea-b828-a21a31758931")
 	)
 	(embedded_fonts no)
-	(model "jlc_parts.3dshapes/SOIC-24_L15.4-W7.5-H2.7-LS10.3-P1.27.wrl"
+	(model "${KIPRJMOD}/../libraries/jlc_parts.3dshapes/SOIC-24_L15.4-W7.5-H2.7-LS10.3-P1.27.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

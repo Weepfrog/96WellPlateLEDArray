@@ -270,7 +270,7 @@
 		(uuid "36ac344c-6167-4962-80fa-5f884435a90c")
 	)
 	(embedded_fonts no)
-	(model "jlc_parts.3dshapes/LED-SMD_3P-L3.5-W3.5_NLW3535AV2.wrl"
+	(model "${KIPRJMOD}/../libraries/jlc_parts.3dshapes/LED-SMD_3P-L3.5-W3.5_NLW3535AV2.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

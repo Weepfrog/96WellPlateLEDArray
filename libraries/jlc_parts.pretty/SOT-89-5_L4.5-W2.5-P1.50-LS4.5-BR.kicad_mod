@@ -190,7 +190,7 @@
 		(uuid "1daffc3c-b63e-409b-98a6-4309019a0c80")
 	)
 	(embedded_fonts no)
-	(model "jlc_parts.3dshapes/SOT-89-5_L4.5-W2.5-H1.5-LS4.1-P1.50.wrl"
+	(model "${KIPRJMOD}/../libraries/jlc_parts.3dshapes/SOT-89-5_L4.5-W2.5-H1.5-LS4.1-P1.50.wrl"
 		(offset
 			(xyz 0 0 0)
 		)
