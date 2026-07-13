@@ -213,6 +213,14 @@ def main():
       "(J6 screw terminal or J7 barrel jack). The LED board needs no "
       "direct 24 V — every LED is powered through its channel pair.")
     A("")
+    A("## Test points")
+    A("")
+    for title, board_, in [("LED board", led), ("Control board", ctl)]:
+        tps = [p for p in board_["parts"] if p["ref"].startswith("TP")]
+        if tps:
+            A(f"**{title}:** " + ", ".join(
+                f"{p['ref']} = {p['value']}" for p in tps))
+            A("")
     A("## ERC housekeeping")
     A("")
     A("- Add power symbols (+24V, +5V, +3V3, GND) and one PWR_FLAG on "

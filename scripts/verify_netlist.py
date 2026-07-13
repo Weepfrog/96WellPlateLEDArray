@@ -25,8 +25,7 @@ def load_netlist(path):
 
 def check(board, xml_path):
     nets, comps = load_netlist(xml_path)
-    want_refs = {p["ref"] for p in board["parts"]
-                 if p["lib_id"] and not p["ref"].startswith("H")}
+    want_refs = {p["ref"] for p in board["parts"] if p["lib_id"]}
     missing_refs = want_refs - comps
     extra_refs = {c for c in comps - want_refs if not c.startswith("#")}
     errs = []

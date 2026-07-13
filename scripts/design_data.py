@@ -115,6 +115,7 @@ FP = {
     "elec8":  "Capacitor_SMD:CP_Elec_8x10",
     "elec63": "Capacitor_SMD:CP_Elec_6.3x7.7",
     "hole":   "MountingHole:MountingHole_3.2mm_M3",
+    "tp":     "TestPoint:TestPoint_Pad_1.5x1.5mm",
 }
 
 LIB = {
@@ -139,6 +140,8 @@ LIB = {
     "screw2": "Connector:Screw_Terminal_01x02",
     "barrel": "Connector:Barrel_Jack",
     "hdr2":   "Connector_Generic:Conn_01x02",
+    "tp":     "Connector:TestPoint",
+    "hole":   "Mechanical:MountingHole",
 }
 
 
@@ -222,10 +225,17 @@ def build_led_board():
     for p, sig in J5_PINOUT.items():
         net(sig if sig not in ("+3V3",) else "+3V3", "J5", p)
 
-    # --- mounting holes (pcb only): 4 corners of LED field + top mid ---
+    # --- test points ---
+    for i, (tnet, txy) in enumerate([("+3V3", (13, 86)), ("GND", (13, 90)),
+                                     ("GND", (13, 94))], 1):
+        parts.append(part(f"TP{i}", LIB["tp"], tnet, FP["tp"], "",
+                          (0, 0), txy, 0, desc=f"test point {tnet}"))
+        net(tnet, f"TP{i}", 1)
+
+    # --- mounting holes: 4 corners of LED field + top mid ---
     holes = [(5.5, 5.5), (134.5, 5.5), (5.5, 82), (134.5, 82), (70, 5.5)]
     for i, (hx, hy) in enumerate(holes, 1):
-        parts.append(part(f"H{i}", None, "M3", FP["hole"], "",
+        parts.append(part(f"H{i}", LIB["hole"], "M3", FP["hole"], "",
                           (0, 0), (hx, hy), 0, desc="M3 mounting hole"))
 
     board = dict(
@@ -478,10 +488,21 @@ def build_control_board():
     for p, sig in J5_PINOUT.items():
         net(sig, "J5", p)
 
+    # --- test points ---
+    tps = [("+24V", (68, 166)), ("+5V", (74, 166)), ("+3V3", (80, 166)),
+           ("GND", (86, 166)), ("GND", (92, 166)), ("SW_5V", (98, 166)),
+           ("I2C_SDA", (104, 166)), ("I2C_SCL", (110, 166)),
+           ("FAN_SW", (152, 178)),
+           ("DIM1", (68, 178)), ("LED_A1", (74, 178)), ("LED_K1", (80, 178))]
+    for i, (tnet, txy) in enumerate(tps, 1):
+        parts.append(part(f"TP{i}", LIB["tp"], tnet, FP["tp"], "",
+                          (0, 0), txy, 0, desc=f"test point {tnet}"))
+        net(tnet, f"TP{i}", 1)
+
     # --- mounting holes ---
     holes = [(5.5, 5.5), (164.5, 5.5), (5.5, 184.5), (164.5, 184.5)]
     for i, (hx, hy) in enumerate(holes, 1):
-        parts.append(part(f"H{i}", None, "M3", FP["hole"], "",
+        parts.append(part(f"H{i}", LIB["hole"], "M3", FP["hole"], "",
                           (0, 0), (hx, hy), 0, desc="M3 mounting hole"))
 
     board = dict(

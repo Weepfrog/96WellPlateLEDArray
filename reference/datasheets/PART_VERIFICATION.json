@@ -122,11 +122,11 @@
       "note": "JLCPCB Extended, ~3.9k stock."
     },
     "C9144": {
-      "status": "ok",
-      "correct": "C9144",
-      "actual_part": "BOOMELE 2.54-2*10P, 2x10 (20P) IDC box header, 2.54mm, RIGHT ANGLE, through-hole",
+      "status": "wrong",
+      "correct": "C53207551",
+      "actual_part": "BOOMELE 2.54-2*10P, 2x10 (20P) IDC box header, 2.54mm, RIGHT ANGLE, through-hole (~9.4k stock)",
       "basic": false,
-      "note": "CAUTION: this is the right-angle (bent) variant, JLCPCB Extended, ~9.4k stock. If a vertical/straight 2x10 box header is required, best in-stock options found: JXTCONN IDC2.54-2*10PZ C53207551 (~147 stock) or DC2.54-2*10PZ C53207553 (~70 stock) - both low stock."
+      "note": "Footprint audit: both boards use Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical (straight), and the 2x25 C9044 is the straight variant, so the design intent is vertical - C9144 (right-angle) does not match. Replace with a STRAIGHT 2x10 box header: JXTCONN IDC2.54-2*10PZ C53207551 (~147 stock) or DC2.54-2*10PZ C53207553 (~70 stock); both low stock - or buy any generic straight 2x10 box header off-BOM since it is hand-soldered anyway. Alternatively keep C9144 and change the footprint to IDC-Header_2x10_P2.54mm_Horizontal."
     },
     "C319202": {
       "status": "ok",

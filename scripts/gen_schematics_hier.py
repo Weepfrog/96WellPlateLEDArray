@@ -444,6 +444,10 @@ def main():
     for j in range(1, 5):
         led_pos[f"J{j}"] = (dd.snap(495.3 + (j - 1) * 25.4), 266.7)
     led_pos["J5"] = (571.5, 355.6)
+    for i in range(1, 4):
+        led_pos[f"TP{i}"] = (dd.snap(76.2 + (i - 1) * 15.24), 388.62)
+    for i in range(1, 6):
+        led_pos[f"H{i}"] = (dd.snap(152.4 + (i - 1) * 15.24), 388.62)
 
     sheet_uuids = place_root(
         root, led, root_uuid, "well.kicad_sch",
@@ -504,6 +508,10 @@ def main():
         "J1": (711.2, 63.5), "J2": (736.6, 63.5), "J3": (762, 63.5),
         "J4": (787.4, 63.5), "J5": (812.8, 152.4),
     })
+    for i in range(1, 13):
+        pos[f"TP{i}"] = (dd.snap(127 + (i - 1) * 17.78), 552.45)
+    for i in range(1, 5):
+        pos[f"H{i}"] = (dd.snap(355.6 + (i - 1) * 15.24), 578.36)
 
     sheet_uuids = place_root(
         root, ctl, root_uuid, "channel.kicad_sch",

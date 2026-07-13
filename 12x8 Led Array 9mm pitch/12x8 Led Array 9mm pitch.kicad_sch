@@ -2955,6 +2955,228 @@
 				)
 				(embedded_fonts no)
 			)
+		(symbol "Connector:TestPoint"
+				(pin_numbers
+					(hide yes)
+				)
+				(pin_names
+					(offset 0.762)
+					(hide yes)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "TP"
+					(at 0 6.858 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Value" "TestPoint"
+					(at 0 5.08 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 5.08 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 5.08 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" "test point"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "ki_keywords" "test point tp"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "ki_fp_filters" "Pin* Test*"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "TestPoint_0_1"
+					(circle
+						(center 0 3.302)
+						(radius 0.762)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+				)
+				(symbol "TestPoint_1_1"
+					(pin passive line
+						(at 0 0 90)
+						(length 2.54)
+						(name "1"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)
+		(symbol "Mechanical:MountingHole"
+				(pin_names
+					(offset 1.016)
+				)
+				(exclude_from_sim no)
+				(in_bom no)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "H"
+					(at 0 5.08 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Value" "MountingHole"
+					(at 0 3.175 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" "Mounting Hole without connection"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "ki_keywords" "mounting hole"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "ki_fp_filters" "MountingHole*"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "MountingHole_0_1"
+					(circle
+						(center 0 0)
+						(radius 1.27)
+						(stroke
+							(width 1.27)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)
 		(symbol "power:+3V3"
 				(power global)
 				(pin_numbers
@@ -21343,6 +21565,490 @@
 		)
 		(uuid "5483ad97-fa51-5240-874e-2013bcecbd24")
 	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 76.2 388.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a7b69cf9-3b92-54ea-a8b5-3bffbbfce091")
+		(property "Reference" "TP1"
+			(at 78.74 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 78.74 386.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+			(at 78.74 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 78.74 391.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b1b50d5f-01e6-57ce-b470-de2e60eb2063")
+		)
+		(instances
+			(project "12x8 Led Array 9mm pitch"
+				(path "/c128bece-10e4-5694-bf62-65ef7a61f96c"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "+3V3"
+		(at 76.2 388.62 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "78285c76-e806-5f03-af10-08b16bd436cc")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 91.44 388.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "95650a22-bb5a-56ed-ae2b-23e3c71c75e5")
+		(property "Reference" "TP2"
+			(at 93.98 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 93.98 386.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+			(at 93.98 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 93.98 391.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "24762529-1db9-58bd-bc10-e116f10be22a")
+		)
+		(instances
+			(project "12x8 Led Array 9mm pitch"
+				(path "/c128bece-10e4-5694-bf62-65ef7a61f96c"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 91.44 388.62 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "069b578d-f33d-5579-aea7-4d3bd761167b")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 106.68 388.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "20beda3a-b018-5738-b81b-f79919348597")
+		(property "Reference" "TP3"
+			(at 109.22 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 109.22 386.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+			(at 109.22 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 109.22 391.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eb1d6dc5-9d13-54f9-b2c8-ad8cdfb6a3a4")
+		)
+		(instances
+			(project "12x8 Led Array 9mm pitch"
+				(path "/c128bece-10e4-5694-bf62-65ef7a61f96c"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 106.68 388.62 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e8f6dd1b-0046-525c-8481-271659fa96b5")
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 152.4 388.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ecee22d2-07e7-5796-ae56-4623933b072b")
+		(property "Reference" "H1"
+			(at 154.94 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 154.94 386.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 154.94 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 391.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "12x8 Led Array 9mm pitch"
+				(path "/c128bece-10e4-5694-bf62-65ef7a61f96c"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 167.64 388.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "22464c22-a494-557a-8bba-f241b11bc512")
+		(property "Reference" "H2"
+			(at 170.18 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 170.18 386.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 170.18 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 170.18 391.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "12x8 Led Array 9mm pitch"
+				(path "/c128bece-10e4-5694-bf62-65ef7a61f96c"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 182.88 388.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "189f0624-1c3d-550a-b57e-7b0f9afc4fc6")
+		(property "Reference" "H3"
+			(at 185.42 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 185.42 386.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 185.42 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 185.42 391.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "12x8 Led Array 9mm pitch"
+				(path "/c128bece-10e4-5694-bf62-65ef7a61f96c"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 198.12 388.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0ba8dfc6-b163-5a57-82cd-faf041ac69d9")
+		(property "Reference" "H4"
+			(at 200.66 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 200.66 386.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 200.66 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 200.66 391.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "12x8 Led Array 9mm pitch"
+				(path "/c128bece-10e4-5694-bf62-65ef7a61f96c"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 213.36 388.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "37c20b73-cbfa-502e-8bc6-e07a93d2c8f5")
+		(property "Reference" "H5"
+			(at 215.9 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 215.9 386.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 215.9 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 215.9 391.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "12x8 Led Array 9mm pitch"
+				(path "/c128bece-10e4-5694-bf62-65ef7a61f96c"
+					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(text "96 WELLS (CH01..CH96) - see well.kicad_sch"
 		(exclude_from_sim no)
 		(at 25.4 22.86 0)
@@ -21352,7 +22058,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b1b50d5f-01e6-57ce-b470-de2e60eb2063")
+		(uuid "d06f764a-df34-5389-92ac-59a4a22d180e")
 	)
 	(text "NTC MUXES U1-U6 (ch 1-16 / 17-32 / 33-48 / 49-64 / 65-80 / 81-96)"
 		(exclude_from_sim no)
@@ -21363,7 +22069,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "78285c76-e806-5f03-af10-08b16bd436cc")
+		(uuid "a22751fa-4f67-5280-b612-fe7284e80b63")
 	)
 	(text "RIBBONS TO CONTROL BOARD"
 		(exclude_from_sim no)
@@ -21374,7 +22080,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "24762529-1db9-58bd-bc10-e116f10be22a")
+		(uuid "6da99c18-77b8-5b16-a7d4-e4a993415a5a")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -21424,7 +22130,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "069b578d-f33d-5579-aea7-4d3bd761167b")
+			(uuid "97a500f0-e6a1-5f8e-99d7-62d1d828e51e")
 		)
 		(instances
 			(project "12x8 Led Array 9mm pitch"
@@ -21483,7 +22189,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "eb1d6dc5-9d13-54f9-b2c8-ad8cdfb6a3a4")
+			(uuid "20e1375d-9cb5-5924-a8d9-57f95352a1b1")
 		)
 		(instances
 			(project "12x8 Led Array 9mm pitch"
@@ -21542,7 +22248,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e8f6dd1b-0046-525c-8481-271659fa96b5")
+			(uuid "f2218274-4765-5ba8-9c47-ebe65bf22b21")
 		)
 		(instances
 			(project "12x8 Led Array 9mm pitch"
@@ -21601,7 +22307,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d06f764a-df34-5389-92ac-59a4a22d180e")
+			(uuid "4bbb7ca3-4036-5ab6-8559-385afb778f4f")
 		)
 		(instances
 			(project "12x8 Led Array 9mm pitch"
