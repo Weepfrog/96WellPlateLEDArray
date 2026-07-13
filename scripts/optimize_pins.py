@@ -81,14 +81,22 @@ right_m = sorted((u for u in ("U1", "U2", "U3", "U4", "U5", "U6")
                   if fppos[u][0] >= 149), key=lambda u: fppos[u][1])
 print(f"# left muxes (top->bottom): {left_m}, right: {right_m}")
 
-NTC = {}    # n -> (mux_ref, input_pin)
-for side, muxes, cols in (("L", left_m, range(1, 7)),
-                          ("R", right_m, range(7, 13))):
-    chans = [n for n, (r, c) in pos_rc.items() if c in cols]
-    chans.sort(key=lambda n: (pos_rc[n][0], pos_rc[n][1]))   # row-major sweep
-    for i, n in enumerate(chans):
-        u = muxes[i // 16]
-        NTC[n] = (u, MUX_INPUT_PIN[i % 16])
+NTC = {}    # n -> (mux_ref, input_pin): each mux owns 2 columns (16 wells)
+ncols_left = 2 * len(left_m)
+col_owner = {}
+for i, u in enumerate(left_m):
+    for c in (2 * i + 1, 2 * i + 2):
+        col_owner[c] = u
+for i, u in enumerate(right_m):
+    for c in (ncols_left + 2 * i + 1, ncols_left + 2 * i + 2):
+        col_owner[c] = u
+per_mux_count = {}
+for n in sorted(pos_rc, key=lambda n: (pos_rc[n][1], pos_rc[n][0])):
+    r, c = pos_rc[n]
+    u = col_owner[c]
+    k = per_mux_count.get(u, 0)
+    per_mux_count[u] = k + 1
+    NTC[n] = (u, MUX_INPUT_PIN[k])
 
 # ---- emit tables ----
 print("\nCONN_MAP = {")
