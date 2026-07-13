@@ -25,12 +25,13 @@ def ch_rc(n):  # channel -> (row, col) 1-based
     return ((n - 1) // 12 + 1, (n - 1) % 12 + 1)
 
 
-# LED connector map: J1..J4 carry channels in blocks of 24, two pins each.
+# LED connector map: geometry-optimized quadrant assignment (see pin_maps.py)
+from pin_maps import CONN_MAP, NTC_MAP
+
+
 def led_conn_pins(n):
     """Return (conn_ref, anode_pin, cathode_pin) for channel n (1..96)."""
-    j = (n - 1) // 24 + 1            # J1..J4
-    o = (n - 1) % 24                 # 0..23 within connector
-    return (f"J{j}", 2 * o + 1, 2 * o + 2)
+    return CONN_MAP[n]
 
 
 # 4067 mux input pin numbers: I0..I7 = pins 9..2, I8..I15 = pins 23..16
@@ -41,10 +42,8 @@ MUX_INPUT_PIN.update({k: 31 - k for k in range(8, 16)})
 
 
 def ntc_mux(n):
-    """NTC n -> (mux_ref, input_pin)."""
-    m = (n - 1) // 16 + 1            # U1..U6
-    k = (n - 1) % 16                 # channel 0..15
-    return (f"U{m}", MUX_INPUT_PIN[k])
+    """NTC n -> (mux_ref, input_pin) - side-matched to placement."""
+    return NTC_MAP[n]
 
 
 # J5 logic ribbon pinout (both boards)

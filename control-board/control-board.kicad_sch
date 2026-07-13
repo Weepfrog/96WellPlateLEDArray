@@ -33561,7 +33561,7 @@
 		)
 		(uuid "9f775374-3d31-5519-8fb7-1b8c93d0348e")
 	)
-	(label "LED_A2"
+	(label "LED_A13"
 		(at 706.12 35.56 180)
 		(effects
 			(font
@@ -33571,7 +33571,7 @@
 		)
 		(uuid "2f67afb1-02f0-52fe-a6c8-d741a34f245f")
 	)
-	(label "LED_K2"
+	(label "LED_K13"
 		(at 718.82 35.56 0)
 		(effects
 			(font
@@ -33581,7 +33581,7 @@
 		)
 		(uuid "54b4ed65-ce15-51a5-a7e2-91fb2b74da12")
 	)
-	(label "LED_A3"
+	(label "LED_A25"
 		(at 706.12 38.1 180)
 		(effects
 			(font
@@ -33591,7 +33591,7 @@
 		)
 		(uuid "8c69121a-c112-5fb7-ba52-043038f297f6")
 	)
-	(label "LED_K3"
+	(label "LED_K25"
 		(at 718.82 38.1 0)
 		(effects
 			(font
@@ -33601,7 +33601,7 @@
 		)
 		(uuid "4f125bfd-493e-547d-9d50-b5aff7e69a89")
 	)
-	(label "LED_A4"
+	(label "LED_A37"
 		(at 706.12 40.64 180)
 		(effects
 			(font
@@ -33611,7 +33611,7 @@
 		)
 		(uuid "9f187669-c7a4-521e-bde0-2c691d61512f")
 	)
-	(label "LED_K4"
+	(label "LED_K37"
 		(at 718.82 40.64 0)
 		(effects
 			(font
@@ -33621,7 +33621,7 @@
 		)
 		(uuid "67c3e5ad-1eee-5805-914d-89e41e3ea07e")
 	)
-	(label "LED_A5"
+	(label "LED_A2"
 		(at 706.12 43.18 180)
 		(effects
 			(font
@@ -33631,7 +33631,7 @@
 		)
 		(uuid "58f36255-881f-58af-9575-3184e5ef340c")
 	)
-	(label "LED_K5"
+	(label "LED_K2"
 		(at 718.82 43.18 0)
 		(effects
 			(font
@@ -33641,7 +33641,7 @@
 		)
 		(uuid "3a3dbe89-c1f2-5b06-af38-727f65431e7d")
 	)
-	(label "LED_A6"
+	(label "LED_A14"
 		(at 706.12 45.72 180)
 		(effects
 			(font
@@ -33651,7 +33651,7 @@
 		)
 		(uuid "b060326d-e230-5586-b0c3-f17e3d805d01")
 	)
-	(label "LED_K6"
+	(label "LED_K14"
 		(at 718.82 45.72 0)
 		(effects
 			(font
@@ -33661,7 +33661,7 @@
 		)
 		(uuid "de3be283-38c6-5952-98e2-f3faca941619")
 	)
-	(label "LED_A7"
+	(label "LED_A26"
 		(at 706.12 48.26 180)
 		(effects
 			(font
@@ -33671,7 +33671,7 @@
 		)
 		(uuid "5d116b41-567c-58ac-9133-c9f55f3f3e4c")
 	)
-	(label "LED_K7"
+	(label "LED_K26"
 		(at 718.82 48.26 0)
 		(effects
 			(font
@@ -33681,7 +33681,7 @@
 		)
 		(uuid "10d36a99-1b56-515c-b2c8-c3f9e283f1d1")
 	)
-	(label "LED_A8"
+	(label "LED_A38"
 		(at 706.12 50.8 180)
 		(effects
 			(font
@@ -33691,7 +33691,7 @@
 		)
 		(uuid "fbe8b82c-9681-565b-98d2-f2f8dabccde6")
 	)
-	(label "LED_K8"
+	(label "LED_K38"
 		(at 718.82 50.8 0)
 		(effects
 			(font
@@ -33701,7 +33701,7 @@
 		)
 		(uuid "ad9c055e-568a-539d-9dd2-369e81c96f8e")
 	)
-	(label "LED_A9"
+	(label "LED_A3"
 		(at 706.12 53.34 180)
 		(effects
 			(font
@@ -33711,7 +33711,7 @@
 		)
 		(uuid "a08fa0af-0a3b-5033-858b-03d95303ef9a")
 	)
-	(label "LED_K9"
+	(label "LED_K3"
 		(at 718.82 53.34 0)
 		(effects
 			(font
@@ -33721,7 +33721,7 @@
 		)
 		(uuid "1b6b379a-2c0d-59fc-8256-35e4f858aa1a")
 	)
-	(label "LED_A10"
+	(label "LED_A15"
 		(at 706.12 55.88 180)
 		(effects
 			(font
@@ -33731,7 +33731,7 @@
 		)
 		(uuid "a731d378-22cb-5313-9262-d403a953d2f1")
 	)
-	(label "LED_K10"
+	(label "LED_K15"
 		(at 718.82 55.88 0)
 		(effects
 			(font
@@ -33741,7 +33741,7 @@
 		)
 		(uuid "ef87cd7d-4609-54ad-ba3f-87cfbd7ea3d6")
 	)
-	(label "LED_A11"
+	(label "LED_A27"
 		(at 706.12 58.42 180)
 		(effects
 			(font
@@ -33751,7 +33751,7 @@
 		)
 		(uuid "7924b5fa-1577-5c9c-9242-888e2c2f0f74")
 	)
-	(label "LED_K11"
+	(label "LED_K27"
 		(at 718.82 58.42 0)
 		(effects
 			(font
@@ -33761,7 +33761,7 @@
 		)
 		(uuid "ffb749ca-4396-5982-a391-b030c2b32e4b")
 	)
-	(label "LED_A12"
+	(label "LED_A39"
 		(at 706.12 60.96 180)
 		(effects
 			(font
@@ -33771,7 +33771,7 @@
 		)
 		(uuid "3beb4f31-a2ef-54e2-88d2-c20fb761d1d0")
 	)
-	(label "LED_K12"
+	(label "LED_K39"
 		(at 718.82 60.96 0)
 		(effects
 			(font
@@ -33781,7 +33781,7 @@
 		)
 		(uuid "90a7bfb3-4083-56dd-9e3f-085b1f038675")
 	)
-	(label "LED_A13"
+	(label "LED_A4"
 		(at 706.12 63.5 180)
 		(effects
 			(font
@@ -33791,7 +33791,7 @@
 		)
 		(uuid "05ea49d7-8364-5610-a3e3-c292181ba67e")
 	)
-	(label "LED_K13"
+	(label "LED_K4"
 		(at 718.82 63.5 0)
 		(effects
 			(font
@@ -33801,7 +33801,7 @@
 		)
 		(uuid "05ba4165-ea00-5828-a0b2-bed534ed2a16")
 	)
-	(label "LED_A14"
+	(label "LED_A16"
 		(at 706.12 66.04 180)
 		(effects
 			(font
@@ -33811,7 +33811,7 @@
 		)
 		(uuid "551f5d9f-3880-5c5a-91d8-07016620f654")
 	)
-	(label "LED_K14"
+	(label "LED_K16"
 		(at 718.82 66.04 0)
 		(effects
 			(font
@@ -33821,7 +33821,7 @@
 		)
 		(uuid "26cf5885-2362-5804-b922-202a1c1e0447")
 	)
-	(label "LED_A15"
+	(label "LED_A28"
 		(at 706.12 68.58 180)
 		(effects
 			(font
@@ -33831,7 +33831,7 @@
 		)
 		(uuid "8a71727e-553f-5d84-84d7-5a30c2b40fda")
 	)
-	(label "LED_K15"
+	(label "LED_K28"
 		(at 718.82 68.58 0)
 		(effects
 			(font
@@ -33841,7 +33841,7 @@
 		)
 		(uuid "80c8d2fa-a6ad-50fd-a53d-72d09caeeed9")
 	)
-	(label "LED_A16"
+	(label "LED_A40"
 		(at 706.12 71.12 180)
 		(effects
 			(font
@@ -33851,7 +33851,7 @@
 		)
 		(uuid "50dc5b6c-1c98-5f9f-9df6-3c86da552d35")
 	)
-	(label "LED_K16"
+	(label "LED_K40"
 		(at 718.82 71.12 0)
 		(effects
 			(font
@@ -33861,7 +33861,7 @@
 		)
 		(uuid "ca82d44f-04ca-5811-8257-0eaf4da3a030")
 	)
-	(label "LED_A17"
+	(label "LED_A5"
 		(at 706.12 73.66 180)
 		(effects
 			(font
@@ -33871,7 +33871,7 @@
 		)
 		(uuid "3dfa4f84-770c-5d72-9c25-20dca276bb8b")
 	)
-	(label "LED_K17"
+	(label "LED_K5"
 		(at 718.82 73.66 0)
 		(effects
 			(font
@@ -33881,7 +33881,7 @@
 		)
 		(uuid "558ed4ed-4ec7-5624-bd3d-95ab2ac4d9d5")
 	)
-	(label "LED_A18"
+	(label "LED_A17"
 		(at 706.12 76.2 180)
 		(effects
 			(font
@@ -33891,7 +33891,7 @@
 		)
 		(uuid "7372dcf3-e287-5908-bc1e-2d79a59661d4")
 	)
-	(label "LED_K18"
+	(label "LED_K17"
 		(at 718.82 76.2 0)
 		(effects
 			(font
@@ -33901,7 +33901,7 @@
 		)
 		(uuid "2f0a3613-7677-5891-a695-7ba34007c395")
 	)
-	(label "LED_A19"
+	(label "LED_A29"
 		(at 706.12 78.74 180)
 		(effects
 			(font
@@ -33911,7 +33911,7 @@
 		)
 		(uuid "7c347047-f2d5-52f7-be7b-7a75f9d68fc6")
 	)
-	(label "LED_K19"
+	(label "LED_K29"
 		(at 718.82 78.74 0)
 		(effects
 			(font
@@ -33921,7 +33921,7 @@
 		)
 		(uuid "2c291e3d-ab06-5cc4-8115-acbe9f4755ab")
 	)
-	(label "LED_A20"
+	(label "LED_A41"
 		(at 706.12 81.28 180)
 		(effects
 			(font
@@ -33931,7 +33931,7 @@
 		)
 		(uuid "f9dad7c8-9995-55d4-aba1-ef7eef538f4c")
 	)
-	(label "LED_K20"
+	(label "LED_K41"
 		(at 718.82 81.28 0)
 		(effects
 			(font
@@ -33941,7 +33941,7 @@
 		)
 		(uuid "8863127e-e951-53dc-a669-52d027e8c3e6")
 	)
-	(label "LED_A21"
+	(label "LED_A6"
 		(at 706.12 83.82 180)
 		(effects
 			(font
@@ -33951,7 +33951,7 @@
 		)
 		(uuid "58216430-2ec6-5f22-8ec9-0183b7060a50")
 	)
-	(label "LED_K21"
+	(label "LED_K6"
 		(at 718.82 83.82 0)
 		(effects
 			(font
@@ -33961,7 +33961,7 @@
 		)
 		(uuid "59e833f4-f2aa-59c7-aa16-9ef143e0620e")
 	)
-	(label "LED_A22"
+	(label "LED_A18"
 		(at 706.12 86.36 180)
 		(effects
 			(font
@@ -33971,7 +33971,7 @@
 		)
 		(uuid "aa076aa0-3d14-5821-88fa-e218dc9caad3")
 	)
-	(label "LED_K22"
+	(label "LED_K18"
 		(at 718.82 86.36 0)
 		(effects
 			(font
@@ -33981,7 +33981,7 @@
 		)
 		(uuid "77664a08-9c47-5d01-b98f-081627731bbb")
 	)
-	(label "LED_A23"
+	(label "LED_A30"
 		(at 706.12 88.9 180)
 		(effects
 			(font
@@ -33991,7 +33991,7 @@
 		)
 		(uuid "dbce1a0f-bf67-51bb-83e0-8d5f3a831f96")
 	)
-	(label "LED_K23"
+	(label "LED_K30"
 		(at 718.82 88.9 0)
 		(effects
 			(font
@@ -34001,7 +34001,7 @@
 		)
 		(uuid "58c68a74-e760-5c91-91a2-b50629ee2690")
 	)
-	(label "LED_A24"
+	(label "LED_A42"
 		(at 706.12 91.44 180)
 		(effects
 			(font
@@ -34011,7 +34011,7 @@
 		)
 		(uuid "faf55d06-0f50-5f35-ac53-a03d1140fa6d")
 	)
-	(label "LED_K24"
+	(label "LED_K42"
 		(at 718.82 91.44 0)
 		(effects
 			(font
@@ -34375,7 +34375,7 @@
 			)
 		)
 	)
-	(label "LED_A25"
+	(label "LED_A7"
 		(at 731.52 33.02 180)
 		(effects
 			(font
@@ -34385,7 +34385,7 @@
 		)
 		(uuid "4b1e911d-7de9-5c0d-a5ce-efe6f415c858")
 	)
-	(label "LED_K25"
+	(label "LED_K7"
 		(at 744.22 33.02 0)
 		(effects
 			(font
@@ -34395,7 +34395,7 @@
 		)
 		(uuid "e55814a6-4e36-5395-b86b-8123e59a0acc")
 	)
-	(label "LED_A26"
+	(label "LED_A19"
 		(at 731.52 35.56 180)
 		(effects
 			(font
@@ -34405,7 +34405,7 @@
 		)
 		(uuid "eecdfdb5-6210-5294-bc01-30c15f9b7a87")
 	)
-	(label "LED_K26"
+	(label "LED_K19"
 		(at 744.22 35.56 0)
 		(effects
 			(font
@@ -34415,7 +34415,7 @@
 		)
 		(uuid "a109e392-6142-55b0-ada4-28f752beb718")
 	)
-	(label "LED_A27"
+	(label "LED_A31"
 		(at 731.52 38.1 180)
 		(effects
 			(font
@@ -34425,7 +34425,7 @@
 		)
 		(uuid "9699ced3-62ea-56fd-a893-5ca813c91b1d")
 	)
-	(label "LED_K27"
+	(label "LED_K31"
 		(at 744.22 38.1 0)
 		(effects
 			(font
@@ -34435,7 +34435,7 @@
 		)
 		(uuid "e5d78444-cadd-56d2-8377-78b4e15e27ac")
 	)
-	(label "LED_A28"
+	(label "LED_A43"
 		(at 731.52 40.64 180)
 		(effects
 			(font
@@ -34445,7 +34445,7 @@
 		)
 		(uuid "7c4de346-8a2c-5da8-82dc-23793bc5f38d")
 	)
-	(label "LED_K28"
+	(label "LED_K43"
 		(at 744.22 40.64 0)
 		(effects
 			(font
@@ -34455,7 +34455,7 @@
 		)
 		(uuid "960f781a-1aa9-5f5f-9413-08da9e48f2f4")
 	)
-	(label "LED_A29"
+	(label "LED_A8"
 		(at 731.52 43.18 180)
 		(effects
 			(font
@@ -34465,7 +34465,7 @@
 		)
 		(uuid "163281ee-7e10-57e5-a763-ac2a7441df2a")
 	)
-	(label "LED_K29"
+	(label "LED_K8"
 		(at 744.22 43.18 0)
 		(effects
 			(font
@@ -34475,7 +34475,7 @@
 		)
 		(uuid "6f0b4268-9465-5473-9adf-dc213fd791ea")
 	)
-	(label "LED_A30"
+	(label "LED_A20"
 		(at 731.52 45.72 180)
 		(effects
 			(font
@@ -34485,7 +34485,7 @@
 		)
 		(uuid "7ee83ee2-4d71-5c2d-b01b-eb01cb2c0d37")
 	)
-	(label "LED_K30"
+	(label "LED_K20"
 		(at 744.22 45.72 0)
 		(effects
 			(font
@@ -34495,7 +34495,7 @@
 		)
 		(uuid "5e70b56e-2bcc-503c-a58a-6e9754153bbe")
 	)
-	(label "LED_A31"
+	(label "LED_A32"
 		(at 731.52 48.26 180)
 		(effects
 			(font
@@ -34505,7 +34505,7 @@
 		)
 		(uuid "c90ea583-a69e-5598-be10-0bb30714058d")
 	)
-	(label "LED_K31"
+	(label "LED_K32"
 		(at 744.22 48.26 0)
 		(effects
 			(font
@@ -34515,7 +34515,7 @@
 		)
 		(uuid "ca7f9379-f154-58e3-88e4-2993925fc8c3")
 	)
-	(label "LED_A32"
+	(label "LED_A44"
 		(at 731.52 50.8 180)
 		(effects
 			(font
@@ -34525,7 +34525,7 @@
 		)
 		(uuid "6319cbb8-575a-5349-be7a-1e0bd2505b71")
 	)
-	(label "LED_K32"
+	(label "LED_K44"
 		(at 744.22 50.8 0)
 		(effects
 			(font
@@ -34535,7 +34535,7 @@
 		)
 		(uuid "36f55058-c5c2-5c44-b257-3383f9dacda5")
 	)
-	(label "LED_A33"
+	(label "LED_A9"
 		(at 731.52 53.34 180)
 		(effects
 			(font
@@ -34545,7 +34545,7 @@
 		)
 		(uuid "f1776b80-3057-5c79-a373-8093b668d4ec")
 	)
-	(label "LED_K33"
+	(label "LED_K9"
 		(at 744.22 53.34 0)
 		(effects
 			(font
@@ -34555,7 +34555,7 @@
 		)
 		(uuid "7e680c94-e898-53db-8adf-1aa3445c8802")
 	)
-	(label "LED_A34"
+	(label "LED_A21"
 		(at 731.52 55.88 180)
 		(effects
 			(font
@@ -34565,7 +34565,7 @@
 		)
 		(uuid "d51d4e71-3362-5547-9cb1-05570310c8d5")
 	)
-	(label "LED_K34"
+	(label "LED_K21"
 		(at 744.22 55.88 0)
 		(effects
 			(font
@@ -34575,7 +34575,7 @@
 		)
 		(uuid "a69ae1f8-bbee-52c0-8685-246178377b0c")
 	)
-	(label "LED_A35"
+	(label "LED_A33"
 		(at 731.52 58.42 180)
 		(effects
 			(font
@@ -34585,7 +34585,7 @@
 		)
 		(uuid "8a9ebe36-f042-5758-a11c-cc48cbb9c9e8")
 	)
-	(label "LED_K35"
+	(label "LED_K33"
 		(at 744.22 58.42 0)
 		(effects
 			(font
@@ -34595,7 +34595,7 @@
 		)
 		(uuid "007a541d-31a0-5fe6-af9d-3358a2723f64")
 	)
-	(label "LED_A36"
+	(label "LED_A45"
 		(at 731.52 60.96 180)
 		(effects
 			(font
@@ -34605,7 +34605,7 @@
 		)
 		(uuid "f5914fb0-f080-50a7-8509-9f405d8baadc")
 	)
-	(label "LED_K36"
+	(label "LED_K45"
 		(at 744.22 60.96 0)
 		(effects
 			(font
@@ -34615,7 +34615,7 @@
 		)
 		(uuid "2f995d2b-f5da-5d08-b544-3e4c54259590")
 	)
-	(label "LED_A37"
+	(label "LED_A10"
 		(at 731.52 63.5 180)
 		(effects
 			(font
@@ -34625,7 +34625,7 @@
 		)
 		(uuid "dd482d5d-0dd2-5e50-b84d-744850be9431")
 	)
-	(label "LED_K37"
+	(label "LED_K10"
 		(at 744.22 63.5 0)
 		(effects
 			(font
@@ -34635,7 +34635,7 @@
 		)
 		(uuid "e28d560d-38b8-542c-ada5-e57f916ba35a")
 	)
-	(label "LED_A38"
+	(label "LED_A22"
 		(at 731.52 66.04 180)
 		(effects
 			(font
@@ -34645,7 +34645,7 @@
 		)
 		(uuid "7d59c6c6-ff0c-5190-8179-cb32e09d932c")
 	)
-	(label "LED_K38"
+	(label "LED_K22"
 		(at 744.22 66.04 0)
 		(effects
 			(font
@@ -34655,7 +34655,7 @@
 		)
 		(uuid "5c919ed1-c8db-54d7-a11b-e46d94641d4b")
 	)
-	(label "LED_A39"
+	(label "LED_A34"
 		(at 731.52 68.58 180)
 		(effects
 			(font
@@ -34665,7 +34665,7 @@
 		)
 		(uuid "6e5b5fec-abc9-5ed1-918a-02ba1240b5d7")
 	)
-	(label "LED_K39"
+	(label "LED_K34"
 		(at 744.22 68.58 0)
 		(effects
 			(font
@@ -34675,7 +34675,7 @@
 		)
 		(uuid "c9f19c15-0e93-585a-b1e8-d1ad9bf6285b")
 	)
-	(label "LED_A40"
+	(label "LED_A46"
 		(at 731.52 71.12 180)
 		(effects
 			(font
@@ -34685,7 +34685,7 @@
 		)
 		(uuid "298fad84-69ec-51c4-b437-2217616a4a82")
 	)
-	(label "LED_K40"
+	(label "LED_K46"
 		(at 744.22 71.12 0)
 		(effects
 			(font
@@ -34695,7 +34695,7 @@
 		)
 		(uuid "d0a60324-3e5e-5200-bd64-7861873c0345")
 	)
-	(label "LED_A41"
+	(label "LED_A11"
 		(at 731.52 73.66 180)
 		(effects
 			(font
@@ -34705,7 +34705,7 @@
 		)
 		(uuid "5efd7c0b-d5c6-50e1-98aa-484f8a82a1a4")
 	)
-	(label "LED_K41"
+	(label "LED_K11"
 		(at 744.22 73.66 0)
 		(effects
 			(font
@@ -34715,7 +34715,7 @@
 		)
 		(uuid "65658628-493c-5de8-94dd-08c3ba750fcc")
 	)
-	(label "LED_A42"
+	(label "LED_A23"
 		(at 731.52 76.2 180)
 		(effects
 			(font
@@ -34725,7 +34725,7 @@
 		)
 		(uuid "d2cd7437-bda8-5fa4-b49a-52db10e4de8d")
 	)
-	(label "LED_K42"
+	(label "LED_K23"
 		(at 744.22 76.2 0)
 		(effects
 			(font
@@ -34735,7 +34735,7 @@
 		)
 		(uuid "74586c5b-e793-5529-b668-5be986e7e8a3")
 	)
-	(label "LED_A43"
+	(label "LED_A35"
 		(at 731.52 78.74 180)
 		(effects
 			(font
@@ -34745,7 +34745,7 @@
 		)
 		(uuid "ccef0e76-246d-5d20-8a9f-4599ddce57ae")
 	)
-	(label "LED_K43"
+	(label "LED_K35"
 		(at 744.22 78.74 0)
 		(effects
 			(font
@@ -34755,7 +34755,7 @@
 		)
 		(uuid "49d0dd04-5846-57f6-8312-ff1a8d9c5b4a")
 	)
-	(label "LED_A44"
+	(label "LED_A47"
 		(at 731.52 81.28 180)
 		(effects
 			(font
@@ -34765,7 +34765,7 @@
 		)
 		(uuid "c1705f54-4b7f-59dc-b4ca-da073b4c0108")
 	)
-	(label "LED_K44"
+	(label "LED_K47"
 		(at 744.22 81.28 0)
 		(effects
 			(font
@@ -34775,7 +34775,7 @@
 		)
 		(uuid "9f0b27d8-fd42-5c0f-a777-a03ebc072a68")
 	)
-	(label "LED_A45"
+	(label "LED_A12"
 		(at 731.52 83.82 180)
 		(effects
 			(font
@@ -34785,7 +34785,7 @@
 		)
 		(uuid "197c4150-c582-58bb-a53f-98644e40a3bc")
 	)
-	(label "LED_K45"
+	(label "LED_K12"
 		(at 744.22 83.82 0)
 		(effects
 			(font
@@ -34795,7 +34795,7 @@
 		)
 		(uuid "3ddfd0d9-c405-5c51-b433-092e39bf6527")
 	)
-	(label "LED_A46"
+	(label "LED_A24"
 		(at 731.52 86.36 180)
 		(effects
 			(font
@@ -34805,7 +34805,7 @@
 		)
 		(uuid "446fa9b5-b245-58f9-87f8-9a92f7a8364e")
 	)
-	(label "LED_K46"
+	(label "LED_K24"
 		(at 744.22 86.36 0)
 		(effects
 			(font
@@ -34815,7 +34815,7 @@
 		)
 		(uuid "c8b5cc5d-1e1e-5117-8334-e7f571c501a3")
 	)
-	(label "LED_A47"
+	(label "LED_A36"
 		(at 731.52 88.9 180)
 		(effects
 			(font
@@ -34825,7 +34825,7 @@
 		)
 		(uuid "9cb7bbbb-27fd-557e-923a-0f53e2b1654d")
 	)
-	(label "LED_K47"
+	(label "LED_K36"
 		(at 744.22 88.9 0)
 		(effects
 			(font
@@ -35209,7 +35209,7 @@
 			)
 		)
 	)
-	(label "LED_A49"
+	(label "LED_A55"
 		(at 756.92 33.02 180)
 		(effects
 			(font
@@ -35219,7 +35219,7 @@
 		)
 		(uuid "2d44da20-cf55-5ac2-86e8-4e9a1d9c3f10")
 	)
-	(label "LED_K49"
+	(label "LED_K55"
 		(at 769.62 33.02 0)
 		(effects
 			(font
@@ -35229,7 +35229,7 @@
 		)
 		(uuid "d7573bf7-6976-556e-840b-29803942b8ce")
 	)
-	(label "LED_A50"
+	(label "LED_A67"
 		(at 756.92 35.56 180)
 		(effects
 			(font
@@ -35239,7 +35239,7 @@
 		)
 		(uuid "c9cef98f-942a-57a7-b079-0c3a95f6a31c")
 	)
-	(label "LED_K50"
+	(label "LED_K67"
 		(at 769.62 35.56 0)
 		(effects
 			(font
@@ -35249,7 +35249,7 @@
 		)
 		(uuid "eef9e88b-22a7-596e-b2e9-5f429514bcba")
 	)
-	(label "LED_A51"
+	(label "LED_A79"
 		(at 756.92 38.1 180)
 		(effects
 			(font
@@ -35259,7 +35259,7 @@
 		)
 		(uuid "98120630-e91b-5b43-97cf-2b395bbba379")
 	)
-	(label "LED_K51"
+	(label "LED_K79"
 		(at 769.62 38.1 0)
 		(effects
 			(font
@@ -35269,7 +35269,7 @@
 		)
 		(uuid "6ad0c9de-5b09-5520-a024-11121579a07f")
 	)
-	(label "LED_A52"
+	(label "LED_A91"
 		(at 756.92 40.64 180)
 		(effects
 			(font
@@ -35279,7 +35279,7 @@
 		)
 		(uuid "50ce8639-1b36-573f-860e-532f2cfc0571")
 	)
-	(label "LED_K52"
+	(label "LED_K91"
 		(at 769.62 40.64 0)
 		(effects
 			(font
@@ -35289,7 +35289,7 @@
 		)
 		(uuid "131ba69f-6348-529e-a964-a22d1f64934e")
 	)
-	(label "LED_A53"
+	(label "LED_A56"
 		(at 756.92 43.18 180)
 		(effects
 			(font
@@ -35299,7 +35299,7 @@
 		)
 		(uuid "f865f1cf-d1a5-5fde-afb8-aee5df7c192c")
 	)
-	(label "LED_K53"
+	(label "LED_K56"
 		(at 769.62 43.18 0)
 		(effects
 			(font
@@ -35309,7 +35309,7 @@
 		)
 		(uuid "c4ba0331-cb7c-5acd-b517-eff51c8924db")
 	)
-	(label "LED_A54"
+	(label "LED_A68"
 		(at 756.92 45.72 180)
 		(effects
 			(font
@@ -35319,7 +35319,7 @@
 		)
 		(uuid "e5a301e1-e7d1-524c-80e0-35e6793a1d2d")
 	)
-	(label "LED_K54"
+	(label "LED_K68"
 		(at 769.62 45.72 0)
 		(effects
 			(font
@@ -35329,7 +35329,7 @@
 		)
 		(uuid "dc065e08-12c4-549b-9475-abf2a356025c")
 	)
-	(label "LED_A55"
+	(label "LED_A80"
 		(at 756.92 48.26 180)
 		(effects
 			(font
@@ -35339,7 +35339,7 @@
 		)
 		(uuid "ba67b69e-6bb4-5e5f-ad04-34483c83a4e1")
 	)
-	(label "LED_K55"
+	(label "LED_K80"
 		(at 769.62 48.26 0)
 		(effects
 			(font
@@ -35349,7 +35349,7 @@
 		)
 		(uuid "73b7ef83-3013-549e-bc77-5732181e9551")
 	)
-	(label "LED_A56"
+	(label "LED_A92"
 		(at 756.92 50.8 180)
 		(effects
 			(font
@@ -35359,7 +35359,7 @@
 		)
 		(uuid "7516fb2b-6dc0-541d-acc3-a992ee4c2c52")
 	)
-	(label "LED_K56"
+	(label "LED_K92"
 		(at 769.62 50.8 0)
 		(effects
 			(font
@@ -35389,7 +35389,7 @@
 		)
 		(uuid "20074824-743a-5c1f-ad30-cfd18961582b")
 	)
-	(label "LED_A58"
+	(label "LED_A69"
 		(at 756.92 55.88 180)
 		(effects
 			(font
@@ -35399,7 +35399,7 @@
 		)
 		(uuid "d969c58b-57d8-552f-b354-fd368bd16e94")
 	)
-	(label "LED_K58"
+	(label "LED_K69"
 		(at 769.62 55.88 0)
 		(effects
 			(font
@@ -35409,7 +35409,7 @@
 		)
 		(uuid "aea53961-fb7f-50cf-bff0-a9cb7a9d096b")
 	)
-	(label "LED_A59"
+	(label "LED_A81"
 		(at 756.92 58.42 180)
 		(effects
 			(font
@@ -35419,7 +35419,7 @@
 		)
 		(uuid "a82d66ba-e033-53da-88e0-22d1a878591f")
 	)
-	(label "LED_K59"
+	(label "LED_K81"
 		(at 769.62 58.42 0)
 		(effects
 			(font
@@ -35429,7 +35429,7 @@
 		)
 		(uuid "b48e28d6-49c5-58d6-8a38-69d7a25484b4")
 	)
-	(label "LED_A60"
+	(label "LED_A93"
 		(at 756.92 60.96 180)
 		(effects
 			(font
@@ -35439,7 +35439,7 @@
 		)
 		(uuid "57b2d4b8-3ed5-54d5-a242-c087f2558363")
 	)
-	(label "LED_K60"
+	(label "LED_K93"
 		(at 769.62 60.96 0)
 		(effects
 			(font
@@ -35449,7 +35449,7 @@
 		)
 		(uuid "d971afe8-ca9a-531a-8e24-390647b7d540")
 	)
-	(label "LED_A61"
+	(label "LED_A58"
 		(at 756.92 63.5 180)
 		(effects
 			(font
@@ -35459,7 +35459,7 @@
 		)
 		(uuid "08ea9dec-7169-5e5c-a8e3-80fffed0bcf9")
 	)
-	(label "LED_K61"
+	(label "LED_K58"
 		(at 769.62 63.5 0)
 		(effects
 			(font
@@ -35469,7 +35469,7 @@
 		)
 		(uuid "22992ff0-4616-5d03-95ad-b77e059a0907")
 	)
-	(label "LED_A62"
+	(label "LED_A70"
 		(at 756.92 66.04 180)
 		(effects
 			(font
@@ -35479,7 +35479,7 @@
 		)
 		(uuid "2e80d5b4-6b55-5d42-8822-1d6f7aa520d8")
 	)
-	(label "LED_K62"
+	(label "LED_K70"
 		(at 769.62 66.04 0)
 		(effects
 			(font
@@ -35489,7 +35489,7 @@
 		)
 		(uuid "09157eb6-a3bf-5f5b-a20a-2de6015dadbf")
 	)
-	(label "LED_A63"
+	(label "LED_A82"
 		(at 756.92 68.58 180)
 		(effects
 			(font
@@ -35499,7 +35499,7 @@
 		)
 		(uuid "5b8131ef-eb0a-5eb7-938f-132e45b287ca")
 	)
-	(label "LED_K63"
+	(label "LED_K82"
 		(at 769.62 68.58 0)
 		(effects
 			(font
@@ -35509,7 +35509,7 @@
 		)
 		(uuid "f2b64485-3182-576f-af47-c0d667d6da4f")
 	)
-	(label "LED_A64"
+	(label "LED_A94"
 		(at 756.92 71.12 180)
 		(effects
 			(font
@@ -35519,7 +35519,7 @@
 		)
 		(uuid "d48f647c-9c9b-56a9-9577-49de13cad3af")
 	)
-	(label "LED_K64"
+	(label "LED_K94"
 		(at 769.62 71.12 0)
 		(effects
 			(font
@@ -35529,7 +35529,7 @@
 		)
 		(uuid "083309e8-9137-5ed4-be48-886796564d44")
 	)
-	(label "LED_A65"
+	(label "LED_A59"
 		(at 756.92 73.66 180)
 		(effects
 			(font
@@ -35539,7 +35539,7 @@
 		)
 		(uuid "146ecaae-41a7-51d2-b28c-787a0f53b53f")
 	)
-	(label "LED_K65"
+	(label "LED_K59"
 		(at 769.62 73.66 0)
 		(effects
 			(font
@@ -35549,7 +35549,7 @@
 		)
 		(uuid "b501c74d-a946-5e76-98aa-cb7eaa8133ac")
 	)
-	(label "LED_A66"
+	(label "LED_A71"
 		(at 756.92 76.2 180)
 		(effects
 			(font
@@ -35559,7 +35559,7 @@
 		)
 		(uuid "5c14cf6b-2371-5239-9c3a-fffc4e1ea0ef")
 	)
-	(label "LED_K66"
+	(label "LED_K71"
 		(at 769.62 76.2 0)
 		(effects
 			(font
@@ -35569,7 +35569,7 @@
 		)
 		(uuid "4f180372-fa70-5715-a580-63e5cfcc043b")
 	)
-	(label "LED_A67"
+	(label "LED_A83"
 		(at 756.92 78.74 180)
 		(effects
 			(font
@@ -35579,7 +35579,7 @@
 		)
 		(uuid "8fe5a9b4-6677-5f22-bdd0-bf574b1b4dc4")
 	)
-	(label "LED_K67"
+	(label "LED_K83"
 		(at 769.62 78.74 0)
 		(effects
 			(font
@@ -35589,7 +35589,7 @@
 		)
 		(uuid "ba1ed107-36c2-5684-9ec5-2d58aaa4a998")
 	)
-	(label "LED_A68"
+	(label "LED_A95"
 		(at 756.92 81.28 180)
 		(effects
 			(font
@@ -35599,7 +35599,7 @@
 		)
 		(uuid "e465c566-0c8e-58d7-881a-f413095b9120")
 	)
-	(label "LED_K68"
+	(label "LED_K95"
 		(at 769.62 81.28 0)
 		(effects
 			(font
@@ -35609,7 +35609,7 @@
 		)
 		(uuid "7d4d8585-0444-5923-96c4-5be8480cff80")
 	)
-	(label "LED_A69"
+	(label "LED_A60"
 		(at 756.92 83.82 180)
 		(effects
 			(font
@@ -35619,7 +35619,7 @@
 		)
 		(uuid "640d40e2-e449-55a0-a68b-2c94b4fac7cb")
 	)
-	(label "LED_K69"
+	(label "LED_K60"
 		(at 769.62 83.82 0)
 		(effects
 			(font
@@ -35629,7 +35629,7 @@
 		)
 		(uuid "c89944ee-4b2d-5411-97e9-ed675a553ab5")
 	)
-	(label "LED_A70"
+	(label "LED_A72"
 		(at 756.92 86.36 180)
 		(effects
 			(font
@@ -35639,7 +35639,7 @@
 		)
 		(uuid "c5b793d7-14a3-5154-accf-7205a3e9798d")
 	)
-	(label "LED_K70"
+	(label "LED_K72"
 		(at 769.62 86.36 0)
 		(effects
 			(font
@@ -35649,7 +35649,7 @@
 		)
 		(uuid "f97fec50-4525-535b-b914-7aaaa3a138f9")
 	)
-	(label "LED_A71"
+	(label "LED_A84"
 		(at 756.92 88.9 180)
 		(effects
 			(font
@@ -35659,7 +35659,7 @@
 		)
 		(uuid "c9bfc5cc-5fe0-56c2-a39d-1cfff0d00680")
 	)
-	(label "LED_K71"
+	(label "LED_K84"
 		(at 769.62 88.9 0)
 		(effects
 			(font
@@ -35669,7 +35669,7 @@
 		)
 		(uuid "b2407cd9-537a-5066-8c57-d7e89b30e648")
 	)
-	(label "LED_A72"
+	(label "LED_A96"
 		(at 756.92 91.44 180)
 		(effects
 			(font
@@ -35679,7 +35679,7 @@
 		)
 		(uuid "4a44978a-1de7-5c6a-815e-ca7fe7d55e45")
 	)
-	(label "LED_K72"
+	(label "LED_K96"
 		(at 769.62 91.44 0)
 		(effects
 			(font
@@ -36043,7 +36043,7 @@
 			)
 		)
 	)
-	(label "LED_A73"
+	(label "LED_A49"
 		(at 782.32 33.02 180)
 		(effects
 			(font
@@ -36053,7 +36053,7 @@
 		)
 		(uuid "0ae14938-de53-5fd8-ab2a-a47574735758")
 	)
-	(label "LED_K73"
+	(label "LED_K49"
 		(at 795.02 33.02 0)
 		(effects
 			(font
@@ -36063,7 +36063,7 @@
 		)
 		(uuid "d6068309-d33e-5c08-9ade-b2433b50550f")
 	)
-	(label "LED_A74"
+	(label "LED_A61"
 		(at 782.32 35.56 180)
 		(effects
 			(font
@@ -36073,7 +36073,7 @@
 		)
 		(uuid "f49aee02-d14a-5a9d-92a5-03a98fe4b746")
 	)
-	(label "LED_K74"
+	(label "LED_K61"
 		(at 795.02 35.56 0)
 		(effects
 			(font
@@ -36083,7 +36083,7 @@
 		)
 		(uuid "4ecc24e4-5d06-5e14-806e-98f88a1354c2")
 	)
-	(label "LED_A75"
+	(label "LED_A73"
 		(at 782.32 38.1 180)
 		(effects
 			(font
@@ -36093,7 +36093,7 @@
 		)
 		(uuid "1fd51289-3308-5d66-828b-d3bba3e9e4f1")
 	)
-	(label "LED_K75"
+	(label "LED_K73"
 		(at 795.02 38.1 0)
 		(effects
 			(font
@@ -36103,7 +36103,7 @@
 		)
 		(uuid "8a0be810-e1a6-5dd5-96f8-36691e19017e")
 	)
-	(label "LED_A76"
+	(label "LED_A85"
 		(at 782.32 40.64 180)
 		(effects
 			(font
@@ -36113,7 +36113,7 @@
 		)
 		(uuid "9e5536a3-4278-51bf-8168-70c36b7b29c2")
 	)
-	(label "LED_K76"
+	(label "LED_K85"
 		(at 795.02 40.64 0)
 		(effects
 			(font
@@ -36123,7 +36123,7 @@
 		)
 		(uuid "64db7232-3518-5b72-9919-6a1adc857a1c")
 	)
-	(label "LED_A77"
+	(label "LED_A50"
 		(at 782.32 43.18 180)
 		(effects
 			(font
@@ -36133,7 +36133,7 @@
 		)
 		(uuid "db60a1a7-851f-50b4-886d-defe585fb564")
 	)
-	(label "LED_K77"
+	(label "LED_K50"
 		(at 795.02 43.18 0)
 		(effects
 			(font
@@ -36143,7 +36143,7 @@
 		)
 		(uuid "77bd774d-92a2-5d44-8b75-fc355137debf")
 	)
-	(label "LED_A78"
+	(label "LED_A62"
 		(at 782.32 45.72 180)
 		(effects
 			(font
@@ -36153,7 +36153,7 @@
 		)
 		(uuid "83e68c77-b3d0-509b-8abd-93c461052120")
 	)
-	(label "LED_K78"
+	(label "LED_K62"
 		(at 795.02 45.72 0)
 		(effects
 			(font
@@ -36163,7 +36163,7 @@
 		)
 		(uuid "a08ce6c7-cdcb-5412-a9a0-19c551efd684")
 	)
-	(label "LED_A79"
+	(label "LED_A74"
 		(at 782.32 48.26 180)
 		(effects
 			(font
@@ -36173,7 +36173,7 @@
 		)
 		(uuid "ea04f837-7161-5873-a496-bc113f9d006d")
 	)
-	(label "LED_K79"
+	(label "LED_K74"
 		(at 795.02 48.26 0)
 		(effects
 			(font
@@ -36183,7 +36183,7 @@
 		)
 		(uuid "2217a18f-6e1d-5c95-8d80-3ead557d72ad")
 	)
-	(label "LED_A80"
+	(label "LED_A86"
 		(at 782.32 50.8 180)
 		(effects
 			(font
@@ -36193,7 +36193,7 @@
 		)
 		(uuid "7b9f8d71-ef0b-55c3-a270-c8eb204e57ec")
 	)
-	(label "LED_K80"
+	(label "LED_K86"
 		(at 795.02 50.8 0)
 		(effects
 			(font
@@ -36203,7 +36203,7 @@
 		)
 		(uuid "ff281a43-c7ef-5086-b36d-da6d25ed312c")
 	)
-	(label "LED_A81"
+	(label "LED_A51"
 		(at 782.32 53.34 180)
 		(effects
 			(font
@@ -36213,7 +36213,7 @@
 		)
 		(uuid "f284d027-f2d7-525e-9250-5821ae9b6da7")
 	)
-	(label "LED_K81"
+	(label "LED_K51"
 		(at 795.02 53.34 0)
 		(effects
 			(font
@@ -36223,7 +36223,7 @@
 		)
 		(uuid "ddf9f5c1-ad5f-505a-a1db-fede653753ee")
 	)
-	(label "LED_A82"
+	(label "LED_A63"
 		(at 782.32 55.88 180)
 		(effects
 			(font
@@ -36233,7 +36233,7 @@
 		)
 		(uuid "0f68b392-6c37-5488-be4a-25ef18b0c6b1")
 	)
-	(label "LED_K82"
+	(label "LED_K63"
 		(at 795.02 55.88 0)
 		(effects
 			(font
@@ -36243,7 +36243,7 @@
 		)
 		(uuid "3ee40b49-7b98-5e7d-9d19-236ec1c6704b")
 	)
-	(label "LED_A83"
+	(label "LED_A75"
 		(at 782.32 58.42 180)
 		(effects
 			(font
@@ -36253,7 +36253,7 @@
 		)
 		(uuid "11faa999-70e4-5a7b-9620-6c0501b557de")
 	)
-	(label "LED_K83"
+	(label "LED_K75"
 		(at 795.02 58.42 0)
 		(effects
 			(font
@@ -36263,7 +36263,7 @@
 		)
 		(uuid "6cf0bfed-9b3d-5155-97ba-a4aa892af39b")
 	)
-	(label "LED_A84"
+	(label "LED_A87"
 		(at 782.32 60.96 180)
 		(effects
 			(font
@@ -36273,7 +36273,7 @@
 		)
 		(uuid "c0910c8a-3537-5c20-839b-336071ffb26a")
 	)
-	(label "LED_K84"
+	(label "LED_K87"
 		(at 795.02 60.96 0)
 		(effects
 			(font
@@ -36283,7 +36283,7 @@
 		)
 		(uuid "70d494b1-e555-5b39-a907-08a124c3198d")
 	)
-	(label "LED_A85"
+	(label "LED_A52"
 		(at 782.32 63.5 180)
 		(effects
 			(font
@@ -36293,7 +36293,7 @@
 		)
 		(uuid "bbb91eab-836e-55f7-aeeb-3e211789f52c")
 	)
-	(label "LED_K85"
+	(label "LED_K52"
 		(at 795.02 63.5 0)
 		(effects
 			(font
@@ -36303,7 +36303,7 @@
 		)
 		(uuid "cfbbf7b5-66b2-51d1-a619-fde49d787670")
 	)
-	(label "LED_A86"
+	(label "LED_A64"
 		(at 782.32 66.04 180)
 		(effects
 			(font
@@ -36313,7 +36313,7 @@
 		)
 		(uuid "45aeb273-92da-5651-9596-a5e6fdbf4171")
 	)
-	(label "LED_K86"
+	(label "LED_K64"
 		(at 795.02 66.04 0)
 		(effects
 			(font
@@ -36323,7 +36323,7 @@
 		)
 		(uuid "7f51b972-a2ff-5f3b-8a0c-e52201ec144d")
 	)
-	(label "LED_A87"
+	(label "LED_A76"
 		(at 782.32 68.58 180)
 		(effects
 			(font
@@ -36333,7 +36333,7 @@
 		)
 		(uuid "ccf0c700-d75a-5895-aa02-01906a2ac859")
 	)
-	(label "LED_K87"
+	(label "LED_K76"
 		(at 795.02 68.58 0)
 		(effects
 			(font
@@ -36363,7 +36363,7 @@
 		)
 		(uuid "a5751160-88f5-5eaf-9f5d-c99d29185c35")
 	)
-	(label "LED_A89"
+	(label "LED_A53"
 		(at 782.32 73.66 180)
 		(effects
 			(font
@@ -36373,7 +36373,7 @@
 		)
 		(uuid "fa0dc8ca-a1dc-5cbf-bbf7-640e04e2a939")
 	)
-	(label "LED_K89"
+	(label "LED_K53"
 		(at 795.02 73.66 0)
 		(effects
 			(font
@@ -36383,7 +36383,7 @@
 		)
 		(uuid "453f075a-926f-5a7a-a904-6ef17da4e2f0")
 	)
-	(label "LED_A90"
+	(label "LED_A65"
 		(at 782.32 76.2 180)
 		(effects
 			(font
@@ -36393,7 +36393,7 @@
 		)
 		(uuid "4fe8007f-e8e4-57bd-9076-29309db868a1")
 	)
-	(label "LED_K90"
+	(label "LED_K65"
 		(at 795.02 76.2 0)
 		(effects
 			(font
@@ -36403,7 +36403,7 @@
 		)
 		(uuid "4e4aa551-b9bd-5e19-89e9-d5fd845b39f7")
 	)
-	(label "LED_A91"
+	(label "LED_A77"
 		(at 782.32 78.74 180)
 		(effects
 			(font
@@ -36413,7 +36413,7 @@
 		)
 		(uuid "b91870af-91a8-5c52-9899-d54dd0b9795c")
 	)
-	(label "LED_K91"
+	(label "LED_K77"
 		(at 795.02 78.74 0)
 		(effects
 			(font
@@ -36423,7 +36423,7 @@
 		)
 		(uuid "cc184495-cba5-5241-ba91-82782d08f7a9")
 	)
-	(label "LED_A92"
+	(label "LED_A89"
 		(at 782.32 81.28 180)
 		(effects
 			(font
@@ -36433,7 +36433,7 @@
 		)
 		(uuid "e76342f5-2ab0-5089-8916-296e0ac35437")
 	)
-	(label "LED_K92"
+	(label "LED_K89"
 		(at 795.02 81.28 0)
 		(effects
 			(font
@@ -36443,7 +36443,7 @@
 		)
 		(uuid "5ba18f36-9210-5eae-b291-acbc3b1f7565")
 	)
-	(label "LED_A93"
+	(label "LED_A54"
 		(at 782.32 83.82 180)
 		(effects
 			(font
@@ -36453,7 +36453,7 @@
 		)
 		(uuid "eaddeebb-c515-5b43-8d72-12ffcd1fdca6")
 	)
-	(label "LED_K93"
+	(label "LED_K54"
 		(at 795.02 83.82 0)
 		(effects
 			(font
@@ -36463,7 +36463,7 @@
 		)
 		(uuid "11c849e2-50f8-5bb3-a8f8-0a9b41501342")
 	)
-	(label "LED_A94"
+	(label "LED_A66"
 		(at 782.32 86.36 180)
 		(effects
 			(font
@@ -36473,7 +36473,7 @@
 		)
 		(uuid "cb12868e-f4bc-563a-8940-7bd9143d4164")
 	)
-	(label "LED_K94"
+	(label "LED_K66"
 		(at 795.02 86.36 0)
 		(effects
 			(font
@@ -36483,7 +36483,7 @@
 		)
 		(uuid "b360b3d6-a0ad-5297-8d5a-4b51fe1d1991")
 	)
-	(label "LED_A95"
+	(label "LED_A78"
 		(at 782.32 88.9 180)
 		(effects
 			(font
@@ -36493,7 +36493,7 @@
 		)
 		(uuid "52c872d7-943e-53b8-a326-94787b4d9a5a")
 	)
-	(label "LED_K95"
+	(label "LED_K78"
 		(at 795.02 88.9 0)
 		(effects
 			(font
@@ -36503,7 +36503,7 @@
 		)
 		(uuid "4b7cbd35-ef3e-5279-a319-ca6870f67cf8")
 	)
-	(label "LED_A96"
+	(label "LED_A90"
 		(at 782.32 91.44 180)
 		(effects
 			(font
@@ -36513,7 +36513,7 @@
 		)
 		(uuid "b0f02971-0462-5041-b8c7-a6959ef89a8f")
 	)
-	(label "LED_K96"
+	(label "LED_K90"
 		(at 795.02 91.44 0)
 		(effects
 			(font
