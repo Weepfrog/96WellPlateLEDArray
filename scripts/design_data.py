@@ -109,7 +109,10 @@ FP = {
     "idc50":  "Connector_IDC:IDC-Header_2x25_P2.54mm_Vertical",
     "idc20":  "Connector_IDC:IDC-Header_2x10_P2.54mm_Horizontal",
     "sock19": "Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical",
-    "screw2": "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm",
+    # KF301-5.0-2P (C474881): MX126 footprint geometry but drills enlarged to
+    # 1.4 mm per JLCPCB/EasyEDA recommended pattern (KF301 blade pins are a
+    # marginal fit in the stock MX126 1.3 mm holes).
+    "screw2": "jlc_parts:TerminalBlock_KF301-5.0-2P_1x02_P5.00mm",
     "barrel": "Connector_BarrelJack:BarrelJack_Horizontal",
     "hdr2":   "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
     "elec8":  "Capacitor_SMD:CP_Elec_8x10",

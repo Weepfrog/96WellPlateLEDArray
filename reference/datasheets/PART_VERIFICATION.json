@@ -122,11 +122,11 @@
       "note": "JLCPCB Extended, ~3.9k stock."
     },
     "C9144": {
-      "status": "wrong",
-      "correct": "C53207551",
+      "status": "ok",
+      "correct": "C9144",
       "actual_part": "BOOMELE 2.54-2*10P, 2x10 (20P) IDC box header, 2.54mm, RIGHT ANGLE, through-hole (~9.4k stock)",
       "basic": false,
-      "note": "Footprint audit: both boards use Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical (straight), and the 2x25 C9044 is the straight variant, so the design intent is vertical - C9144 (right-angle) does not match. Replace with a STRAIGHT 2x10 box header: JXTCONN IDC2.54-2*10PZ C53207551 (~147 stock) or DC2.54-2*10PZ C53207553 (~70 stock); both low stock - or buy any generic straight 2x10 box header off-BOM since it is hand-soldered anyway. Alternatively keep C9144 and change the footprint to IDC-Header_2x10_P2.54mm_Horizontal."
+      "note": "C9144 is the RIGHT-ANGLE variant. Footprint audit initially flagged a mismatch (schematics used IDC-Header_2x10_P2.54mm_Vertical), but scripts/design_data.py has since been updated to IDC-Header_2x10_P2.54mm_Horizontal, so part and footprint now agree (pending schematic/PCB regeneration). If a vertical header is ever preferred instead, use a straight part such as JXTCONN IDC2.54-2*10PZ C53207551 (~147 stock) with the Vertical footprint."
     },
     "C319202": {
       "status": "ok",
@@ -136,5 +136,32 @@
       "note": "JLCPCB Extended, ~8.8k stock."
     }
   },
-  "datasheets_failed": []
+  "datasheets_failed": [],
+  "footprint_audit": {
+    "date": "2026-07-13",
+    "method": "Compared every footprint assignment in both .kicad_sch/.kicad_pcb files against LCSC/JLCPCB package data, EasyEDA canonical footprints (pad-level geometry via EasyEDA API), Hongli datasheet recommended land pattern, and KiCad 10 library pad geometry. PCBs contain no nets yet (placement-only), so footprint fixes are safe.",
+    "verified_ok": {
+      "jlc_parts:LED-SMD_3P-L3.5-W3.5_NLW3535AV2 (96x HL-C3535)": "Pad-for-pad identical to EasyEDA footprint for C5445086; matches Hongli recommended pads (outer 0.5x3.3 vs 0.51x3.32, center 1.4x3.3 vs 1.3x3.17, gap 0.45 vs 0.40). 3-pad SMD3535-3P confirmed. Center pad 3 = thermal (TS/cathode point); tie to cathode copper for cooling per datasheet.",
+      "jlc_parts:SOT-89-5 (96x PT4115)": "Identical to EasyEDA footprint for C347356; PT4115 package confirmed SOT-89-5.",
+      "jlc_parts:SOIC-24_L15.4-W7.5 (6x CD74HC4067M96)": "Identical to EasyEDA footprint for C496123 (SOIC-24 wide, 1.27mm pitch, LS10.3).",
+      "jlc_parts:SW-SMD_4P-L5.1-W5.1 (3x TS-1187A-B-A-B)": "Identical to EasyEDA footprint for C318884 (pads 1.0x0.75 at x=+-3.0, y=+-1.85).",
+      "Diode_SMD:D_SMA (98x SS34)": "C8678 confirmed SMA(DO-214AC).",
+      "Package_SO:SOIC-8_3.9x4.9mm (XL1509-5.0E1)": "C61063 confirmed SOIC-8.",
+      "Package_SO:TSSOP-28_4.4x9.7mm (6x PCA9685PW)": "C2678753 = PCA9685PW,118 confirmed TSSOP-28.",
+      "Package_SO:TSSOP-10_3x3mm_P0.5mm (ADS1115IDGSR, DNP)": "ADS1115IDGSR is VSSOP-10 (DGS) 3x3 P0.5 - same JEDEC MO-187 land pattern; compatible.",
+      "Package_TO_SOT_SMD:SOT-23 (AO3400A)": "Confirmed SOT-23.",
+      "Inductor_SMD:L_Sunlord_SWPA4030S / SWPA6045S": "KiCad official Sunlord series footprints, exact series match for C54731 / C36414.",
+      "Capacitor_SMD:CP_Elec_8x10 (100uF 50V C134514, 4x 220uF 35V C134820)": "Both replacement parts are D8xL10mm - matches.",
+      "Capacitor_SMD:CP_Elec_6.3x7.7 (220uF 16V C286136)": "Replacement part is D6.3xL5.8mm; pad pattern is diameter-driven (6.3mm) - matches (height irrelevant to land pattern).",
+      "R_0603/R_0805/C_0603/C_0805/LED_0805": "All chip parts confirmed correct imperial sizes (NTC C13564=0603, 0R39 C2930218=0805, 2.2uF C125847=0805, 100nF C14663=0603, LEDs 0805).",
+      "Connector_BarrelJack:BarrelJack_Horizontal (DC-005-5A-2.5)": "EasyEDA footprint for C381115: 3 slotted pads, 6.0mm pin spacing, third pin at midpoint offset 4.7mm - identical triangle to KiCad footprint (0,0)/(6,0)/(3,4.7) with 1x3mm slots. Fits.",
+      "IDC-Header_2x25_P2.54mm_Vertical (C9044)": "C9044 is the straight/vertical 2x25 box header - matches.",
+      "PinHeader_1x02 (C2337 breakaway), PinSocket_1x19 (C319202)": "Straight 2.54mm parts on straight 2.54mm footprints - match."
+    },
+    "issues_found": {
+      "IDC 2x10 (J-logic, both boards)": "Footprint was Vertical while BOM part C9144 is RIGHT-ANGLE. Resolved in scripts/design_data.py (idc20 -> IDC-Header_2x10_P2.54mm_Horizontal, keeping C9144); generated .kicad_sch/.kicad_pcb still show Vertical until the next regeneration run.",
+      "KF301-5.0-2P terminal (control board)": "FIXED. Was TerminalBlock_MaiXu_MX126-5.0-02P (drill 1.3mm); JLCPCB/EasyEDA recommended footprint for C474881 uses 1.4mm holes and KF301 rectangular blade pins are a marginal fit in 1.3mm. Created jlc_parts:TerminalBlock_KF301-5.0-2P_1x02_P5.00mm (MX126 geometry, drills enlarged to 1.4mm, pads 2.8mm, pitch 5.0mm), updated scripts/design_data.py FP[screw2] (schematics are generated from this file), and patched control-board.kicad_pcb in place. 3D model still references MX126 STEP (visually equivalent block)."
+    },
+    "regeneration_note": "The .kicad_sch files are generated by scripts/gen_schematics_hier.py from scripts/design_data.py. All footprint fixes were applied in design_data.py so they survive regeneration; the currently-checked-in control-board.kicad_sch still carries the old MX126 and Vertical-2x10 strings until regenerated."
+  }
 }
