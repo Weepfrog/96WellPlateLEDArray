@@ -1064,11 +1064,12 @@
 	)
 	(hierarchical_label "LED_K"
 		(shape passive)
-		(at 66.04 64.77 0)
+		(at 66.04 64.77 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify right)
 		)
 		(uuid "3bda1bf2-c975-5782-90ac-d9516104443e")
 	)
@@ -1079,6 +1080,7 @@
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left)
 		)
 		(uuid "a37a2ad5-e246-5875-bd4e-673602462ba5")
 	)
@@ -3433,11 +3435,6 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(sheet_instances
-		(path "/"
-			(page "1")
 		)
 	)
 )

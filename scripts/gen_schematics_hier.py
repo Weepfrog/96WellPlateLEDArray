@@ -88,9 +88,12 @@ class Emitter:
             f"\t\t(color 0 0 0 0)\n\t\t(uuid \"{self.key()}\")\n\t)")
 
     def label(self, name, p, rot=0):
+        just = "right" if rot in (180, 270) else "left"
+        eff = ("(effects\n\t\t\t(font\n\t\t\t\t(size 1.27 1.27)\n\t\t\t)\n"
+               f"\t\t\t(justify {just} bottom)\n\t\t)")
         self.body.append(
             f"\t(label \"{esc(name)}\"\n\t\t(at {p[0]} {p[1]} {rot})\n"
-            f"\t\t{FONT}\n\t\t(uuid \"{self.key()}\")\n\t)")
+            f"\t\t{eff}\n\t\t(uuid \"{self.key()}\")\n\t)")
 
     def hlabel(self, name, p, rot=0):
         self.body.append(
@@ -427,6 +430,10 @@ def power_corner(e, project, root_uuid, rails, x0, y0):
 
 
 def main():
+    # selective regeneration: pass "led", "ctl", or "all" (default all).
+    # NOTE: the LED board sch has been hand-edited in KiCad — do NOT
+    # regenerate it unless explicitly asked (it would wipe those edits).
+    which = sys.argv[1] if len(sys.argv) > 1 else "all"
     led = dd.build_led_board()
     ctl = dd.build_control_board()
 
@@ -459,24 +466,25 @@ def main():
                 25.4, 273.05, 2.5),
                ("RIBBONS TO CONTROL BOARD", 490.22, 227.33, 2.5)])
     power_corner(root, proj, root_uuid, ["+3V3", "GND"], 30.48, 388.62)
-    root.write(led_dir / "12x8 Led Array 9mm pitch.kicad_sch", "A2",
-               led["title"])
-
-    well = build_well_sheet(proj, root_uuid, sheet_uuids, led_parts)
-    well.write(led_dir / "well.kicad_sch", "A4", "Well: LED + NTC")
-
-    meta = {}
-    for n in range(1, 97):
-        for base in ("LED", "TH", "R"):
-            meta[f"{base}{n}"] = {
-                "path": f"/{root_uuid}/{sheet_uuids[n]}/"
-                        + suuid(proj, "well", "sym", f"{base}1")}
-    for ref in led_pos:
-        meta[ref] = {"path": f"/{root_uuid}/"
-                     + suuid(proj, "root", "sym", ref)}
-    meta["__root__"] = root_uuid
-    (led_dir / "sch_meta.json").write_text(json.dumps(meta, indent=1),
-                                           encoding="utf-8")
+    if which in ("led", "all"):
+        root.write(led_dir / "12x8 Led Array 9mm pitch.kicad_sch", "A2",
+                   led["title"])
+        well = build_well_sheet(proj, root_uuid, sheet_uuids, led_parts)
+        well.write(led_dir / "well.kicad_sch", "A4", "Well: LED + NTC")
+        meta = {}
+        for n in range(1, 97):
+            for base in ("LED", "TH", "R"):
+                meta[f"{base}{n}"] = {
+                    "path": f"/{root_uuid}/{sheet_uuids[n]}/"
+                            + suuid(proj, "well", "sym", f"{base}1")}
+        for ref in led_pos:
+            meta[ref] = {"path": f"/{root_uuid}/"
+                         + suuid(proj, "root", "sym", ref)}
+        meta["__root__"] = root_uuid
+        (led_dir / "sch_meta.json").write_text(json.dumps(meta, indent=1),
+                                               encoding="utf-8")
+    else:
+        print("skipping LED board files (hand-edited; pass 'led' to force)")
 
     # ---------------- control board ----------------
     proj = ctl["name"]
@@ -529,26 +537,27 @@ def main():
                ("RIBBONS TO LED BOARD", 706.12, 22.86, 2.5)])
     power_corner(root, proj, root_uuid, ["+24V", "+5V", "+3V3", "GND"],
                  30.48, 552.45)
-    root.write(ctl_dir / "control-board.kicad_sch", "A1", ctl["title"])
-
-    chan = build_channel_sheet(proj, root_uuid, sheet_uuids, ctl_parts)
-    chan.write(ctl_dir / "channel.kicad_sch", "A4",
-               "Channel: PT4115 buck 256mA")
-
-    meta = {}
-    for n in range(1, 97):
-        for base, off in (("U", 0), ("R", 0), ("L", 0), ("D", 0), ("C", 0),
-                          ("R", 100)):
-            ref = f"{base}{n + off}"
-            tmpl = f"{base}{1 + off}"
-            meta[ref] = {"path": f"/{root_uuid}/{sheet_uuids[n]}/"
-                         + suuid(proj, "channel", "sym", tmpl)}
-    for ref in pos:
-        meta[ref] = {"path": f"/{root_uuid}/"
-                     + suuid(proj, "root", "sym", ref)}
-    meta["__root__"] = root_uuid
-    (ctl_dir / "sch_meta.json").write_text(json.dumps(meta, indent=1),
-                                           encoding="utf-8")
+    if which in ("ctl", "all"):
+        root.write(ctl_dir / "control-board.kicad_sch", "A1", ctl["title"])
+        chan = build_channel_sheet(proj, root_uuid, sheet_uuids, ctl_parts)
+        chan.write(ctl_dir / "channel.kicad_sch", "A4",
+                   "Channel: PT4115 buck 256mA")
+        meta = {}
+        for n in range(1, 97):
+            for base, off in (("U", 0), ("R", 0), ("L", 0), ("D", 0),
+                              ("C", 0), ("R", 100)):
+                ref = f"{base}{n + off}"
+                tmpl = f"{base}{1 + off}"
+                meta[ref] = {"path": f"/{root_uuid}/{sheet_uuids[n]}/"
+                             + suuid(proj, "channel", "sym", tmpl)}
+        for ref in pos:
+            meta[ref] = {"path": f"/{root_uuid}/"
+                         + suuid(proj, "root", "sym", ref)}
+        meta["__root__"] = root_uuid
+        (ctl_dir / "sch_meta.json").write_text(json.dumps(meta, indent=1),
+                                               encoding="utf-8")
+    else:
+        print("skipping control board files")
 
 
 if __name__ == "__main__":

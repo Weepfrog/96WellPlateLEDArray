@@ -259,6 +259,230 @@
   "cvpcb": {
     "equivalence_files": []
   },
+  "erc": {
+    "erc_exclusions": [],
+    "meta": {
+      "version": 0
+    },
+    "pin_map": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "rule_severities": {
+      "bus_definition_conflict": "error",
+      "bus_entry_needed": "error",
+      "bus_to_bus_conflict": "error",
+      "bus_to_net_conflict": "error",
+      "different_unit_footprint": "error",
+      "different_unit_net": "error",
+      "duplicate_reference": "error",
+      "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
+      "extra_units": "error",
+      "field_name_whitespace": "warning",
+      "footprint_filter": "ignore",
+      "footprint_link_issues": "warning",
+      "four_way_junction": "ignore",
+      "ground_pin_not_ground": "warning",
+      "hier_label_mismatch": "error",
+      "isolated_pin_label": "warning",
+      "label_dangling": "error",
+      "label_multiple_wires": "warning",
+      "lib_symbol_issues": "warning",
+      "lib_symbol_mismatch": "warning",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
+      "multiple_net_names": "warning",
+      "net_not_bus_member": "warning",
+      "no_connect_connected": "warning",
+      "no_connect_dangling": "warning",
+      "pin_not_connected": "error",
+      "pin_not_driven": "error",
+      "pin_to_pin": "warning",
+      "power_pin_not_driven": "error",
+      "same_local_global_label": "warning",
+      "similar_label_and_power": "warning",
+      "similar_labels": "warning",
+      "similar_power": "warning",
+      "simulation_model_issue": "ignore",
+      "single_global_label": "ignore",
+      "stacked_pin_name": "warning",
+      "unannotated": "error",
+      "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
+      "unit_value_mismatch": "error",
+      "unresolved_variable": "error",
+      "wire_dangling": "error"
+    }
+  },
   "libraries": {
     "pinned_footprint_libs": [],
     "pinned_symbol_libs": []
@@ -307,12 +531,516 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
+    "annotate_start_num": 0,
+    "annotation": {
+      "method": 0,
+      "sort_order": 0
+    },
+    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_fmt_presets": [],
+    "bom_fmt_settings": {
+      "field_delimiter": ",",
+      "keep_line_breaks": false,
+      "keep_tabs": false,
+      "name": "CSV",
+      "ref_delimiter": ",",
+      "ref_range_delimiter": "",
+      "string_delimiter": "\""
+    },
+    "bom_presets": [],
+    "bom_settings": {
+      "exclude_dnp": false,
+      "fields_ordered": [
+        {
+          "group_by": false,
+          "label": "Reference",
+          "name": "Reference",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Value",
+          "name": "Value",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "DNP",
+          "name": "${DNP}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from BOM",
+          "name": "${EXCLUDE_FROM_BOM}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from Board",
+          "name": "${EXCLUDE_FROM_BOARD}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet",
+          "name": "Datasheet",
+          "show": true
+        }
+      ],
+      "filter_string": "",
+      "group_symbols": true,
+      "include_excluded_from_bom": true,
+      "name": "Default Editing",
+      "sort_asc": true,
+      "sort_field": "Reference"
+    },
     "bus_aliases": {},
+    "connection_grid_size": 50.0,
+    "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0,
+      "default_line_thickness": 6.0,
+      "default_text_size": 50.0,
+      "field_names": [],
+      "hop_over_size_choice": 0,
+      "intersheets_ref_own_page": false,
+      "intersheets_ref_prefix": "",
+      "intersheets_ref_short": false,
+      "intersheets_ref_show": false,
+      "intersheets_ref_suffix": "",
+      "junction_size_choice": 3,
+      "label_size_ratio": 0.375,
+      "operating_point_overlay_i_precision": 3,
+      "operating_point_overlay_i_range": "~A",
+      "operating_point_overlay_v_precision": 3,
+      "operating_point_overlay_v_range": "~V",
+      "overbar_offset_ratio": 1.23,
+      "pin_symbol_size": 25.0,
+      "text_offset_ratio": 0.15
+    },
     "legacy_lib_dir": "",
     "legacy_lib_list": [],
-    "top_level_sheets": []
+    "meta": {
+      "version": 1
+    },
+    "page_layout_descr_file": "",
+    "plot_directory": "",
+    "reuse_designators": true,
+    "subpart_first_id": 65,
+    "subpart_id_separator": 0,
+    "top_level_sheets": [
+      {
+        "filename": "control-board.kicad_sch",
+        "name": "control-board",
+        "uuid": "2e846ca6-f8c0-519d-ac35-ee2ffbcedb58"
+      }
+    ],
+    "used_designators": "",
+    "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "2e846ca6-f8c0-519d-ac35-ee2ffbcedb58",
+      "control-board"
+    ],
+    [
+      "adb8cb1a-bbdd-53a8-8066-a488fd3226fa",
+      "CH01"
+    ],
+    [
+      "08b7761b-a121-5e59-a24c-820c8cfbda55",
+      "CH02"
+    ],
+    [
+      "713c0384-d17c-59bb-9d3e-aa7974a69674",
+      "CH03"
+    ],
+    [
+      "5ab8a755-6fae-529c-b514-d506636e6e46",
+      "CH04"
+    ],
+    [
+      "32b0b521-fa66-570c-a410-df30d19f3fa3",
+      "CH05"
+    ],
+    [
+      "4c6bd23f-bb41-56a8-8c4c-075ea11864c2",
+      "CH06"
+    ],
+    [
+      "af467d38-c3f9-5f4c-97f9-cfb971daf190",
+      "CH07"
+    ],
+    [
+      "7ac47eda-524b-5acf-8555-3b46d052dfa1",
+      "CH08"
+    ],
+    [
+      "a9fb9114-ff43-5f3e-9774-2c9c5a1dcfde",
+      "CH09"
+    ],
+    [
+      "8fe1e420-36a8-5aaf-adcd-fea66b33b4a5",
+      "CH10"
+    ],
+    [
+      "805defe7-82a5-585d-a3a1-30222331df15",
+      "CH11"
+    ],
+    [
+      "b32ec1f9-0aef-5c66-acb2-12850895d970",
+      "CH12"
+    ],
+    [
+      "509d5c0e-155e-56fd-9272-5caa066e4857",
+      "CH13"
+    ],
+    [
+      "2e8ec840-9969-5b6d-87d7-723389880a32",
+      "CH14"
+    ],
+    [
+      "4154d227-a0ee-504e-a83e-21b85385312c",
+      "CH15"
+    ],
+    [
+      "f9a82cdb-68ad-5d80-9fbf-72d8d7f17c59",
+      "CH16"
+    ],
+    [
+      "afb1fbeb-e6e0-57fe-8bb0-47ee44997b2a",
+      "CH17"
+    ],
+    [
+      "1717be28-75a7-57e4-8482-3822b70b2cf3",
+      "CH18"
+    ],
+    [
+      "ee02d9c8-b15d-5480-b883-4882e7c60756",
+      "CH19"
+    ],
+    [
+      "0ab03fff-430f-5a73-8580-f512a1ecf4da",
+      "CH20"
+    ],
+    [
+      "9fccb08c-091a-599a-a383-5184f76403c2",
+      "CH21"
+    ],
+    [
+      "bf9b9118-9f38-5071-9386-2419b2ef792c",
+      "CH22"
+    ],
+    [
+      "f2cc614a-ed61-53ad-aa9e-d3899979f48f",
+      "CH23"
+    ],
+    [
+      "d6ce9385-6201-54e7-9880-1cd852a26e05",
+      "CH24"
+    ],
+    [
+      "7272438b-dbe2-5afa-ac7b-1db71c12902f",
+      "CH25"
+    ],
+    [
+      "0188060c-6ce6-547a-a270-01cde02f4ad3",
+      "CH26"
+    ],
+    [
+      "c4ddafb5-f93d-5343-99f9-03a32a4a5942",
+      "CH27"
+    ],
+    [
+      "574247b4-2c89-5b97-8d43-30e165399513",
+      "CH28"
+    ],
+    [
+      "39055ad1-0045-5dcb-bfbb-407f87629479",
+      "CH29"
+    ],
+    [
+      "efa1c0e7-47e9-5f11-a2c8-d2b785dce7a6",
+      "CH30"
+    ],
+    [
+      "1d4312dd-748b-54f0-aa7b-913000e23b81",
+      "CH31"
+    ],
+    [
+      "2b860225-bfa1-5914-ac75-7f6f302e9455",
+      "CH32"
+    ],
+    [
+      "e0d7bd9c-9f90-5061-b1aa-4058614e24bb",
+      "CH33"
+    ],
+    [
+      "fc39de52-9b7c-5387-b944-b4be09d8534d",
+      "CH34"
+    ],
+    [
+      "c1c0238d-1012-5640-9955-c408389c77e9",
+      "CH35"
+    ],
+    [
+      "76e67b6d-9300-59bb-8d08-af7d25b69d87",
+      "CH36"
+    ],
+    [
+      "7b06f410-abdc-56c3-9635-57f8dff97884",
+      "CH37"
+    ],
+    [
+      "53169f59-2e3b-54a2-a966-38c5cd5e09cb",
+      "CH38"
+    ],
+    [
+      "95ef2a74-2ea9-5f65-a246-b8ab2a4743b4",
+      "CH39"
+    ],
+    [
+      "efd019ef-31e3-55c3-a2ba-989c78db9ee2",
+      "CH40"
+    ],
+    [
+      "0b835d79-28ad-51a6-8b3a-070c64eb9056",
+      "CH41"
+    ],
+    [
+      "2f95fd60-c55e-587e-b231-828c1e16fe48",
+      "CH42"
+    ],
+    [
+      "9dd7e272-2a3b-5366-b32f-34189ad31ad9",
+      "CH43"
+    ],
+    [
+      "7811c307-3756-5a4a-88e0-0b1974713c90",
+      "CH44"
+    ],
+    [
+      "b062e3d3-4dd7-59a1-8e20-25350b98c451",
+      "CH45"
+    ],
+    [
+      "b41f619b-b10e-5d8b-89fd-9ff8aa4a8c05",
+      "CH46"
+    ],
+    [
+      "5fff7bf4-ea56-5099-b06b-6544cf1d7049",
+      "CH47"
+    ],
+    [
+      "d143b354-def7-5801-bb7b-41d08c485e4c",
+      "CH48"
+    ],
+    [
+      "91d8730b-7c27-57fb-94a4-f7dda7566b54",
+      "CH49"
+    ],
+    [
+      "1cd3442c-bf01-5f0a-b337-8742ef496578",
+      "CH50"
+    ],
+    [
+      "a222e675-9cb4-51c1-b9ae-ca402c91524c",
+      "CH51"
+    ],
+    [
+      "1d1b2596-1fa7-5169-b52e-2e88b3631bab",
+      "CH52"
+    ],
+    [
+      "5e7f17b5-42c6-5102-a2f6-65b623b1ee17",
+      "CH53"
+    ],
+    [
+      "90324808-42d8-524d-a496-504ccf9872e4",
+      "CH54"
+    ],
+    [
+      "0f4ac76a-0e80-5d4e-9711-4efc5b4ce257",
+      "CH55"
+    ],
+    [
+      "5d04eb1f-434b-51fd-8130-5a25b86ecf33",
+      "CH56"
+    ],
+    [
+      "3c2bd5db-b642-538f-aeb5-195065b45f5f",
+      "CH57"
+    ],
+    [
+      "ec6bb0c1-2fd3-56d8-a040-be1b15b8cb3f",
+      "CH58"
+    ],
+    [
+      "48e7040c-9df3-5f44-8984-78febeca5241",
+      "CH59"
+    ],
+    [
+      "14721385-5db9-5ffd-a0aa-42d6e4041f20",
+      "CH60"
+    ],
+    [
+      "49ab741c-2979-5488-bb7a-9a04fe468103",
+      "CH61"
+    ],
+    [
+      "345cb63c-92b7-50fa-8575-839f9da1c7aa",
+      "CH62"
+    ],
+    [
+      "d4e6315f-9947-58b0-a341-7ce786dc9a40",
+      "CH63"
+    ],
+    [
+      "e86b972a-5d27-5dc2-960a-7f2fcd81af2d",
+      "CH64"
+    ],
+    [
+      "bbf57cb2-5daf-5fa5-91ef-06706a6662bb",
+      "CH65"
+    ],
+    [
+      "fecd08ee-05ae-5d7f-bf44-f72a6aff4769",
+      "CH66"
+    ],
+    [
+      "782be466-553a-55fa-b26f-2a494bf62128",
+      "CH67"
+    ],
+    [
+      "723106ca-c4c9-5752-988b-f0adddb7f3a3",
+      "CH68"
+    ],
+    [
+      "b2361d49-6467-5ed8-bf1f-4cd8da453669",
+      "CH69"
+    ],
+    [
+      "c4e95ac3-e429-5033-a8d8-bcde28471b15",
+      "CH70"
+    ],
+    [
+      "f4f66eda-4b5e-596a-8aa1-e4789a2a41c6",
+      "CH71"
+    ],
+    [
+      "90f71474-5de3-55aa-8d1e-955bab705bc1",
+      "CH72"
+    ],
+    [
+      "7b387068-32bd-50ee-8e5a-313c4c48680b",
+      "CH73"
+    ],
+    [
+      "04455d55-75b5-5a9b-bd30-82914096f2ec",
+      "CH74"
+    ],
+    [
+      "9154ff90-c401-5168-b220-fe0c6a148839",
+      "CH75"
+    ],
+    [
+      "54de47b1-52e0-5ebd-af8d-479d4128b4ea",
+      "CH76"
+    ],
+    [
+      "999ccacd-6d8a-5416-b212-8757d76348b8",
+      "CH77"
+    ],
+    [
+      "bca533a8-f2f8-5299-99f6-fd4db3ec739b",
+      "CH78"
+    ],
+    [
+      "92ec27ed-4d31-58b3-a4be-127168d55e88",
+      "CH79"
+    ],
+    [
+      "d36e0482-c455-5b8f-93bd-1d7fe30418fc",
+      "CH80"
+    ],
+    [
+      "f192adf0-09a2-5b1c-9e38-f3e8ddfadedc",
+      "CH81"
+    ],
+    [
+      "6d9e7eaf-04e0-57ab-aa51-8694a773e091",
+      "CH82"
+    ],
+    [
+      "ce89ecb3-e21f-516e-817f-9af88dff5772",
+      "CH83"
+    ],
+    [
+      "536fc381-5fcd-513e-b396-160199b5d50b",
+      "CH84"
+    ],
+    [
+      "612e140b-d72a-55f9-8709-3b179096612d",
+      "CH85"
+    ],
+    [
+      "dc210e3b-9ce8-5fa5-ad63-8dff1769bf39",
+      "CH86"
+    ],
+    [
+      "d403b682-053b-5aa6-a9ad-0a1f2c9e1e65",
+      "CH87"
+    ],
+    [
+      "4818283d-b8e6-5e4c-863e-dabb616b3ae9",
+      "CH88"
+    ],
+    [
+      "249ea693-2f1c-5b44-aaeb-eb0ad85e97a4",
+      "CH89"
+    ],
+    [
+      "14b4f660-171b-5903-8e88-131aa494bf85",
+      "CH90"
+    ],
+    [
+      "bae8d8d9-2d6a-5547-b13a-68dc7804a452",
+      "CH91"
+    ],
+    [
+      "821baa68-a4a0-5fdc-9fd5-09055ec80e77",
+      "CH92"
+    ],
+    [
+      "6f7f97f0-89bd-5123-a6db-44d018e924b9",
+      "CH93"
+    ],
+    [
+      "8b8470da-3b9b-5695-84ea-acdf81ede7df",
+      "CH94"
+    ],
+    [
+      "589f68b5-1d93-5895-a9b1-0e25b79a4c5d",
+      "CH95"
+    ],
+    [
+      "797d425a-61be-5f16-80f9-0b89f1a10ecf",
+      "CH96"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
