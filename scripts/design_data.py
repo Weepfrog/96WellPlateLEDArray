@@ -58,7 +58,7 @@ J5_PINOUT = {
 # PCA9685PW pin map (TSSOP-28)
 PCA_LED_PIN = {i: 6 + i for i in range(8)}          # LED0..LED7 = 6..13
 PCA_LED_PIN.update({i: 7 + i for i in range(8, 16)})  # LED8..LED15 = 15..22
-PCA_PINS = dict(A0=1, A1=2, A2=3, A3=4, A4=5, GND=14, A5=23, OE=24,
+PCA_PINS = dict(A0=1, A1=2, A2=3, A3=4, A4=5, GND=14, OE=23, A5=24,
                 EXTCLK=25, SCL=26, SDA=27, VDD=28)
 
 # ESP32 DevKitC-38 socket map: J10 = left row seen from top (pin1 = 3V3 corner),
@@ -333,9 +333,9 @@ def build_control_board():
         part("C111", LIB["cp"], "220uF 16V", FP["elec63"], "C134727",
              (sx + 45.72, sy), (58, 172), 0, desc="5V rail output cap"),
     ]
-    net("+24V", "U110", 1); net("+24V", "C110", 1)      # VIN (pin names verified at gen time)
+    # XL1509-5.0 (verified): 1=VIN 2=OUT 3=FB 4=/EN 5..8=GND
+    net("+24V", "U110", 1); net("+24V", "C110", 1)
     net("GND", "C110", 2)
-    net("GND", "U110", 3)                               # GND pin? verified at gen time
     net("SW_5V", "U110", 2)                             # OUT
     net("SW_5V", "L101", 1)
     net("SW_5V", "D101", 1)             # freewheel cathode to SW node
@@ -343,8 +343,10 @@ def build_control_board():
     net("+5V", "L101", 2)
     net("+5V", "C111", 1)
     net("GND", "C111", 2)
-    net("+5V", "U110", 4)                               # FB senses 5V rail
-    net("GND", "U110", 5)                               # /ON-OFF low = on
+    net("+5V", "U110", 3)                               # FB senses 5V rail
+    net("GND", "U110", 4)                               # /EN low = enabled
+    for gp in (5, 6, 7, 8):
+        net("GND", "U110", gp)
 
     # --- bulk 24V caps ---
     for i in range(4):
@@ -363,7 +365,6 @@ def build_control_board():
     ]
     net("+24V", "J6", 1); net("GND", "J6", 2)
     net("+24V", "J7", 1); net("GND", "J7", 2)
-    net("GND", "J7", 3)                                  # switch pin if present
 
     # --- fan output ---
     parts += [

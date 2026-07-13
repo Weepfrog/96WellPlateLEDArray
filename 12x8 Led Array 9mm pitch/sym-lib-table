@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "jlc_parts")(type "KiCad")(uri "${KIPRJMOD}/../libraries/jlc_parts.kicad_sym")(options "")(descr "JLCPCB-sourced parts"))
+)
