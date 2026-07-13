@@ -1,0 +1,16 @@
+# KiCad
+*.lck
+~*
+*-backups/
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.bak
+*.bck
+fp-info-cache
+_autosave-*
+*.kicad_prl
+
+# Editor / misc
+.history/
+Thumbs.db
+__pycache__/
