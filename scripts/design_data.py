@@ -49,7 +49,7 @@ def ntc_mux(n):
 
 # J5 logic ribbon pinout (both boards)
 J5_PINOUT = {
-    1: "+3V3", 2: "GND", 3: "NTC_SIG1", 4: "GND", 5: "NTC_SIG2", 6: "GND",
+    1: "+3.3V", 2: "GND", 3: "NTC_SIG1", 4: "GND", 5: "NTC_SIG2", 6: "GND",
     7: "NTC_SIG3", 8: "GND", 9: "NTC_SIG4", 10: "GND", 11: "NTC_SIG5",
     12: "GND", 13: "NTC_SIG6", 14: "GND", 15: "MUX_A0", 16: "MUX_A1",
     17: "MUX_A2", 18: "MUX_A3", 19: "GND", 20: "GND",
@@ -183,7 +183,7 @@ def build_led_board():
         net(f"LED_K{n}", f"LED{n}", 2)          # pad 2 = cathode
         net(f"LED_K{n}", f"LED{n}", 3)          # pad 3 = thermal, tie to cathode
         net(f"LED_K{n}", ja, pk)
-        net("+3V3", f"TH{n}", 1)
+        net("+3.3V", f"TH{n}", 1)
         net(f"NTC{n}", f"TH{n}", 2)
         net(f"NTC{n}", f"R{n}", 1)
         mref, mpin = ntc_mux(n)
@@ -201,14 +201,14 @@ def build_led_board():
                  (sx + 25.4, sy - 12.7), (px + 6.4, py - 7.0), 90,
                  desc=f"decoupling U{m}"),
         ]
-        net("+3V3", f"U{m}", 24)
+        net("+3.3V", f"U{m}", 24)
         net("GND", f"U{m}", 12)
         net("GND", f"U{m}", 15)                 # /E enabled
         net(f"NTC_SIG{m}", f"U{m}", 1)          # COM
         for i, sig in ((10, "MUX_A0"), (11, "MUX_A1"), (14, "MUX_A2"),
                        (13, "MUX_A3")):
             net(sig, f"U{m}", i)
-        net("+3V3", f"C{m}", 1)
+        net("+3.3V", f"C{m}", 1)
         net("GND", f"C{m}", 2)
 
     # --- connectors ---
@@ -226,10 +226,10 @@ def build_led_board():
                       "C9144", (740, 545), (7, 105), 90,
                       desc="2x10 IDC logic ribbon"))
     for p, sig in J5_PINOUT.items():
-        net(sig if sig not in ("+3V3",) else "+3V3", "J5", p)
+        net(sig if sig not in ("+3.3V",) else "+3.3V", "J5", p)
 
     # --- test points ---
-    for i, (tnet, txy) in enumerate([("+3V3", (13, 86)), ("GND", (13, 90)),
+    for i, (tnet, txy) in enumerate([("+3.3V", (13, 86)), ("GND", (13, 90)),
                                      ("GND", (13, 94))], 1):
         parts.append(part(f"TP{i}", LIB["tp"], tnet, FP["tp"], "",
                           (0, 0), txy, 0, desc=f"test point {tnet}"))
@@ -318,7 +318,7 @@ def build_control_board():
                  (sx + 20.32, sy - 17.78), (px + 6.6, py - 3.0), 90,
                  desc=f"decoupling {u}"),
         ]
-        net("+3V3", u, PCA_PINS["VDD"])
+        net("+3.3V", u, PCA_PINS["VDD"])
         net("GND", u, PCA_PINS["GND"])
         net("GND", u, PCA_PINS["OE"])           # outputs live at reset (LOW)
         net("GND", u, PCA_PINS["EXTCLK"])       # unused, tie low
@@ -326,8 +326,8 @@ def build_control_board():
         net("I2C_SCL", u, PCA_PINS["SCL"])
         # address straps: 0x40+k -> A5..A0 = k in binary (A6 fixed 1 internally)
         for bit, pname in enumerate(["A0", "A1", "A2", "A3", "A4", "A5"]):
-            net("+3V3" if (k >> bit) & 1 else "GND", u, PCA_PINS[pname])
-        net("+3V3", f"C{121 + k}", 1)
+            net("+3.3V" if (k >> bit) & 1 else "GND", u, PCA_PINS[pname])
+        net("+3.3V", f"C{121 + k}", 1)
         net("GND", f"C{121 + k}", 2)
 
     # --- 5V rail: XL1509-5.0E1 buck ---
@@ -412,7 +412,7 @@ def build_control_board():
              "C319202", (1030, 100), (165.4, 130), 0, desc="DevKitC-38 socket R"),
     ]
     for i, name in enumerate(ESP32_J10, 1):
-        sig = {"3V3": "+3V3", "5V": "+5V", "GND": "GND",
+        sig = {"3V3": "+3.3V", "5V": "+5V", "GND": "GND",
                "GPIO36/VP": "NTC_SIG5", "GPIO39/VN": "NTC_SIG6",
                "GPIO34": "NTC_SIG3", "GPIO35": "NTC_SIG4",
                "GPIO32": "NTC_SIG1", "GPIO33": "NTC_SIG2",
@@ -436,8 +436,8 @@ def build_control_board():
         part("R211", LIB["r"], "4.7k", FP["r0603"], "C23162", (1070, 615),
              (150, 148), 0, desc="SCL pullup"),
     ]
-    net("I2C_SDA", "R210", 1); net("+3V3", "R210", 2)
-    net("I2C_SCL", "R211", 1); net("+3V3", "R211", 2)
+    net("I2C_SDA", "R210", 1); net("+3.3V", "R210", 2)
+    net("I2C_SCL", "R211", 1); net("+3.3V", "R211", 2)
 
     # --- UI: buttons + status LEDs ---
     for i, (name, sig) in enumerate([("MODE", "BTN_MODE"), ("UP", "BTN_UP"),
@@ -471,7 +471,7 @@ def build_control_board():
     parts.append(part("U111", LIB["ads"], "ADS1115IDGS (DNP)", FP["vssop10"],
                       "C37593", (1120, 600), (150, 155), 0, dnp=True,
                       desc="optional precision ADC"))
-    net("+3V3", "U111", 8); net("GND", "U111", 3)
+    net("+3.3V", "U111", 8); net("GND", "U111", 3)
     net("I2C_SDA", "U111", 10); net("I2C_SCL", "U111", 9)
     net("GND", "U111", 1)               # ADDR -> 0x48
 
@@ -492,7 +492,7 @@ def build_control_board():
         net(sig, "J5", p)
 
     # --- test points ---
-    tps = [("+24V", (68, 166)), ("+5V", (74, 166)), ("+3V3", (80, 166)),
+    tps = [("+24V", (68, 166)), ("+5V", (74, 166)), ("+3.3V", (80, 166)),
            ("GND", (86, 166)), ("GND", (92, 166)), ("SW_5V", (98, 166)),
            ("I2C_SDA", (104, 166)), ("I2C_SCL", (110, 166)),
            ("FAN_SW", (152, 178)),

@@ -10,7 +10,7 @@ J10 = left socket row, J11 = right socket row, **pin 1 of both = the 3V3/GND end
 
 | J10 pin | DevKit pin | Connect to | | J11 pin | DevKit pin | Connect to |
 |---|---|---|---|---|---|---|
-| 1 | 3V3 | +3V3 | | 1 | GND | GND |
+| 1 | 3V3 | +3.3V | | 1 | GND | GND |
 | 2 | EN | — | | 2 | GPIO23 | — |
 | 3 | GPIO36/VP | NTC_SIG5 | | 3 | GPIO22 | I2C_SCL |
 | 4 | GPIO39/VN | NTC_SIG6 | | 4 | GPIO1/TX0 | — |
@@ -149,19 +149,19 @@ U<n>.2 (GND) → GND
 
 ## PCA9685 bank (control board)
 
-All six: pin 28 (VDD) → +3V3 with 100nF (C121-C126), pin 14 (VSS) → GND, pin 23 (/OE) → GND, pin 25 (EXTCLK) → GND, pin 27 (SDA) → I2C_SDA, pin 26 (SCL) → I2C_SCL.
-I2C_SDA/I2C_SCL → ESP32 GPIO21/GPIO22 + 4.7k pullups R210/R211 to +3V3.
+All six: pin 28 (VDD) → +3.3V with 100nF (C121-C126), pin 14 (VSS) → GND, pin 23 (/OE) → GND, pin 25 (EXTCLK) → GND, pin 27 (SDA) → I2C_SDA, pin 26 (SCL) → I2C_SCL.
+I2C_SDA/I2C_SCL → ESP32 GPIO21/GPIO22 + 4.7k pullups R210/R211 to +3.3V.
 
 Address straps (pin → rail):
 
 | Chip | Addr | A0(1) | A1(2) | A2(3) | A3(4) | A4(5) | A5(24) |
 |---|---|---|---|---|---|---|---|
 | U101 | 0x40 | GND | GND | GND | GND | GND | GND |
-| U102 | 0x41 | +3V3 | GND | GND | GND | GND | GND |
-| U103 | 0x42 | GND | +3V3 | GND | GND | GND | GND |
-| U104 | 0x43 | +3V3 | +3V3 | GND | GND | GND | GND |
-| U105 | 0x44 | GND | GND | +3V3 | GND | GND | GND |
-| U106 | 0x45 | +3V3 | GND | +3V3 | GND | GND | GND |
+| U102 | 0x41 | +3.3V | GND | GND | GND | GND | GND |
+| U103 | 0x42 | GND | +3.3V | GND | GND | GND | GND |
+| U104 | 0x43 | +3.3V | +3.3V | GND | GND | GND | GND |
+| U105 | 0x44 | GND | GND | +3.3V | GND | GND | GND |
+| U106 | 0x45 | +3.3V | GND | +3.3V | GND | GND | GND |
 
 ## 5V rail (control board)
 
@@ -199,7 +199,7 @@ Note: +24V and GND on the control board also touch every channel (see channel se
 ribbon A pin ── LED_A<n> ── LED<n>.1 (anode, '+' silk mark)
 LED<n>.2 (cathode) ──●── LED<n>.3 (thermal pad — tie to cathode)
                      └── LED_K<n> ── ribbon K pin
-+3V3 ── TH<n>.1   TH<n> = 10k NTC
++3.3V ── TH<n>.1   TH<n> = 10k NTC
 TH<n>.2 ──●── R<n>.1 (10k 1%; R<n>.2 → GND)
           └── NTC<n> ── mux input (see table)
 ```
@@ -305,7 +305,7 @@ TH<n>.2 ──●── R<n>.1 (10k 1%; R<n>.2 → GND)
 
 ## LED board — muxes
 
-All six CD74HC4067: pin 24 (VCC) → +3V3 with 100nF (C1-C6), pin 12 (GND) → GND, pin 15 (/E) → GND (always enabled).
+All six CD74HC4067: pin 24 (VCC) → +3.3V with 100nF (C1-C6), pin 12 (GND) → GND, pin 15 (/E) → GND (always enabled).
 
 | Signal | Mux pins | Ribbon |
 |---|---|---|
@@ -328,7 +328,7 @@ J5 (20-way):
 
 | Pin | Signal | Pin | Signal |
 |---|---|---|---|
-| 1 | +3V3 | 2 | GND |
+| 1 | +3.3V | 2 | GND |
 | 3 | NTC_SIG1 | 4 | GND |
 | 5 | NTC_SIG2 | 6 | GND |
 | 7 | NTC_SIG3 | 8 | GND |
@@ -343,13 +343,13 @@ J5 (20-way):
 
 ## Test points
 
-**LED board:** TP1 = +3V3, TP2 = GND, TP3 = GND
+**LED board:** TP1 = +3.3V, TP2 = GND, TP3 = GND
 
-**Control board:** TP1 = +24V, TP2 = +5V, TP3 = +3V3, TP4 = GND, TP5 = GND, TP6 = SW_5V, TP7 = I2C_SDA, TP8 = I2C_SCL, TP9 = FAN_SW, TP10 = DIM1, TP11 = LED_A1, TP12 = LED_K1
+**Control board:** TP1 = +24V, TP2 = +5V, TP3 = +3.3V, TP4 = GND, TP5 = GND, TP6 = SW_5V, TP7 = I2C_SDA, TP8 = I2C_SCL, TP9 = FAN_SW, TP10 = DIM1, TP11 = LED_A1, TP12 = LED_K1
 
 ## ERC housekeeping
 
-- Add power symbols (+24V, +5V, +3V3, GND) and one PWR_FLAG on +24V, +5V, +3V3 and GND (they enter via connectors).
+- Add power symbols (+24V, +5V, +3.3V, GND) and one PWR_FLAG on +24V, +5V, +3.3V and GND (they enter via connectors).
 - U111 (ADS1115) is DNP — wire it anyway (ADDR pin 1 → GND = 0x48) so it can be populated later; or leave unwired and ignore ERC.
 - Unused mux inputs: none (all 16 used on all six).
 - Unused PCA9685 outputs: none (96 = 6×16 exactly).

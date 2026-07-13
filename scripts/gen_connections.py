@@ -116,17 +116,17 @@ def main():
     # ---------------- PCA9685 ----------------
     A("## PCA9685 bank (control board)")
     A("")
-    A("All six: pin 28 (VDD) → +3V3 with 100nF (C121-C126), pin 14 (VSS) → "
+    A("All six: pin 28 (VDD) → +3.3V with 100nF (C121-C126), pin 14 (VSS) → "
       "GND, pin 23 (/OE) → GND, pin 25 (EXTCLK) → GND, pin 27 (SDA) → "
       "I2C_SDA, pin 26 (SCL) → I2C_SCL.")
-    A("I2C_SDA/I2C_SCL → ESP32 GPIO21/GPIO22 + 4.7k pullups R210/R211 to +3V3.")
+    A("I2C_SDA/I2C_SCL → ESP32 GPIO21/GPIO22 + 4.7k pullups R210/R211 to +3.3V.")
     A("")
     A("Address straps (pin → rail):")
     A("")
     A("| Chip | Addr | A0(1) | A1(2) | A2(3) | A3(4) | A4(5) | A5(24) |")
     A("|---|---|---|---|---|---|---|---|")
     for k in range(6):
-        bits = ["+3V3" if (k >> b) & 1 else "GND" for b in range(6)]
+        bits = ["+3.3V" if (k >> b) & 1 else "GND" for b in range(6)]
         A(f"| U{101+k} | 0x{0x40+k:02X} | " + " | ".join(bits) + " |")
     A("")
 
@@ -161,7 +161,7 @@ def main():
     A("ribbon A pin ── LED_A<n> ── LED<n>.1 (anode, '+' silk mark)")
     A("LED<n>.2 (cathode) ──●── LED<n>.3 (thermal pad — tie to cathode)")
     A("                     └── LED_K<n> ── ribbon K pin")
-    A("+3V3 ── TH<n>.1   TH<n> = 10k NTC")
+    A("+3.3V ── TH<n>.1   TH<n> = 10k NTC")
     A("TH<n>.2 ──●── R<n>.1 (10k 1%; R<n>.2 → GND)")
     A("          └── NTC<n> ── mux input (see table)")
     A("```")
@@ -178,7 +178,7 @@ def main():
 
     A("## LED board — muxes")
     A("")
-    A("All six CD74HC4067: pin 24 (VCC) → +3V3 with 100nF (C1-C6), pin 12 "
+    A("All six CD74HC4067: pin 24 (VCC) → +3.3V with 100nF (C1-C6), pin 12 "
       "(GND) → GND, pin 15 (/E) → GND (always enabled).")
     A("")
     A("| Signal | Mux pins | Ribbon |")
@@ -223,8 +223,8 @@ def main():
             A("")
     A("## ERC housekeeping")
     A("")
-    A("- Add power symbols (+24V, +5V, +3V3, GND) and one PWR_FLAG on "
-      "+24V, +5V, +3V3 and GND (they enter via connectors).")
+    A("- Add power symbols (+24V, +5V, +3.3V, GND) and one PWR_FLAG on "
+      "+24V, +5V, +3.3V and GND (they enter via connectors).")
     A("- U111 (ADS1115) is DNP — wire it anyway (ADDR pin 1 → GND = 0x48) "
       "so it can be populated later; or leave unwired and ignore ERC.")
     A("- Unused mux inputs: none (all 16 used on all six).")

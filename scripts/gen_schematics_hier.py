@@ -268,7 +268,7 @@ def build_well_sheet(project, root_uuid, sheet_uuids, parts_by_ref):
     e.wire((66.04, 58.42), (66.04, 64.77))
     e.junction((66.04, 64.77))
     # NTC divider
-    pwr3 = P("power:+3V3", "+3V3", "#PWR?", xy=(114.3, 49.53))
+    pwr3 = P("power:+3.3V", "+3.3V", "#PWR?", xy=(114.3, 49.53))
     gnd = P("power:GND", "GND", "#PWR?", xy=(114.3, 77.47))
     e.symbol(pwr3, inst("#PWR01"), uid=suuid(project, "well", "pwr3v3"))
     e.symbol(gnd, inst("#PWR02"), uid=suuid(project, "well", "pwrgnd"))
@@ -374,9 +374,26 @@ def netmap(board):
     return m
 
 
+POWER_NETS = {"GND": "power:GND", "+3.3V": "power:+3.3V",
+              "+5V": "power:+5V", "+24V": "power:+24V"}
+AWAY = {0: (-1, 0), 180: (1, 0), 90: (0, 1), 270: (0, -1)}
+
+
 def place_root(e, board, root_uuid, sub_file, sub_pins, chan_refs,
                root_pos, texts):
     nm = netmap(board)
+    pwr_n = [0]
+
+    def power_at(pt, netname):
+        """Wire stub from pin + real power symbol (user's preferred style)."""
+        dx, dy = AWAY[int(pt[2]) % 360]
+        end = (dd.snap(pt[0] + dx * 3.81), dd.snap(pt[1] + dy * 3.81))
+        e.wire((pt[0], pt[1]), end)
+        pwr_n[0] += 1
+        ref = f"#PWR2{pwr_n[0]:03d}"
+        e.symbol(P(POWER_NETS[netname], netname, ref, xy=end),
+                 [(f"/{root_uuid}", ref)],
+                 uid=suuid(e.project, "root", "pwrstub", pwr_n[0]))
     # 96 sheet boxes
     sheet_uuids = {}
     for n in range(1, 97):
@@ -409,7 +426,9 @@ def place_root(e, board, root_uuid, sub_file, sub_pins, chan_refs,
         for num, g in geo.items():
             pt = pin_abs(root_pos[ref], g, 0)
             net = nm.get((ref, num))
-            if net:
+            if net in POWER_NETS:
+                power_at(pt, net)
+            elif net:
                 rot = int((pt[2] + 180) % 360)
                 e.label(net, (pt[0], pt[1]), rot)
             else:
@@ -465,7 +484,7 @@ def main():
                ("NTC MUXES U1-U6 (ch 1-16 / 17-32 / 33-48 / 49-64 / 65-80 / 81-96)",
                 25.4, 273.05, 2.5),
                ("RIBBONS TO CONTROL BOARD", 490.22, 227.33, 2.5)])
-    power_corner(root, proj, root_uuid, ["+3V3", "GND"], 30.48, 388.62)
+    power_corner(root, proj, root_uuid, ["+3.3V", "GND"], 30.48, 388.62)
     if which in ("led", "all"):
         root.write(led_dir / "12x8 Led Array 9mm pitch.kicad_sch", "A2",
                    led["title"])
@@ -535,7 +554,7 @@ def main():
                ("ESP32 DEVKITC-38 SOCKET (J10 left / J11 right, "
                 "pin1 = 3V3/GND end)", 693.42, 298.45, 2.5),
                ("RIBBONS TO LED BOARD", 706.12, 22.86, 2.5)])
-    power_corner(root, proj, root_uuid, ["+24V", "+5V", "+3V3", "GND"],
+    power_corner(root, proj, root_uuid, ["+24V", "+5V", "+3.3V", "GND"],
                  30.48, 552.45)
     if which in ("ctl", "all"):
         root.write(ctl_dir / "control-board.kicad_sch", "A1", ctl["title"])

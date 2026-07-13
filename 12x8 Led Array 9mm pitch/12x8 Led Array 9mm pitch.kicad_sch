@@ -3453,7 +3453,7 @@
 					)
 				)
 			)
-			(property "Value" "+3V3"
+			(property "Value" "+3.3V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7051,16 +7051,6 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 293.37) (xy 355.6 293.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72b85b61-0336-4935-ac58-593fd3d7bb35")
-	)
-	(wire
-		(pts
 			(xy 327.66 224.79) (xy 331.47 224.79)
 		)
 		(stroke
@@ -7601,16 +7591,6 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 347.98) (xy 224.79 347.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87b8d690-d75e-4e65-b3a0-4a04b48d7e82")
-	)
-	(wire
-		(pts
 			(xy 43.18 113.03) (xy 46.99 113.03)
 		)
 		(stroke
@@ -7938,16 +7918,6 @@
 			(type default)
 		)
 		(uuid "95106af3-c69d-4671-9dea-80abdc5ee94a")
-	)
-	(wire
-		(pts
-			(xy 342.9 353.06) (xy 355.6 353.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9518f87b-f440-48d4-ba2c-a882abc66c0f")
 	)
 	(wire
 		(pts
@@ -8578,16 +8548,6 @@
 			(type default)
 		)
 		(uuid "ab15754d-5bfd-481c-95aa-0bb506317ac1")
-	)
-	(wire
-		(pts
-			(xy 87.63 346.71) (xy 100.33 346.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab17c201-c949-40d7-a195-8dbc44715863")
 	)
 	(wire
 		(pts
@@ -10231,16 +10191,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 293.37) (xy 101.6 293.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e33c6b7f-8538-49e8-baa3-f710c5f9c0d4")
-	)
-	(wire
-		(pts
 			(xy 288.29 311.15) (xy 292.1 311.15)
 		)
 		(stroke
@@ -10338,16 +10288,6 @@
 			(type default)
 		)
 		(uuid "e7c77ef2-f7a9-5b7d-a0e1-9e36a4d5cf60")
-	)
-	(wire
-		(pts
-			(xy 213.36 292.1) (xy 226.06 292.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7f438f9-db6d-4a2b-a664-45aa356e4bcc")
 	)
 	(wire
 		(pts
@@ -13738,7 +13678,7 @@
 		)
 		(uuid "772c38c8-965c-5b5f-bebc-323ea66f8f8b")
 	)
-	(label "+3V3"
+	(label "+3.3V"
 		(at 431.8 270.51 90)
 		(effects
 			(font
@@ -21681,7 +21621,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+3.3V"
 			(at 434.34 267.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23311,7 +23251,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "power:+3.3V")
 		(at 386.08 270.51 0)
 		(unit 1)
 		(body_style 1)
@@ -23332,7 +23272,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+3.3V"
 			(at 389.636 273.558 0)
 			(show_name no)
 			(do_not_autoplace no)
