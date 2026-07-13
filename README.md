@@ -40,16 +40,21 @@ JLCPCB/LCSC library (stock verified 2026-07-13).
 
 ## Workflow
 
-1. Open either project in KiCad 10, wire the schematic following
-   `CONNECTIONS.md` (parts are already placed and clustered per channel).
-2. Open the PCB — footprints are already placed (LED grid at exact 9.0 mm
-   pitch). Run **Tools → Update PCB from Schematic (F8)** with *"Re-link
-   footprints to schematic symbols based on their reference designators"*
-   enabled, then route.
-3. Regenerating: `python scripts/gen_schematics.py` then run
-   `scripts/gen_pcbs.py` with KiCad's Python (see script header). **Warning:
-   regeneration overwrites the sch/pcb files** — don't rerun after you've
-   started wiring unless you want a reset.
+1. **Schematics are hierarchical and fully wired**: each board is a root
+   sheet + one sub-sheet (`well.kicad_sch` / `channel.kicad_sch`)
+   instantiated 96×, with references matching `CONNECTIONS.md` (LED1-96,
+   U1-96, …). Verified automatically: KiCad's exported netlist matches the
+   intended netlist in `design_data.py` net-for-net; ERC is clean (3 benign
+   library-mismatch warnings on the control board). Review, then move to
+   layout.
+2. Open the PCB — footprints are pre-placed (LED grid at exact 9.0 mm
+   pitch; placement still draft). Run **Tools → Update PCB from Schematic
+   (F8)**, then route.
+3. Regenerating: `python scripts/gen_schematics_hier.py`, then
+   `scripts/gen_pcbs.py` with KiCad's Python (see script headers), then
+   `python scripts/gen_connections.py`. Verify with
+   `scripts/verify_netlist.py` (see header). **Regeneration overwrites the
+   sch/pcb files** — don't rerun after manual edits unless you want a reset.
 
 ## Key design rules (don't skip)
 

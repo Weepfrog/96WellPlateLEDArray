@@ -107,7 +107,7 @@ FP = {
     "vssop10": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
     "sot23":  "Package_TO_SOT_SMD:SOT-23",
     "idc50":  "Connector_IDC:IDC-Header_2x25_P2.54mm_Vertical",
-    "idc20":  "Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical",
+    "idc20":  "Connector_IDC:IDC-Header_2x10_P2.54mm_Horizontal",
     "sock19": "Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical",
     "screw2": "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm",
     "barrel": "Connector_BarrelJack:BarrelJack_Horizontal",
@@ -262,7 +262,7 @@ def build_control_board():
             part(f"D{n}", LIB["dsch"], "SS34", FP["sma"], "C8678",
                  (sx + 16.51, sy + 6.35), (px + 2.6, py + 4.2), 180,
                  desc=f"freewheel ch{n}"),
-            part(f"C{n}", LIB["c"], "2.2uF 50V", FP["c0805"], "C28323",
+            part(f"C{n}", LIB["c"], "2.2uF 50V", FP["c0805"], "C125847",
                  (sx - 20.32, sy + 6.35), (px - 4.0, py + 4.2), 90,
                  desc=f"VIN cap ch{n}"),
             part(f"R{100 + n}", LIB["r"], "100k", FP["r0603"], "C25803",
@@ -324,13 +324,13 @@ def build_control_board():
     parts += [
         part("U110", LIB["xl1509"], "XL1509-5.0E1", FP["soic8"], "C61063",
              (sx, sy), (36, 172), 0, desc="24V->5V 2A buck"),
-        part("C110", LIB["cp"], "100uF 50V", FP["elec8"], "C134722",
+        part("C110", LIB["cp"], "100uF 50V", FP["elec8"], "C134514",
              (sx - 30.48, sy), (22, 172), 0, desc="5V buck input cap"),
-        part("L101", LIB["l"], "47uH 2A+", FP["swpa6045"], "C2896384",
+        part("L101", LIB["l"], "47uH 2A+", FP["swpa6045"], "C36414",
              (sx + 25.4, sy - 5.08), (48, 168), 0, desc="5V buck inductor"),
         part("D101", LIB["dsch"], "SS34", FP["sma"], "C8678",
              (sx + 25.4, sy + 7.62), (48, 176), 90, desc="5V buck freewheel"),
-        part("C111", LIB["cp"], "220uF 16V", FP["elec63"], "C134727",
+        part("C111", LIB["cp"], "220uF 16V", FP["elec63"], "C286136",
              (sx + 45.72, sy), (58, 172), 0, desc="5V rail output cap"),
     ]
     # XL1509-5.0 (verified): 1=VIN 2=OUT 3=FB 4=/EN 5..8=GND
@@ -351,7 +351,7 @@ def build_control_board():
     # --- bulk 24V caps ---
     for i in range(4):
         parts.append(part(f"C{101 + i}", LIB["cp"], "220uF 35V", FP["elec8"],
-                          "C134728", (660 + i * 30.48, 700), (22 + i * 11, 183),
+                          "C134820", (660 + i * 30.48, 700), (22 + i * 11, 183),
                           0, desc="24V bulk"))
         net("+24V", f"C{101 + i}", 1)
         net("GND", f"C{101 + i}", 2)

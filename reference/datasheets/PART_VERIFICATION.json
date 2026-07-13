@@ -1,0 +1,140 @@
+{
+  "verified_date": "2026-07-13",
+  "verification_source": "lcsc.com product pages + jlcpcb.com parts API (stock/library status)",
+  "lcsc_corrections": {
+    "C28323": {
+      "status": "wrong",
+      "correct": "C125847",
+      "actual_part": "Samsung CL21B105KBFNNNE, 1uF 50V X7R 0805 (NOT 2.2uF; JLCPCB Basic, 4.4M stock)",
+      "basic": false,
+      "note": "Replacement C125847 = YAGEO CC0805KKX7R9BB225, 2.2uF 50V X7R +-10% 0805, JLCPCB Extended, ~103k stock. No genuinely-50V X7R 2.2uF 0805 exists in the JLCPCB Basic library; if Basic is mandatory, C28323 (1uF 50V Basic) x2 in parallel is the only Basic route."
+    },
+    "C134722": {
+      "status": "wrong",
+      "correct": "C134514",
+      "actual_part": "Lelon VE-101M1ATR-0505, 100uF 10V SMD D5x5.3mm (wrong voltage and size)",
+      "basic": false,
+      "note": "Replacement C134514 = Lelon VZH101M1HTR-0810K, 100uF 50V +-20% SMD D8x10mm, 5000h@105C, JLCPCB Extended, ~4.2k stock (LCSC ~3.9k). Alternative C294509 (VZH101M1HTR-0810)."
+    },
+    "C134727": {
+      "status": "wrong",
+      "correct": "C286136",
+      "actual_part": "Lelon VE-102M1CTR-1313, 1000uF 16V D12.5x13.5mm (wrong value and size, stock 1)",
+      "basic": false,
+      "note": "Replacement C286136 = Lelon VZT221M1CTR-0606ACS, 220uF 16V +-20% SMD D6.3x5.8mm, JLCPCB Extended, ~19k stock."
+    },
+    "C134728": {
+      "status": "wrong",
+      "correct": "C134820",
+      "actual_part": "Lelon VE-220M1CTR-0405, 22uF 16V D4x5.3mm (wrong value, voltage and size)",
+      "basic": false,
+      "note": "Replacement C134820 = Lelon VZH221M1VTR-0810, 220uF 35V +-20% SMD D8x10mm, 5000h@105C, JLCPCB Extended, ~1.5k stock (LCSC ~950). Panasonic EEEFK1V221GP C343910 is a higher-ripple alternative."
+    },
+    "C2896384": {
+      "status": "wrong",
+      "correct": "C36414",
+      "actual_part": "SHM DCH222K36Y5PN6FL5C8, 2.2nF 1kV through-hole disc capacitor (completely different part)",
+      "basic": false,
+      "note": "SWPA6045S470MT (Sunlord 47uH 6x6mm, 1.2A/1.4A, 200mOhm) = C36414, JLCPCB Extended, ~17.6k stock."
+    },
+    "C2297": {
+      "status": "ok",
+      "correct": "C2297",
+      "actual_part": "Hubei KENTO KT-0805G, emerald green 0805 LED, 525nm",
+      "basic": true,
+      "note": "JLCPCB Basic, ~3.4M stock."
+    },
+    "C2293": {
+      "status": "ok",
+      "correct": "C2293",
+      "actual_part": "Hubei KENTO KT-0805B, blue 0805 LED, 469nm",
+      "basic": false,
+      "note": "JLCPCB Extended (not Basic), ~51k stock."
+    },
+    "C84256": {
+      "status": "ok",
+      "correct": "C84256",
+      "actual_part": "NATIONSTAR NCD0805R1, red 0805 LED, 630nm",
+      "basic": true,
+      "note": "JLCPCB Basic, ~1.8M stock."
+    },
+    "C2337": {
+      "status": "ok",
+      "correct": "C2337",
+      "actual_part": "BOOMELE 2.54-1*40P, 1x40 male pin header, 2.54mm, straight, through-hole",
+      "basic": false,
+      "note": "JLCPCB Extended, ~61k stock. It is a 1x40 breakaway strip - snap off 2 positions for the 1x02 fan header (JLC hand-assembly/THT)."
+    },
+    "C4190": {
+      "status": "ok",
+      "correct": "C4190",
+      "actual_part": "UNI-ROYAL 0603WAF2201T5E, 2.2kOhm 1% 0603",
+      "basic": true,
+      "note": "JLCPCB Basic, ~1.7M stock (LCSC retail page shows out of stock, irrelevant for JLC assembly)."
+    },
+    "C21190": {
+      "status": "ok",
+      "correct": "C21190",
+      "actual_part": "UNI-ROYAL 0603WAF1001T5E, 1kOhm 1% 0603",
+      "basic": true,
+      "note": "JLCPCB Basic, ~1.1M stock."
+    },
+    "C22775": {
+      "status": "ok",
+      "correct": "C22775",
+      "actual_part": "UNI-ROYAL 0603WAF1000T5E, 100Ohm 1% 0603",
+      "basic": true,
+      "note": "JLCPCB Basic, ~5.2M stock."
+    },
+    "C23162": {
+      "status": "ok",
+      "correct": "C23162",
+      "actual_part": "UNI-ROYAL 0603WAF4701T5E, 4.7kOhm 1% 0603",
+      "basic": true,
+      "note": "JLCPCB Basic, ~6.1M stock."
+    },
+    "C25803": {
+      "status": "ok",
+      "correct": "C25803",
+      "actual_part": "UNI-ROYAL 0603WAF1003T5E, 100kOhm 1% 0603",
+      "basic": true,
+      "note": "JLCPCB Basic, ~7.2M stock."
+    },
+    "C25804": {
+      "status": "out-of-stock",
+      "correct": "C25804",
+      "actual_part": "UNI-ROYAL 0603WAF1002T5E, 10kOhm 1% 0603 (correct part, JLCPCB Basic)",
+      "basic": true,
+      "note": "JLCPCB API reports 0 stock and LCSC retail out of stock as of 2026-07-13. Usually restocks quickly; fallback: YAGEO RC0603FR-0710KL C98220 (Extended, ~1.0M stock) or Hong Kong Resistors RCT0310KFLF C177644 (Extended, ~127k)."
+    },
+    "C14663": {
+      "status": "ok",
+      "correct": "C14663",
+      "actual_part": "YAGEO CC0603KRX7R9BB104, 100nF 50V X7R 0603",
+      "basic": true,
+      "note": "JLCPCB Basic, ~37M stock."
+    },
+    "C9044": {
+      "status": "ok",
+      "correct": "C9044",
+      "actual_part": "BOOMELE 2.54-2*25P, 2x25 (50P) IDC box header, 2.54mm, straight, through-hole",
+      "basic": false,
+      "note": "JLCPCB Extended, ~3.9k stock."
+    },
+    "C9144": {
+      "status": "ok",
+      "correct": "C9144",
+      "actual_part": "BOOMELE 2.54-2*10P, 2x10 (20P) IDC box header, 2.54mm, RIGHT ANGLE, through-hole",
+      "basic": false,
+      "note": "CAUTION: this is the right-angle (bent) variant, JLCPCB Extended, ~9.4k stock. If a vertical/straight 2x10 box header is required, best in-stock options found: JXTCONN IDC2.54-2*10PZ C53207551 (~147 stock) or DC2.54-2*10PZ C53207553 (~70 stock) - both low stock."
+    },
+    "C319202": {
+      "status": "ok",
+      "correct": "C319202",
+      "actual_part": "BOOMELE 2.54-1*19P, 1x19 female socket header, 2.54mm, single row, through-hole",
+      "basic": false,
+      "note": "JLCPCB Extended, ~8.8k stock."
+    }
+  },
+  "datasheets_failed": []
+}

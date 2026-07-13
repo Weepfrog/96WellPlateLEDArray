@@ -47,11 +47,13 @@ def main():
 
     L = []
     A = L.append
-    A("# CONNECTIONS.md — complete wiring guide")
+    A("# CONNECTIONS.md — complete wiring reference")
     A("")
-    A("Generated from `scripts/design_data.py` (same data that placed the "
-      "schematic symbols). Wire each net listed here; net names are "
-      "suggestions for your KiCad labels.")
+    A("Generated from `scripts/design_data.py`. The hierarchical schematics "
+      "are **already wired to match this document** (verified: KiCad's "
+      "exported netlist matches every net below exactly, ERC clean). Use "
+      "this as the review checklist and as the reference during PCB "
+      "routing, firmware bring-up, and debugging.")
     A("")
     A("**Channel numbering:** `n = (row-1)*12 + col`, rows top→bottom 1-8, "
       "columns left→right 1-12 looking at the LED side. CH1 = top-left well, "
