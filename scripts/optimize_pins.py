@@ -48,19 +48,19 @@ print(f"# LED grid recovered; generator numbering intact: {renumber_ok}")
 # front row (nearer field, smaller y) serves rows 5-8; back row serves 1-4.
 # left pair serves cols 1-6, right pair cols 7-12.
 jinfo = {j: fppos[j] for j in ("J1", "J2", "J3", "J4")}
-ymid = sum(y for _, y in jinfo.values()) / 4
 xmid = sum(x for x, _ in jinfo.values()) / 4
+field_ymid = (min(ys) + max(ys)) / 2
 quad = {}
 for j, (x, y) in jinfo.items():
     side = "L" if x < xmid else "R"
-    depth = "front" if y < ymid else "back"
+    depth = "top" if y < field_ymid else "bottom"
     quad[j] = (side, depth)
 print(f"# connector quadrants: {quad}")
 
 CONN = {}   # n -> (jref, pinA, pinK)
 for j, (side, depth) in quad.items():
     cols = range(1, 7) if side == "L" else range(7, 13)
-    rows = range(5, 9) if depth == "front" else range(1, 5)
+    rows = range(1, 5) if depth == "top" else range(5, 9)
     chans = [n for n, (r, c) in pos_rc.items() if r in rows and c in cols]
     # order pin pairs to match the connector's physical pin-1..50 direction:
     # sort channels by (column asc if pin1 is at the -x end else desc, row)

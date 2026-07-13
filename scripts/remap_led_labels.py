@@ -20,14 +20,15 @@ MUX_INPUT_PIN = {k: 9 - k for k in range(8)}
 MUX_INPUT_PIN.update({k: 31 - k for k in range(8, 16)})
 
 
+import pin_maps_old
+
+
 def old_conn(n):
-    j = (n - 1) // 24 + 1
-    o = (n - 1) % 24
-    return (f"J{j}", 2 * o + 1, 2 * o + 2)
+    return pin_maps_old.CONN_MAP[n]
 
 
 def old_mux(n):
-    return (f"U{(n - 1) // 16 + 1}", MUX_INPUT_PIN[(n - 1) % 16])
+    return pin_maps_old.NTC_MAP[n]
 
 
 def main():
