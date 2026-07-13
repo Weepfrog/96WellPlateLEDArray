@@ -14,3 +14,8 @@ _autosave-*
 .history/
 Thumbs.db
 __pycache__/
+
+# Obsidian per-user state (keep shared config)
+.obsidian/workspace*
+.obsidian/cache
+.obsidian/plugins/
