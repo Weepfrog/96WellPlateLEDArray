@@ -28,7 +28,7 @@ def tomm(v):
 board = pcbnew.LoadBoard(str(BOARD))
 
 # 1. relocate stray holes (chosen to be clear of muxes/connectors/TPs)
-strays = {"H2": (52.0, 128.0), "H4": (227.0, 128.0), "H5": (196.0, 32.0)}
+strays = {"H2": (52.0, 128.0), "H4": (210.0, 124.0), "H5": (46.0, 150.0)}
 for fp in board.GetFootprints():
     r = fp.GetReference()
     if r in strays:
