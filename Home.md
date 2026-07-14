@@ -14,6 +14,7 @@ sensing**, ESP32-controlled, JLCPCB-fabricated.
 - [[CONNECTIONS|Wiring guide (CONNECTIONS.md)]] — every net, pin by pin ← *wire the schematics from this*
 - [[notes/Design Decisions|Design Decisions]] — why each part/topology was chosen
 - [[notes/Parts and BOM|Parts and BOM]] — every component with LCSC numbers
+- [[notes/What Every Part Does|What Every Part Does]] — plain-language purpose of every part
 - [[notes/Bring-Up Checklist|Bring-Up Checklist]] — first power-on procedure
 - [[notes/Firmware Plan|Firmware Plan]] — ESP32 pin map + software sketch
 - [[README|README]] — GitHub-facing overview

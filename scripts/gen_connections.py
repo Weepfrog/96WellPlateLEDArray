@@ -186,21 +186,22 @@ def main():
     for sig, mp in [("MUX_A0", "10 (S0)"), ("MUX_A1", "11 (S1)"),
                     ("MUX_A2", "14 (S2)"), ("MUX_A3", "13 (S3)")]:
         j5pin = [p for p, s in dd.J5_PINOUT.items() if s == sig][0]
-        A(f"| {sig} | U1-U6 pin {mp} | J5.{j5pin} |")
+        A(f"| {sig} | U1-U6 pin {mp} | J9.{j5pin} |")
     for m in range(1, 7):
         j5pin = [p for p, s in dd.J5_PINOUT.items()
                  if s == f"NTC_SIG{m}"][0]
-        A(f"| NTC_SIG{m} | U{m} pin 1 (COM) | J5.{j5pin} |")
+        A(f"| NTC_SIG{m} | U{m} pin 1 (COM) | J9.{j5pin} |")
     A("")
 
     # ---------------- ribbons ----------------
     A("## Ribbon cables (straight 1:1, keyed)")
     A("")
-    A("J1-J4 (50-way): odd pin 2o+1 = LED_A(channel), even pin 2o+2 = "
-      "LED_K(channel); channel = 24·(J#−1) + o + 1 for o = 0…23. "
-      "Pins 49, 50 = GND on both boards.")
+    A("J1-J6 (40-way, one PCA9685 bank per ribbon): channel = "
+      "16*(J#-1) + i for pair i = 1..16. Pairs 1-9 on pins 1-18, pairs "
+      "10-16 on pins 21-34; pin 20 UNUSED (IDE-cable key), pins 19 and "
+      "35-40 = GND. A = odd pin, K = even pin of each pair.")
     A("")
-    A("J5 (20-way):")
+    A("J9 (20-way):")
     A("")
     A("| Pin | Signal | Pin | Signal |")
     A("|---|---|---|---|")

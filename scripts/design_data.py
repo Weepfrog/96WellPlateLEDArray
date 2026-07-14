@@ -25,13 +25,18 @@ def ch_rc(n):  # channel -> (row, col) 1-based
     return ((n - 1) // 12 + 1, (n - 1) % 12 + 1)
 
 
-# LED connector map: geometry-optimized quadrant assignment (see pin_maps.py)
-from pin_maps import CONN_MAP, NTC_MAP
+# LED connector map: 6x 40-pin ribbons, 16 channels each (= one PCA9685
+# per cable). IDE-safe: pin 20 unused, GND on 19 & 35-40.
+from pin_maps import NTC_MAP
 
 
 def led_conn_pins(n):
     """Return (conn_ref, anode_pin, cathode_pin) for channel n (1..96)."""
-    return CONN_MAP[n]
+    k = (n - 1) // 16 + 1            # ribbon J1..J6
+    i = (n - 1) % 16 + 1             # pair 1..16 within ribbon
+    if i <= 9:
+        return (f"J{k}", 2 * i - 1, 2 * i)
+    return (f"J{k}", 2 * i + 1, 2 * i + 2)
 
 
 # 4067 mux input pin numbers: I0..I7 = pins 9..2, I8..I15 = pins 23..16
@@ -105,7 +110,7 @@ FP = {
     "tssop28": "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm",
     "vssop10": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
     "sot23":  "Package_TO_SOT_SMD:SOT-23",
-    "idc50":  "Connector_IDC:IDC-Header_2x25_P2.54mm_Vertical",
+    "idc40":  "Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical",
     "idc20":  "Connector_IDC:IDC-Header_2x10_P2.54mm_Horizontal",
     "sock19": "Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical",
     # KF301-5.0-2P (C474881): MX126 footprint geometry but drills enlarged to
@@ -136,7 +141,7 @@ LIB = {
     "xl1509": "Regulator_Switching:XL1509-5.0",
     "ads":    "Analog_ADC:ADS1115IDGS",
     "fet":    "Transistor_FET:AO3400A",
-    "conn50": "Connector_Generic:Conn_02x25_Odd_Even",
+    "conn40": "Connector_Generic:Conn_02x20_Odd_Even",
     "conn20": "Connector_Generic:Conn_02x10_Odd_Even",
     "sock19": "Connector_Generic:Conn_01x19",
     "screw2": "Connector:Screw_Terminal_01x02",
@@ -211,21 +216,23 @@ def build_led_board():
         net("GND", f"C{m}", 2)
 
     # --- connectors ---
-    # J1..J4: two rows of two on bottom edge strip
-    for j in range(1, 5):
-        sx, sy = 740, 60 + (j - 1) * 125
-        px = 37 + ((j - 1) % 2) * 66            # two columns
-        py = 100 if j <= 2 else 111             # two rows
-        parts.append(part(f"J{j}", LIB["conn50"], f"LED ch {24*(j-1)+1}-{24*j}",
-                          FP["idc50"], "C9044", (sx, sy), (px, py), 0,
-                          desc="2x25 IDC to control board"))
-        net("GND", f"J{j}", 49)
-        net("GND", f"J{j}", 50)
-    parts.append(part("J5", LIB["conn20"], "logic/analog", FP["idc20"],
+    # J1..J6: 40-pin ribbons, 16 channels each; 3 top edge, 3 bottom
+    for j in range(1, 7):
+        sx, sy = 740, 40 + (j - 1) * 80
+        px = 66 + ((j - 1) % 3) * 60
+        py = 26.5 if j <= 3 else 135.3
+        parts.append(part(f"J{j}", LIB["conn40"],
+                          f"LED ch {16*(j-1)+1}-{16*j}",
+                          FP["idc40"], "C9043", (sx, sy), (px, py), 90,
+                          desc=f"2x20 IDC ribbon {j} (PCA bank {j})"))
+        for gp in (19, 35, 36, 37, 38, 39, 40):
+            net("GND", f"J{j}", gp)
+        # pin 20 left unconnected: IDE-cable key compatibility
+    parts.append(part("J9", LIB["conn20"], "logic/analog", FP["idc20"],
                       "C9144", (740, 545), (7, 105), 90,
                       desc="2x10 IDC logic ribbon"))
     for p, sig in J5_PINOUT.items():
-        net(sig if sig not in ("+3.3V",) else "+3.3V", "J5", p)
+        net(sig, "J9", p)
 
     # --- test points ---
     for i, (tnet, txy) in enumerate([("+3.3V", (13, 86)), ("GND", (13, 90)),
@@ -370,12 +377,12 @@ def build_control_board():
 
     # --- power inputs ---
     parts += [
-        part("J6", LIB["screw2"], "24V IN", FP["screw2"], "C474881",
+        part("J12", LIB["screw2"], "24V IN", FP["screw2"], "C474881",
              (800, 700), (8, 172), 90, desc="24V screw terminal"),
         part("J7", LIB["barrel"], "24V IN (5.5/2.5)", FP["barrel"], "C381115",
              (800, 740), (8, 150), 0, desc="24V barrel jack 5A"),
     ]
-    net("+24V", "J6", 1); net("GND", "J6", 2)
+    net("+24V", "J12", 1); net("GND", "J12", 2)
     net("+24V", "J7", 1); net("GND", "J7", 2)
 
     # --- fan output ---
@@ -474,21 +481,22 @@ def build_control_board():
     net("I2C_SDA", "U111", 10); net("I2C_SCL", "U111", 9)
     net("GND", "U111", 1)               # ADDR -> 0x48
 
-    # --- IDC + logic connectors (top edge) ---
-    for j in range(1, 5):
-        sx, sy = 1120, 60 + (j - 1) * 125
-        px = 40 + ((j - 1) % 2) * 68
-        py = 8 if j <= 2 else 19
-        parts.append(part(f"J{j}", LIB["conn50"], f"LED ch {24*(j-1)+1}-{24*j}",
-                          FP["idc50"], "C9044", (sx, sy), (px, py), 0,
-                          desc="2x25 IDC to LED board"))
-        net("GND", f"J{j}", 49)
-        net("GND", f"J{j}", 50)
-    parts.append(part("J5", LIB["conn20"], "logic/analog", FP["idc20"],
-                      "C9144", (1120, 560), (135, 13.5), 90,
+    # --- IDC + logic connectors: 6x 40-pin ribbons ---
+    for j in range(1, 7):
+        sx, sy = 1120, 40 + (j - 1) * 80
+        px = 36 + ((j - 1) % 3) * 60
+        py = 26.5 if j <= 3 else 136.8
+        parts.append(part(f"J{j}", LIB["conn40"],
+                          f"LED ch {16*(j-1)+1}-{16*j}",
+                          FP["idc40"], "C9043", (sx, sy), (px, py), 270,
+                          desc=f"2x20 IDC ribbon {j} (PCA bank {j})"))
+        for gp in (19, 35, 36, 37, 38, 39, 40):
+            net("GND", f"J{j}", gp)
+    parts.append(part("J9", LIB["conn20"], "logic/analog", FP["idc20"],
+                      "C9144", (1120, 560), (14, 80.15), 180,
                       desc="2x10 IDC logic ribbon"))
     for p, sig in J5_PINOUT.items():
-        net(sig, "J5", p)
+        net(sig, "J9", p)
 
     # --- test points ---
     tps = [("+24V", (68, 166)), ("+5V", (74, 166)), ("+3.3V", (80, 166)),
