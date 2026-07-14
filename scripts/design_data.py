@@ -25,18 +25,14 @@ def ch_rc(n):  # channel -> (row, col) 1-based
     return ((n - 1) // 12 + 1, (n - 1) % 12 + 1)
 
 
-# LED connector map: 6x 40-pin ribbons, 16 channels each (= one PCA9685
-# per cable). IDE-safe: pin 20 unused, GND on 19 & 35-40.
-from pin_maps import NTC_MAP
+# LED connector map: 6x 40-pin ribbons (IDE-safe), pair order jointly
+# optimized for both boards' placement; PCA outputs geometry-assigned.
+from pin_maps import CONN_MAP, NTC_MAP, PCA_MAP
 
 
 def led_conn_pins(n):
     """Return (conn_ref, anode_pin, cathode_pin) for channel n (1..96)."""
-    k = (n - 1) // 16 + 1            # ribbon J1..J6
-    i = (n - 1) % 16 + 1             # pair 1..16 within ribbon
-    if i <= 9:
-        return (f"J{k}", 2 * i - 1, 2 * i)
-    return (f"J{k}", 2 * i + 1, 2 * i + 2)
+    return CONN_MAP[n]
 
 
 # 4067 mux input pin numbers: I0..I7 = pins 9..2, I8..I15 = pins 23..16
@@ -307,9 +303,8 @@ def build_control_board():
         ja, pa, pk = led_conn_pins(n)
         net(f"LED_A{n}", ja, pa)
         net(f"LED_K{n}", ja, pk)
-        k = (n - 1) // 16                        # PCA chip index 0..5
-        led_i = (n - 1) % 16
-        net(f"DIM{n}", f"U{101 + k}", PCA_LED_PIN[led_i])
+        pca_ref, pca_pin = PCA_MAP[n]
+        net(f"DIM{n}", pca_ref, pca_pin)
 
     # --- PCA9685 bank ---
     for k in range(6):
