@@ -40,13 +40,24 @@ def ch_rc(n):
 def cell_positions(n):
     r, c = ch_rc(n)
     px, py = FX(c), FY(r)
+    if r <= 4:
+        # top half: escapes face J1/J2 (up)
+        return {
+            f"U{n}":       (px - 3.0, py - 2.8, 0),
+            f"L{n}":       (px + 3.3, py - 3.0, 0),
+            f"D{n}":       (px - 2.6, py + 2.9, 0),
+            f"R{n}":       (px + 2.2, py + 2.9, 90),
+            f"C{n}":       (px + 4.4, py + 2.9, 90),
+            f"R{100 + n}": (px - 2.6, py + 5.6, 0),
+        }
+    # bottom half: y-mirrored so escapes face J3/J4 (down)
     return {
-        f"U{n}":       (px - 3.0, py - 2.8, 0),
-        f"L{n}":       (px + 3.3, py - 3.0, 0),
-        f"D{n}":       (px - 2.6, py + 2.9, 0),
-        f"R{n}":       (px + 2.2, py + 2.9, 90),
-        f"C{n}":       (px + 4.4, py + 2.9, 90),
-        f"R{100 + n}": (px + 2.2, py + 5.55, 0),
+        f"U{n}":       (px - 3.0, py + 2.8, 180),
+        f"L{n}":       (px + 3.3, py + 3.0, 0),
+        f"D{n}":       (px - 2.6, py - 2.9, 180),
+        f"R{n}":       (px + 2.2, py - 2.9, 90),
+        f"C{n}":       (px + 4.4, py - 2.9, 90),
+        f"R{100 + n}": (px + 2.2, py - 5.6, 0),
     }
 
 
