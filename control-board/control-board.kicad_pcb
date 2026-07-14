@@ -17749,7 +17749,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
-			(net "/LED_A49")
+			(net "/LED_A64")
 			(uuid "cda1db7e-8623-4000-b87d-33f6d373b208")
 		)
 		(pad "2" thru_hole circle
@@ -17758,7 +17758,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K49")
+			(net "/LED_K64")
 			(uuid "1faee641-ffd2-4a5e-b916-ab5cf4635683")
 		)
 		(pad "3" thru_hole circle
@@ -17767,7 +17767,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A50")
+			(net "/LED_A63")
 			(uuid "6d68c5d9-5033-4487-a1ee-836ecf4b4031")
 		)
 		(pad "4" thru_hole circle
@@ -17776,7 +17776,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K50")
+			(net "/LED_K63")
 			(uuid "8f7ba249-6e91-4c82-a995-12498569eb13")
 		)
 		(pad "5" thru_hole circle
@@ -17785,7 +17785,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A51")
+			(net "/LED_A62")
 			(uuid "25692d55-61cb-4d3b-b4d8-972fdb2d6f4e")
 		)
 		(pad "6" thru_hole circle
@@ -17794,7 +17794,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K51")
+			(net "/LED_K62")
 			(uuid "04aa9796-8f3c-4ff3-a55b-c1466fdbc7eb")
 		)
 		(pad "7" thru_hole circle
@@ -17803,7 +17803,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A52")
+			(net "/LED_A61")
 			(uuid "1650d5e8-04f1-41aa-88dd-1e740735ecd3")
 		)
 		(pad "8" thru_hole circle
@@ -17812,7 +17812,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K52")
+			(net "/LED_K61")
 			(uuid "005ef027-7df7-4c28-b309-957aef4a8ced")
 		)
 		(pad "9" thru_hole circle
@@ -17821,7 +17821,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A53")
+			(net "/LED_A60")
 			(uuid "8bc69a4e-56e0-438e-8eb6-693e4f3ca46b")
 		)
 		(pad "10" thru_hole circle
@@ -17830,7 +17830,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K53")
+			(net "/LED_K60")
 			(uuid "05ad540a-5f33-4abf-997b-8309a2eee535")
 		)
 		(pad "11" thru_hole circle
@@ -17839,7 +17839,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A54")
+			(net "/LED_A59")
 			(uuid "6540e343-9488-4d4d-a0b9-e4e502847530")
 		)
 		(pad "12" thru_hole circle
@@ -17848,7 +17848,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K54")
+			(net "/LED_K59")
 			(uuid "5d55bf56-1364-4892-85aa-17b39b9deb13")
 		)
 		(pad "13" thru_hole circle
@@ -17857,7 +17857,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A55")
+			(net "/LED_A58")
 			(uuid "df6efe72-c7db-4590-a1cb-45d658dd516c")
 		)
 		(pad "14" thru_hole circle
@@ -17866,7 +17866,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K55")
+			(net "/LED_K58")
 			(uuid "2f9871f0-2c56-467e-be5e-f167c7598939")
 		)
 		(pad "15" thru_hole circle
@@ -17875,7 +17875,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A56")
+			(net "/LED_A57")
 			(uuid "03bc9dbc-6955-423d-b3f5-8a9a2b23ccb0")
 		)
 		(pad "16" thru_hole circle
@@ -17884,7 +17884,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K56")
+			(net "/LED_K57")
 			(uuid "3c1483b4-be15-4e32-9de5-101d4112de72")
 		)
 		(pad "17" thru_hole circle
@@ -17893,7 +17893,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A57")
+			(net "/LED_A56")
 			(uuid "bd7776e7-af55-4f54-9d69-d84236b445db")
 		)
 		(pad "18" thru_hole circle
@@ -17902,7 +17902,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K57")
+			(net "/LED_K56")
 			(uuid "565e7985-b048-4cfe-8dd7-9cb4ffaa35e5")
 		)
 		(pad "19" thru_hole circle
@@ -17929,7 +17929,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A58")
+			(net "/LED_A55")
 			(uuid "bad1f0ae-7b3f-49fd-b436-84d0fc915c9a")
 		)
 		(pad "22" thru_hole circle
@@ -17938,7 +17938,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K58")
+			(net "/LED_K55")
 			(uuid "4490e446-66c1-41a4-ad23-8f60b337ec5c")
 		)
 		(pad "23" thru_hole circle
@@ -17947,7 +17947,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A59")
+			(net "/LED_A54")
 			(uuid "f309fef9-7f8f-421e-b817-395726252fa9")
 		)
 		(pad "24" thru_hole circle
@@ -17956,7 +17956,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K59")
+			(net "/LED_K54")
 			(uuid "5af4c98d-37d6-4fa4-8153-495c18a8426d")
 		)
 		(pad "25" thru_hole circle
@@ -17965,7 +17965,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A60")
+			(net "/LED_A53")
 			(uuid "010f6ea2-271e-4879-afb2-668d4f43e317")
 		)
 		(pad "26" thru_hole circle
@@ -17974,7 +17974,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K60")
+			(net "/LED_K53")
 			(uuid "63daae44-b95b-4c36-b56b-fecc16dba66e")
 		)
 		(pad "27" thru_hole circle
@@ -17983,7 +17983,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A61")
+			(net "/LED_A52")
 			(uuid "4ffb3acf-985f-4a38-bbf7-23ee7bc1fa38")
 		)
 		(pad "28" thru_hole circle
@@ -17992,7 +17992,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K61")
+			(net "/LED_K52")
 			(uuid "6c5ab355-7b57-4d47-9c3b-9027267456c0")
 		)
 		(pad "29" thru_hole circle
@@ -18001,7 +18001,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A62")
+			(net "/LED_A51")
 			(uuid "b61114d2-9362-4680-90f7-e2d6a713b06f")
 		)
 		(pad "30" thru_hole circle
@@ -18010,7 +18010,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K62")
+			(net "/LED_K51")
 			(uuid "5c47be25-163c-4aff-a4f0-8cedb56fec4d")
 		)
 		(pad "31" thru_hole circle
@@ -18019,7 +18019,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A63")
+			(net "/LED_A50")
 			(uuid "c0c323ad-38fe-4391-beb4-e81ae331f637")
 		)
 		(pad "32" thru_hole circle
@@ -18028,7 +18028,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K63")
+			(net "/LED_K50")
 			(uuid "667bef61-fb6d-48f3-b490-460c6dd774f4")
 		)
 		(pad "33" thru_hole circle
@@ -18037,7 +18037,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A64")
+			(net "/LED_A49")
 			(uuid "0b5a2972-4b71-4b28-811b-97fb9671c1ff")
 		)
 		(pad "34" thru_hole circle
@@ -18046,7 +18046,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K64")
+			(net "/LED_K49")
 			(uuid "c825bcd7-7ae0-4f05-8891-94b894642fce")
 		)
 		(pad "35" thru_hole circle
@@ -23441,7 +23441,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
-			(net "/LED_A32")
+			(net "/LED_A25")
 			(uuid "fbed8132-a820-4d45-ad86-d9fc4d38dde1")
 		)
 		(pad "2" thru_hole circle
@@ -23450,7 +23450,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K32")
+			(net "/LED_K25")
 			(uuid "6bff9b92-9089-45d5-9a83-82890377a54c")
 		)
 		(pad "3" thru_hole circle
@@ -23459,7 +23459,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A31")
+			(net "/LED_A26")
 			(uuid "3076d530-0332-48c0-bb05-360e390d7a26")
 		)
 		(pad "4" thru_hole circle
@@ -23468,7 +23468,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K31")
+			(net "/LED_K26")
 			(uuid "54fe7cf2-9d94-42dc-bd90-fa92c78a66c4")
 		)
 		(pad "5" thru_hole circle
@@ -23477,7 +23477,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A30")
+			(net "/LED_A27")
 			(uuid "f42a930e-55cd-47b4-b869-6f2a956400fa")
 		)
 		(pad "6" thru_hole circle
@@ -23486,7 +23486,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K30")
+			(net "/LED_K27")
 			(uuid "3246c839-29c4-4e6b-8634-31746b8e1473")
 		)
 		(pad "7" thru_hole circle
@@ -23495,7 +23495,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A29")
+			(net "/LED_A28")
 			(uuid "d21465ac-179e-4217-b034-90de80bd018b")
 		)
 		(pad "8" thru_hole circle
@@ -23504,7 +23504,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K29")
+			(net "/LED_K28")
 			(uuid "b225ea23-9a8b-4e97-a932-c35692415749")
 		)
 		(pad "9" thru_hole circle
@@ -23513,7 +23513,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A28")
+			(net "/LED_A17")
 			(uuid "83c6c835-2899-4f1a-b98f-5eaca3831eb7")
 		)
 		(pad "10" thru_hole circle
@@ -23522,7 +23522,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K28")
+			(net "/LED_K17")
 			(uuid "cef38870-44b3-4d24-866d-894509b08ccf")
 		)
 		(pad "11" thru_hole circle
@@ -23531,7 +23531,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A27")
+			(net "/LED_A29")
 			(uuid "3eaffaf2-d818-421b-ba9e-b0764f9abc77")
 		)
 		(pad "12" thru_hole circle
@@ -23540,7 +23540,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K27")
+			(net "/LED_K29")
 			(uuid "eb2d0764-6365-4eda-98dc-a514ceba6612")
 		)
 		(pad "13" thru_hole circle
@@ -23549,7 +23549,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A26")
+			(net "/LED_A18")
 			(uuid "bef95d85-3bdf-451c-a76b-9ca252356a16")
 		)
 		(pad "14" thru_hole circle
@@ -23558,7 +23558,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K26")
+			(net "/LED_K18")
 			(uuid "fe7e51e4-def5-4565-96fd-03f1901eaa67")
 		)
 		(pad "15" thru_hole circle
@@ -23567,7 +23567,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A25")
+			(net "/LED_A30")
 			(uuid "9739e293-897f-4f3e-a2d7-afae01d001f3")
 		)
 		(pad "16" thru_hole circle
@@ -23576,7 +23576,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K25")
+			(net "/LED_K30")
 			(uuid "4aa529b0-937c-44c3-810d-ac1e947fc161")
 		)
 		(pad "17" thru_hole circle
@@ -23585,7 +23585,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A24")
+			(net "/LED_A19")
 			(uuid "bac52765-f1b7-4289-a1b1-a1fab83ddbfb")
 		)
 		(pad "18" thru_hole circle
@@ -23594,7 +23594,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K24")
+			(net "/LED_K19")
 			(uuid "07f7d484-7f95-4764-8d8d-568c3f965d99")
 		)
 		(pad "19" thru_hole circle
@@ -23621,7 +23621,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A23")
+			(net "/LED_A31")
 			(uuid "9717ca7b-a935-4afd-85ac-4375e59c67de")
 		)
 		(pad "22" thru_hole circle
@@ -23630,7 +23630,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K23")
+			(net "/LED_K31")
 			(uuid "1782a3f4-b4cf-4a0e-a59d-cf0929179717")
 		)
 		(pad "23" thru_hole circle
@@ -23639,7 +23639,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A22")
+			(net "/LED_A20")
 			(uuid "0e63a53e-58dd-4ad4-9c8d-cb291d816520")
 		)
 		(pad "24" thru_hole circle
@@ -23648,7 +23648,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K22")
+			(net "/LED_K20")
 			(uuid "89d07d22-6be1-4356-ad36-a77e800ee84d")
 		)
 		(pad "25" thru_hole circle
@@ -23657,7 +23657,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A21")
+			(net "/LED_A32")
 			(uuid "d55c2709-80ce-4b47-9316-1ae537cd282c")
 		)
 		(pad "26" thru_hole circle
@@ -23666,7 +23666,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K21")
+			(net "/LED_K32")
 			(uuid "65685bd3-3cf3-46f7-a17f-21783c590593")
 		)
 		(pad "27" thru_hole circle
@@ -23675,7 +23675,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A20")
+			(net "/LED_A21")
 			(uuid "3544693f-684c-434e-9307-26198acceaab")
 		)
 		(pad "28" thru_hole circle
@@ -23684,7 +23684,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K20")
+			(net "/LED_K21")
 			(uuid "94aa96ec-8a18-4dd8-bdef-bee15a11f6a1")
 		)
 		(pad "29" thru_hole circle
@@ -23693,7 +23693,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A19")
+			(net "/LED_A22")
 			(uuid "e2c926a8-54da-4523-a2d9-8c113b84d2cc")
 		)
 		(pad "30" thru_hole circle
@@ -23702,7 +23702,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K19")
+			(net "/LED_K22")
 			(uuid "24725980-dc56-47d9-8d94-0b747c954419")
 		)
 		(pad "31" thru_hole circle
@@ -23711,7 +23711,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A18")
+			(net "/LED_A23")
 			(uuid "bea77d2f-e230-4288-800d-99c38c5b073e")
 		)
 		(pad "32" thru_hole circle
@@ -23720,7 +23720,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K18")
+			(net "/LED_K23")
 			(uuid "a09599cb-eced-4e7a-8cd9-690d3c2e989b")
 		)
 		(pad "33" thru_hole circle
@@ -23729,7 +23729,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A17")
+			(net "/LED_A24")
 			(uuid "91e4b442-2504-448c-b9cb-846112c4b09e")
 		)
 		(pad "34" thru_hole circle
@@ -23738,7 +23738,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K17")
+			(net "/LED_K24")
 			(uuid "29cd0a57-37f8-4347-83b3-e102a8cba1f8")
 		)
 		(pad "35" thru_hole circle
@@ -46571,7 +46571,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
-			(net "/LED_A1")
+			(net "/LED_A16")
 			(uuid "d97def5a-b939-4ee1-beab-93733f982320")
 		)
 		(pad "2" thru_hole circle
@@ -46580,7 +46580,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K1")
+			(net "/LED_K16")
 			(uuid "0f1704d6-d5ee-45c4-9802-191a25a6c9c7")
 		)
 		(pad "3" thru_hole circle
@@ -46589,7 +46589,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A2")
+			(net "/LED_A15")
 			(uuid "00b762b0-7c28-47df-8354-b31a679c2a54")
 		)
 		(pad "4" thru_hole circle
@@ -46598,7 +46598,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K2")
+			(net "/LED_K15")
 			(uuid "16601691-4309-445e-a045-c6a52e36ab0e")
 		)
 		(pad "5" thru_hole circle
@@ -46607,7 +46607,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A3")
+			(net "/LED_A14")
 			(uuid "03ffd2d2-29b5-4b8b-859d-a5571911d29b")
 		)
 		(pad "6" thru_hole circle
@@ -46616,7 +46616,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K3")
+			(net "/LED_K14")
 			(uuid "032a3171-3bf2-4f06-b347-1652e611516d")
 		)
 		(pad "7" thru_hole circle
@@ -46625,7 +46625,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A4")
+			(net "/LED_A13")
 			(uuid "e42612d2-41b4-4c91-840f-849b39036c06")
 		)
 		(pad "8" thru_hole circle
@@ -46634,7 +46634,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K4")
+			(net "/LED_K13")
 			(uuid "c032d7ab-558b-45e3-92ee-6a286c457eca")
 		)
 		(pad "9" thru_hole circle
@@ -46643,7 +46643,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A5")
+			(net "/LED_A12")
 			(uuid "12368f73-4ea4-4471-8501-cf468a6f04c7")
 		)
 		(pad "10" thru_hole circle
@@ -46652,7 +46652,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K5")
+			(net "/LED_K12")
 			(uuid "3e4a77c5-01d4-4a2e-917f-d68244653d1f")
 		)
 		(pad "11" thru_hole circle
@@ -46661,7 +46661,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A6")
+			(net "/LED_A11")
 			(uuid "6e8314d4-5a63-47c4-a94a-5db414df99cb")
 		)
 		(pad "12" thru_hole circle
@@ -46670,7 +46670,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K6")
+			(net "/LED_K11")
 			(uuid "d4f112de-07c7-43f7-9e55-08ff490d2e2a")
 		)
 		(pad "13" thru_hole circle
@@ -46679,7 +46679,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A7")
+			(net "/LED_A10")
 			(uuid "4350af34-3b2e-4b8c-b0ca-56f3ab136233")
 		)
 		(pad "14" thru_hole circle
@@ -46688,7 +46688,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K7")
+			(net "/LED_K10")
 			(uuid "6d90c3ef-6f00-42a5-9022-72d1f52134a7")
 		)
 		(pad "15" thru_hole circle
@@ -46697,7 +46697,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A8")
+			(net "/LED_A9")
 			(uuid "c59d520a-de95-4cd4-be46-c3dca5fa36ae")
 		)
 		(pad "16" thru_hole circle
@@ -46706,7 +46706,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K8")
+			(net "/LED_K9")
 			(uuid "be71cc7d-0925-4d28-9b4d-cd29973dfbad")
 		)
 		(pad "17" thru_hole circle
@@ -46715,7 +46715,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A9")
+			(net "/LED_A8")
 			(uuid "1816c0eb-6890-4cfc-a019-3c27bfddbd1b")
 		)
 		(pad "18" thru_hole circle
@@ -46724,7 +46724,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K9")
+			(net "/LED_K8")
 			(uuid "1e1e4741-3a17-447d-b133-446a178ca879")
 		)
 		(pad "19" thru_hole circle
@@ -46751,7 +46751,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A10")
+			(net "/LED_A7")
 			(uuid "aa3cb6d2-68a3-403b-8a91-a8f414519ba5")
 		)
 		(pad "22" thru_hole circle
@@ -46760,7 +46760,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K10")
+			(net "/LED_K7")
 			(uuid "ff025889-f79d-46ca-992b-b0f2024ee8a7")
 		)
 		(pad "23" thru_hole circle
@@ -46769,7 +46769,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A11")
+			(net "/LED_A6")
 			(uuid "22136a56-8d93-4696-ae15-e52c0f5fdf7c")
 		)
 		(pad "24" thru_hole circle
@@ -46778,7 +46778,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K11")
+			(net "/LED_K6")
 			(uuid "a124514e-c42c-4cea-af18-ca5de41e56e5")
 		)
 		(pad "25" thru_hole circle
@@ -46787,7 +46787,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A12")
+			(net "/LED_A5")
 			(uuid "48824607-0e77-44cb-b06b-f0bac363161e")
 		)
 		(pad "26" thru_hole circle
@@ -46796,7 +46796,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K12")
+			(net "/LED_K5")
 			(uuid "cc7048f3-d0e0-419f-9039-9b09614a0fa5")
 		)
 		(pad "27" thru_hole circle
@@ -46805,7 +46805,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A13")
+			(net "/LED_A4")
 			(uuid "ec0c4179-c9ac-441e-88a2-28be761bb17e")
 		)
 		(pad "28" thru_hole circle
@@ -46814,7 +46814,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K13")
+			(net "/LED_K4")
 			(uuid "51d54e09-5136-48b3-8e6f-81c19a8b7a16")
 		)
 		(pad "29" thru_hole circle
@@ -46823,7 +46823,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A14")
+			(net "/LED_A3")
 			(uuid "f9b1e5f0-139f-497e-9dbc-bdb57117136c")
 		)
 		(pad "30" thru_hole circle
@@ -46832,7 +46832,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K14")
+			(net "/LED_K3")
 			(uuid "2f09a217-728b-439c-9e24-799ce247097d")
 		)
 		(pad "31" thru_hole circle
@@ -46841,7 +46841,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A15")
+			(net "/LED_A2")
 			(uuid "c3f0deb8-b04c-4555-b306-009e84c1cc8a")
 		)
 		(pad "32" thru_hole circle
@@ -46850,7 +46850,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K15")
+			(net "/LED_K2")
 			(uuid "3a18781a-d310-47e3-841e-a3cdb83d64ec")
 		)
 		(pad "33" thru_hole circle
@@ -46859,7 +46859,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A16")
+			(net "/LED_A1")
 			(uuid "aabb0d2f-cb3d-4f69-81eb-ed0c524f3d88")
 		)
 		(pad "34" thru_hole circle
@@ -46868,7 +46868,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K16")
+			(net "/LED_K1")
 			(uuid "35714ad9-8d68-42fd-bcce-aaa48af91573")
 		)
 		(pad "35" thru_hole circle
@@ -84124,7 +84124,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
-			(net "/LED_A48")
+			(net "/LED_A37")
 			(uuid "4f927d93-667b-4254-b859-9b9609882c94")
 		)
 		(pad "2" thru_hole circle
@@ -84133,7 +84133,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K48")
+			(net "/LED_K37")
 			(uuid "3e42caae-b2f7-49ef-a238-997f26dc3887")
 		)
 		(pad "3" thru_hole circle
@@ -84142,7 +84142,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A47")
+			(net "/LED_A38")
 			(uuid "3ccfe14d-5919-4b7c-b72c-0634ab8a8b26")
 		)
 		(pad "4" thru_hole circle
@@ -84151,7 +84151,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K47")
+			(net "/LED_K38")
 			(uuid "494379c3-04ff-4a99-a9e4-ecfbfb30e2e2")
 		)
 		(pad "5" thru_hole circle
@@ -84160,7 +84160,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A46")
+			(net "/LED_A39")
 			(uuid "b2180a2f-3204-4745-aff7-2363098a0b6f")
 		)
 		(pad "6" thru_hole circle
@@ -84169,7 +84169,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K46")
+			(net "/LED_K39")
 			(uuid "8edb0c99-22d4-45b7-8527-039922bdc152")
 		)
 		(pad "7" thru_hole circle
@@ -84178,7 +84178,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A45")
+			(net "/LED_A40")
 			(uuid "6672042e-59b7-49ec-ad39-6d2582ba7c9b")
 		)
 		(pad "8" thru_hole circle
@@ -84187,7 +84187,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K45")
+			(net "/LED_K40")
 			(uuid "b1075ca7-e1a2-4213-9bf2-460d0695fd1c")
 		)
 		(pad "9" thru_hole circle
@@ -84196,7 +84196,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A44")
+			(net "/LED_A41")
 			(uuid "8bad6e55-0032-4e24-9acf-005f415ad0e7")
 		)
 		(pad "10" thru_hole circle
@@ -84205,7 +84205,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K44")
+			(net "/LED_K41")
 			(uuid "e9a94057-45c0-40e9-b3d0-f2c9530c748d")
 		)
 		(pad "11" thru_hole circle
@@ -84214,7 +84214,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A43")
+			(net "/LED_A42")
 			(uuid "10cd2291-8e5d-41d8-9909-fb4de12c97f3")
 		)
 		(pad "12" thru_hole circle
@@ -84223,7 +84223,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K43")
+			(net "/LED_K42")
 			(uuid "2862529a-2df0-4356-8b9e-2d93a1c69440")
 		)
 		(pad "13" thru_hole circle
@@ -84232,7 +84232,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A42")
+			(net "/LED_A43")
 			(uuid "82e1587f-c2d0-4b40-bafd-8274a1360e72")
 		)
 		(pad "14" thru_hole circle
@@ -84241,7 +84241,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K42")
+			(net "/LED_K43")
 			(uuid "7e67b7e6-deaf-4285-bb31-b3ebcfec80c3")
 		)
 		(pad "15" thru_hole circle
@@ -84250,7 +84250,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A41")
+			(net "/LED_A44")
 			(uuid "44856037-2506-45a2-b9d6-fc27d5474cc6")
 		)
 		(pad "16" thru_hole circle
@@ -84259,7 +84259,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K41")
+			(net "/LED_K44")
 			(uuid "781b3766-2654-4b08-af80-7efa13fc28aa")
 		)
 		(pad "17" thru_hole circle
@@ -84268,7 +84268,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A40")
+			(net "/LED_A33")
 			(uuid "de62c178-4c4b-4ab2-a381-23b9e7072136")
 		)
 		(pad "18" thru_hole circle
@@ -84277,7 +84277,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K40")
+			(net "/LED_K33")
 			(uuid "3995e826-d770-43dc-9fb1-4f5385d8e70a")
 		)
 		(pad "19" thru_hole circle
@@ -84304,7 +84304,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A39")
+			(net "/LED_A45")
 			(uuid "d8654d94-e29f-434c-b0b8-4ec5b5fa0d34")
 		)
 		(pad "22" thru_hole circle
@@ -84313,7 +84313,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K39")
+			(net "/LED_K45")
 			(uuid "5fa727f9-c14a-4cd5-a197-1ed442d66094")
 		)
 		(pad "23" thru_hole circle
@@ -84322,7 +84322,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A38")
+			(net "/LED_A34")
 			(uuid "622e3b92-0322-40a5-8954-6c77fddfeefb")
 		)
 		(pad "24" thru_hole circle
@@ -84331,7 +84331,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K38")
+			(net "/LED_K34")
 			(uuid "854c55cb-6727-432a-80d2-8de03802d61f")
 		)
 		(pad "25" thru_hole circle
@@ -84340,7 +84340,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A37")
+			(net "/LED_A46")
 			(uuid "0891ff7f-8a5b-428b-9497-efb4fb5e9f7a")
 		)
 		(pad "26" thru_hole circle
@@ -84349,7 +84349,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K37")
+			(net "/LED_K46")
 			(uuid "747aacc2-72a2-4888-9c98-430b59c47095")
 		)
 		(pad "27" thru_hole circle
@@ -84358,7 +84358,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A36")
+			(net "/LED_A35")
 			(uuid "fa37c73a-ce16-4dfa-99a3-f29d2ce0005e")
 		)
 		(pad "28" thru_hole circle
@@ -84367,7 +84367,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K36")
+			(net "/LED_K35")
 			(uuid "fd8ec764-4a8b-413d-989f-250c2e376cb8")
 		)
 		(pad "29" thru_hole circle
@@ -84376,7 +84376,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A35")
+			(net "/LED_A47")
 			(uuid "9d74d33a-7781-42c5-9c01-c20abee918e5")
 		)
 		(pad "30" thru_hole circle
@@ -84385,7 +84385,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K35")
+			(net "/LED_K47")
 			(uuid "9f90d5eb-d71a-4853-8eb8-729001b74ee4")
 		)
 		(pad "31" thru_hole circle
@@ -84394,7 +84394,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A34")
+			(net "/LED_A36")
 			(uuid "b9eb3e49-e14d-48c7-9b24-9162f185efb0")
 		)
 		(pad "32" thru_hole circle
@@ -84403,7 +84403,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K34")
+			(net "/LED_K36")
 			(uuid "d6606350-7905-4956-b7ff-3b5c4953341f")
 		)
 		(pad "33" thru_hole circle
@@ -84412,7 +84412,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A33")
+			(net "/LED_A48")
 			(uuid "6f1a49ab-3ef8-442c-bf84-6c912039af53")
 		)
 		(pad "34" thru_hole circle
@@ -84421,7 +84421,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K33")
+			(net "/LED_K48")
 			(uuid "9fda8a86-5c27-4b64-8d60-23a835bc7b06")
 		)
 		(pad "35" thru_hole circle
@@ -97650,7 +97650,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
-			(net "/LED_A80")
+			(net "/LED_A73")
 			(uuid "535fbd5e-4fee-4794-9e92-88f36861ca14")
 		)
 		(pad "2" thru_hole circle
@@ -97659,7 +97659,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K80")
+			(net "/LED_K73")
 			(uuid "cfbddfe4-2fe6-4c55-8503-825778e58393")
 		)
 		(pad "3" thru_hole circle
@@ -97668,7 +97668,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A79")
+			(net "/LED_A74")
 			(uuid "f5fd7201-e945-4e4b-bd2f-db8fab08b3cd")
 		)
 		(pad "4" thru_hole circle
@@ -97677,7 +97677,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K79")
+			(net "/LED_K74")
 			(uuid "22784fd9-03bb-429d-bc88-be264bb338e9")
 		)
 		(pad "5" thru_hole circle
@@ -97686,7 +97686,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A78")
+			(net "/LED_A75")
 			(uuid "bb41575e-c4f5-43b3-88d6-3720215e3287")
 		)
 		(pad "6" thru_hole circle
@@ -97695,7 +97695,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K78")
+			(net "/LED_K75")
 			(uuid "cc58faf1-3291-418a-9167-68319b9dac05")
 		)
 		(pad "7" thru_hole circle
@@ -97704,7 +97704,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A77")
+			(net "/LED_A76")
 			(uuid "814639b2-f893-4375-ba31-0de6380d9ac6")
 		)
 		(pad "8" thru_hole circle
@@ -97713,7 +97713,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K77")
+			(net "/LED_K76")
 			(uuid "9d83340f-9293-4f70-aadd-eb54baa5a9c9")
 		)
 		(pad "9" thru_hole circle
@@ -97722,7 +97722,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A76")
+			(net "/LED_A65")
 			(uuid "61e34ee7-df76-4292-943e-49be6bf16c2b")
 		)
 		(pad "10" thru_hole circle
@@ -97731,7 +97731,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K76")
+			(net "/LED_K65")
 			(uuid "d35179c1-3936-4e38-93dd-36a45851c55c")
 		)
 		(pad "11" thru_hole circle
@@ -97740,7 +97740,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A75")
+			(net "/LED_A77")
 			(uuid "9f89d11f-5f10-48c2-864c-65c0815aed59")
 		)
 		(pad "12" thru_hole circle
@@ -97749,7 +97749,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K75")
+			(net "/LED_K77")
 			(uuid "9828df19-f4e7-490e-b265-1d5e9388c4f8")
 		)
 		(pad "13" thru_hole circle
@@ -97758,7 +97758,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A74")
+			(net "/LED_A66")
 			(uuid "ac65c22b-a762-40ae-922d-7d075dc47087")
 		)
 		(pad "14" thru_hole circle
@@ -97767,7 +97767,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K74")
+			(net "/LED_K66")
 			(uuid "d3760540-6243-4074-b711-7e0e6276a759")
 		)
 		(pad "15" thru_hole circle
@@ -97776,7 +97776,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A73")
+			(net "/LED_A78")
 			(uuid "e9a6aebf-2469-4347-9150-8112d4728f32")
 		)
 		(pad "16" thru_hole circle
@@ -97785,7 +97785,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K73")
+			(net "/LED_K78")
 			(uuid "ebd336b1-de69-48b6-b72d-53dad9b27cfd")
 		)
 		(pad "17" thru_hole circle
@@ -97794,7 +97794,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A72")
+			(net "/LED_A67")
 			(uuid "fda51314-e14a-49cb-aadd-77a44edb7a89")
 		)
 		(pad "18" thru_hole circle
@@ -97803,7 +97803,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K72")
+			(net "/LED_K67")
 			(uuid "7df3d1b2-8712-4c99-ad5b-904ac9f51a8f")
 		)
 		(pad "19" thru_hole circle
@@ -97830,7 +97830,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A71")
+			(net "/LED_A79")
 			(uuid "b7705217-be5e-4e60-af67-a3b32f7d6051")
 		)
 		(pad "22" thru_hole circle
@@ -97839,7 +97839,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K71")
+			(net "/LED_K79")
 			(uuid "31a3a1db-eadf-45dd-8aaa-28d28c88d675")
 		)
 		(pad "23" thru_hole circle
@@ -97848,7 +97848,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A70")
+			(net "/LED_A68")
 			(uuid "294dcfbe-6325-4ffb-9ff2-bdb0de678126")
 		)
 		(pad "24" thru_hole circle
@@ -97857,7 +97857,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K70")
+			(net "/LED_K68")
 			(uuid "380ebdf9-d8c1-4b20-b841-3701bd2df4e8")
 		)
 		(pad "25" thru_hole circle
@@ -97866,7 +97866,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A69")
+			(net "/LED_A80")
 			(uuid "c61b59c9-e848-46f3-8e42-49026786b50d")
 		)
 		(pad "26" thru_hole circle
@@ -97875,7 +97875,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K69")
+			(net "/LED_K80")
 			(uuid "3799c1f7-9e10-4bc2-b100-712ca2eba898")
 		)
 		(pad "27" thru_hole circle
@@ -97884,7 +97884,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A68")
+			(net "/LED_A69")
 			(uuid "b60cbc1e-7490-4238-afa2-a5e6f462e0a0")
 		)
 		(pad "28" thru_hole circle
@@ -97893,7 +97893,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K68")
+			(net "/LED_K69")
 			(uuid "ec6496f0-3ae5-467b-b9a9-cf1ed869358c")
 		)
 		(pad "29" thru_hole circle
@@ -97902,7 +97902,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A67")
+			(net "/LED_A70")
 			(uuid "a2ec4ef4-6517-4b3c-a93b-a0a29056898d")
 		)
 		(pad "30" thru_hole circle
@@ -97911,7 +97911,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K67")
+			(net "/LED_K70")
 			(uuid "b17589b0-5316-49a9-92f7-fffe10533837")
 		)
 		(pad "31" thru_hole circle
@@ -97920,7 +97920,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A66")
+			(net "/LED_A71")
 			(uuid "9226c489-611d-40ef-b219-575925ec052a")
 		)
 		(pad "32" thru_hole circle
@@ -97929,7 +97929,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K66")
+			(net "/LED_K71")
 			(uuid "4c403d49-ba26-41bb-b9b2-b4b46fb63091")
 		)
 		(pad "33" thru_hole circle
@@ -97938,7 +97938,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A65")
+			(net "/LED_A72")
 			(uuid "4db6f85b-6adc-4be6-a29b-e389d85a8786")
 		)
 		(pad "34" thru_hole circle
@@ -97947,7 +97947,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K65")
+			(net "/LED_K72")
 			(uuid "fcd35c53-d626-4daf-8253-0349e15178c2")
 		)
 		(pad "35" thru_hole circle
@@ -129124,7 +129124,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
-			(net "/LED_A96")
+			(net "/LED_A85")
 			(uuid "699dcf3e-8897-48ce-8cab-24662316c57b")
 		)
 		(pad "2" thru_hole circle
@@ -129133,7 +129133,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K96")
+			(net "/LED_K85")
 			(uuid "5cd0518a-2dbf-4dec-bbdb-a7c7a2ff2667")
 		)
 		(pad "3" thru_hole circle
@@ -129142,7 +129142,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A95")
+			(net "/LED_A86")
 			(uuid "4b304ea8-b778-41c6-9a36-6dd2581a1e6b")
 		)
 		(pad "4" thru_hole circle
@@ -129151,7 +129151,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K95")
+			(net "/LED_K86")
 			(uuid "4e385b53-de7e-43a5-a534-b1de9bc5849c")
 		)
 		(pad "5" thru_hole circle
@@ -129160,7 +129160,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A94")
+			(net "/LED_A87")
 			(uuid "b53cddb3-786a-4120-9db5-013b78d64be6")
 		)
 		(pad "6" thru_hole circle
@@ -129169,7 +129169,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K94")
+			(net "/LED_K87")
 			(uuid "59403d5b-c759-4f30-a65e-00143611dc40")
 		)
 		(pad "7" thru_hole circle
@@ -129178,7 +129178,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A93")
+			(net "/LED_A88")
 			(uuid "2d221f64-86ac-4200-8814-761cbda05332")
 		)
 		(pad "8" thru_hole circle
@@ -129187,7 +129187,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K93")
+			(net "/LED_K88")
 			(uuid "ad83bf39-b415-41eb-9571-05700b8403dd")
 		)
 		(pad "9" thru_hole circle
@@ -129196,7 +129196,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A92")
+			(net "/LED_A89")
 			(uuid "72ba69ec-4e02-4070-9d50-610dcadf9219")
 		)
 		(pad "10" thru_hole circle
@@ -129205,7 +129205,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K92")
+			(net "/LED_K89")
 			(uuid "bf396dd7-21eb-4fdb-b901-9be6de59fccc")
 		)
 		(pad "11" thru_hole circle
@@ -129214,7 +129214,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A91")
+			(net "/LED_A90")
 			(uuid "cbc85958-07b4-4774-821f-d512e73597a1")
 		)
 		(pad "12" thru_hole circle
@@ -129223,7 +129223,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K91")
+			(net "/LED_K90")
 			(uuid "518b1ac7-f0d8-4731-85b0-179f393ff4bb")
 		)
 		(pad "13" thru_hole circle
@@ -129232,7 +129232,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A90")
+			(net "/LED_A91")
 			(uuid "b7ecd11b-2a9d-4930-a76a-c9c758cfbd17")
 		)
 		(pad "14" thru_hole circle
@@ -129241,7 +129241,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K90")
+			(net "/LED_K91")
 			(uuid "9e868669-ff81-4ca4-8939-3b1c69fff7ab")
 		)
 		(pad "15" thru_hole circle
@@ -129250,7 +129250,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A89")
+			(net "/LED_A92")
 			(uuid "86e0816c-9600-4d12-940a-76e9584cea1f")
 		)
 		(pad "16" thru_hole circle
@@ -129259,7 +129259,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K89")
+			(net "/LED_K92")
 			(uuid "35ff1599-c97e-4967-80c8-dc019affb9f7")
 		)
 		(pad "17" thru_hole circle
@@ -129268,7 +129268,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A88")
+			(net "/LED_A81")
 			(uuid "2234b969-201a-4a2a-8189-0d269348fa96")
 		)
 		(pad "18" thru_hole circle
@@ -129277,7 +129277,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K88")
+			(net "/LED_K81")
 			(uuid "d459b5a9-bb72-4fe0-992a-48d2d5f753d5")
 		)
 		(pad "19" thru_hole circle
@@ -129304,7 +129304,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A87")
+			(net "/LED_A93")
 			(uuid "bab5db2d-e973-4b0c-95f9-62c6d8d99da8")
 		)
 		(pad "22" thru_hole circle
@@ -129313,7 +129313,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K87")
+			(net "/LED_K93")
 			(uuid "ca5a01d3-c45c-4d90-9792-a652fa02ca2a")
 		)
 		(pad "23" thru_hole circle
@@ -129322,7 +129322,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A86")
+			(net "/LED_A82")
 			(uuid "0ea20c13-d48e-4cb8-b718-88ac63bc571b")
 		)
 		(pad "24" thru_hole circle
@@ -129331,7 +129331,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K86")
+			(net "/LED_K82")
 			(uuid "8c5c1049-85bf-4399-8851-88640a75a0de")
 		)
 		(pad "25" thru_hole circle
@@ -129340,7 +129340,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A85")
+			(net "/LED_A94")
 			(uuid "ae43b2da-5d1a-418d-b261-2a974cbc5f08")
 		)
 		(pad "26" thru_hole circle
@@ -129349,7 +129349,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K85")
+			(net "/LED_K94")
 			(uuid "40a7872b-8308-4390-a39b-fdc4339d0ba5")
 		)
 		(pad "27" thru_hole circle
@@ -129358,7 +129358,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A84")
+			(net "/LED_A83")
 			(uuid "2fbb52fd-126e-44a4-a599-7e946bb8a43a")
 		)
 		(pad "28" thru_hole circle
@@ -129367,7 +129367,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K84")
+			(net "/LED_K83")
 			(uuid "fd772f8f-ddfd-4afe-98ca-5a0adaa8654b")
 		)
 		(pad "29" thru_hole circle
@@ -129376,7 +129376,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A83")
+			(net "/LED_A95")
 			(uuid "9fe28ef0-de10-40ac-be4c-d9c8b3a3f508")
 		)
 		(pad "30" thru_hole circle
@@ -129385,7 +129385,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K83")
+			(net "/LED_K95")
 			(uuid "81ca7761-191f-4ae4-b240-54a12211e829")
 		)
 		(pad "31" thru_hole circle
@@ -129394,7 +129394,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A82")
+			(net "/LED_A84")
 			(uuid "b23e6b03-df59-49de-bb24-3850af71ed74")
 		)
 		(pad "32" thru_hole circle
@@ -129403,7 +129403,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K82")
+			(net "/LED_K84")
 			(uuid "fff94747-a3de-43f8-b1fb-fca5cb8fc048")
 		)
 		(pad "33" thru_hole circle
@@ -129412,7 +129412,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_A81")
+			(net "/LED_A96")
 			(uuid "33101b17-322a-449e-97d4-3e22228c8cb4")
 		)
 		(pad "34" thru_hole circle
@@ -129421,7 +129421,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED_K81")
+			(net "/LED_K96")
 			(uuid "73fd4651-5acf-4861-bfd5-782dc6e7acfd")
 		)
 		(pad "35" thru_hole circle
