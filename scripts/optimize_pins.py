@@ -90,13 +90,20 @@ for i, u in enumerate(left_m):
 for i, u in enumerate(right_m):
     for c in (ncols_left + 2 * i + 1, ncols_left + 2 * i + 2):
         col_owner[c] = u
-per_mux_count = {}
-for n in sorted(pos_rc, key=lambda n: (pos_rc[n][1], pos_rc[n][0])):
-    r, c = pos_rc[n]
-    u = col_owner[c]
-    k = per_mux_count.get(u, 0)
-    per_mux_count[u] = k + 1
-    NTC[n] = (u, MUX_INPUT_PIN[k])
+# geometric input assignment: mux input pads sorted by y get the wells
+# sorted by (row, nearest column first) - fan-in with no crossings
+INPUT_PINS = [str(p) for p in list(range(2, 10)) + list(range(16, 24))]
+mux_wells = {}
+for n, (r, c) in pos_rc.items():
+    mux_wells.setdefault(col_owner[c], []).append(n)
+for u, wells in mux_wells.items():
+    ux = fppos[u][0]
+    ins = sorted(INPUT_PINS,
+                 key=lambda pin: (pads[(u, pin)][1], pads[(u, pin)][0]))
+    wells.sort(key=lambda n: (pos_rc[n][0],
+                              abs(led_xy[n][0] - ux)))
+    for pin, n in zip(ins, wells):
+        NTC[n] = (u, int(pin))
 
 # ---- emit tables ----
 print("\nCONN_MAP = {")

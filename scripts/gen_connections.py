@@ -171,7 +171,7 @@ def main():
     for n in range(1, 97):
         ja, pa, pk = dd.led_conn_pins(n)
         mref, mpin = dd.ntc_mux(n)
-        mch = (n - 1) % 16
+        mch = 9 - mpin if mpin <= 9 else 31 - mpin   # pin -> S-channel index
         A(f"| {n} | LED{n} | TH{n} | R{n} | {ja}.{pa} / {ja}.{pk} "
           f"| {mref}.{mpin} (I{mch}) |")
     A("")
