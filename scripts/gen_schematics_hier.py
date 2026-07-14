@@ -479,10 +479,12 @@ def main():
     sheet_uuids = place_root(
         root, led, root_uuid, "well.kicad_sch",
         ["LED_A", "LED_K", "NTC_OUT"],
-        lambda n: [f"LED_A{n}", f"LED_K{n}", f"NTC{n}"],
+        lambda w: [f"LED_A{dd.well_channel(w)}", f"LED_K{dd.well_channel(w)}",
+                   f"NTC{w}"],
         led_pos,
-        texts=[("96 WELLS (CH01..CH96) - see well.kicad_sch", 25.4, 22.86, 2.5),
-               ("NTC MUXES U1-U6 (ch 1-16 / 17-32 / 33-48 / 49-64 / 65-80 / 81-96)",
+        texts=[("96 WELLS (by grid position) - see well.kicad_sch",
+                25.4, 22.86, 2.5),
+               ("NTC MUXES U1-U6 (each takes its 16 nearest wells)",
                 25.4, 273.05, 2.5),
                ("RIBBONS TO CONTROL BOARD", 490.22, 227.33, 2.5)])
     power_corner(root, proj, root_uuid, ["+3.3V", "GND"], 30.48, 388.62)
@@ -545,9 +547,10 @@ def main():
     sheet_uuids = place_root(
         root, ctl, root_uuid, "channel.kicad_sch",
         ["LED_A", "LED_K", "DIM"],
-        lambda n: [f"LED_A{n}", f"LED_K{n}", f"DIM{n}"],
+        lambda d: [f"LED_A{dd.drv_channel(d)}", f"LED_K{dd.drv_channel(d)}",
+                   f"DIM{d}"],
         pos,
-        texts=[("96 DRIVER CHANNELS (CH01..CH96) - see channel.kicad_sch",
+        texts=[("96 DRIVER CHANNELS - see channel.kicad_sch",
                 25.4, 22.86, 2.5),
                ("PCA9685 PWM BANK 0x40-0x45", 25.4, 298.45, 2.5),
                ("5V RAIL + 24V INPUT", 25.4, 421.64, 2.5),

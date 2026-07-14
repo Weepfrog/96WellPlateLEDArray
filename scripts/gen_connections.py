@@ -85,6 +85,31 @@ def main():
                                    for k, v in dd.GPIO_PLAN.items()))
     A("")
 
+    # ---------------- logical channel map (firmware bible) ----------------
+    A("## Logical channel map (well ↔ channel ↔ driver ↔ PWM)")
+    A("")
+    A("The driver serving a well is **not** the same index — each board's "
+      "ribbon pinout was optimized independently to minimize crossings, and "
+      "the cable wires them together slot-for-slot. Firmware addresses a "
+      "well's brightness through the PCA output in this table, and reads its "
+      "temperature through the mux input. **This is the mapping to hard-code.**")
+    A("")
+    well_of = {dd.well_channel(w): w for w in range(1, 97)}
+    drv_of = {dd.drv_channel(d): d for d in range(1, 97)}
+    A("| CH | Well (grid) | Ribbon | Driver | PWM (PCA.out) | NTC (mux.in) |")
+    A("|---|---|---|---|---|---|")
+    inv_led = {v: k for k, v in dd.PCA_LED_PIN.items()}
+    for ch in range(1, 97):
+        w = well_of[ch]; d = drv_of[ch]
+        r, c = dd.ch_rc(w)
+        ja, pa, pk = dd.WELL_CONN[w]
+        pref, ppin = dd.PCA_MAP[d]
+        mref, mpin = dd.ntc_mux(w)
+        mch = 9 - mpin if mpin <= 9 else 31 - mpin
+        A(f"| {ch} | LED{w} (r{r}c{c}) | {ja} p{pa}/{pk} | U{d} "
+          f"| {pref}.LED{inv_led.get(ppin,'?')} | {mref}.I{mch} |")
+    A("")
+
     # ---------------- control board channel ----------------
     A("## Control board — driver channel (repeat for n = 1…96)")
     A("")
@@ -102,15 +127,20 @@ def main():
     A("U<n>.2 (GND) → GND")
     A("```")
     A("")
-    A("| CH | PT4115 | Rs | L | D | Cin | pulldown | ribbon A / K | DIM source |")
+    A("Drivers are indexed physically (U1…U96); the logical channel each "
+      "carries is CH = whichever ribbon slot it was assigned. Table sorted "
+      "by driver.")
+    A("")
+    A("| Driver | CH | Rs | L | D | Cin | pulldown | ribbon A / K | DIM source |")
     A("|---|---|---|---|---|---|---|---|---|")
-    for n in range(1, 97):
-        ja, pa, pk = dd.led_conn_pins(n)
-        k = (n - 1) // 16
-        li = (n - 1) % 16
-        pca = f"U{101+k}.{dd.PCA_LED_PIN[li]} (LED{li})"
-        A(f"| {n} | U{n} | R{n} | L{n} | D{n} | C{n} | R{100+n} "
-          f"| {ja}.{pa} / {ja}.{pk} | {pca} |")
+    inv_pca_led = {v: k for k, v in dd.PCA_LED_PIN.items()}
+    for d in range(1, 97):
+        ch = dd.drv_channel(d)
+        ja, pa, pk = dd.DRV_CONN[d]
+        pref, ppin = dd.PCA_MAP[d]
+        li = inv_pca_led.get(ppin, "?")
+        A(f"| U{d} | {ch} | R{d} | L{d} | D{d} | C{d} | R{100+d} "
+          f"| {ja}.{pa} / {ja}.{pk} | {pref}.{ppin} (LED{li}) |")
     A("")
 
     # ---------------- PCA9685 ----------------
@@ -166,13 +196,18 @@ def main():
     A("          └── NTC<n> ── mux input (see table)")
     A("```")
     A("")
-    A("| CH | LED | NTC | divider R | ribbon A / K | mux input |")
-    A("|---|---|---|---|---|---|")
-    for n in range(1, 97):
-        ja, pa, pk = dd.led_conn_pins(n)
-        mref, mpin = dd.ntc_mux(n)
+    A("Wells are indexed by grid position (LED1…LED96, row-major). The "
+      "logical channel each well carries is CH. Table sorted by well.")
+    A("")
+    A("| Well | row,col | CH | NTC | divider R | ribbon A / K | mux input |")
+    A("|---|---|---|---|---|---|---|")
+    for w in range(1, 97):
+        r, c = dd.ch_rc(w)
+        ch = dd.well_channel(w)
+        ja, pa, pk = dd.WELL_CONN[w]
+        mref, mpin = dd.ntc_mux(w)
         mch = 9 - mpin if mpin <= 9 else 31 - mpin   # pin -> S-channel index
-        A(f"| {n} | LED{n} | TH{n} | R{n} | {ja}.{pa} / {ja}.{pk} "
+        A(f"| LED{w} | {r},{c} | {ch} | TH{w} | R{w} | {ja}.{pa} / {ja}.{pk} "
           f"| {mref}.{mpin} (I{mch}) |")
     A("")
 
@@ -196,10 +231,11 @@ def main():
     # ---------------- ribbons ----------------
     A("## Ribbon cables (straight 1:1, keyed)")
     A("")
-    A("J1-J6 (40-way, one PCA9685 bank per ribbon): channel = "
-      "16*(J#-1) + i for pair i = 1..16. Pairs 1-9 on pins 1-18, pairs "
-      "10-16 on pins 21-34; pin 20 UNUSED (IDE-cable key), pins 19 and "
-      "35-40 = GND. A = odd pin, K = even pin of each pair.")
+    A("J1-J6 (40-way): each ribbon carries 16 channels as pin-pairs. Pairs "
+      "1-9 on pins 1-18, pairs 10-16 on pins 21-34; pin 20 UNUSED (IDE-cable "
+      "key), pins 19 and 35-40 = GND. A = odd pin, K = even pin of each pair. "
+      "Which well and which driver land on each slot is in the channel map "
+      "above (they differ per board — the cable is a straight 1:1).")
     A("")
     A("J9 (20-way):")
     A("")
@@ -234,18 +270,17 @@ def main():
     OUT.write_text("\n".join(L) + "\n", encoding="utf-8")
     print(f"wrote {OUT} ({len(L)} lines)")
 
-    # cross-board consistency check: connector pins must agree
-    for n in range(1, 97):
-        assert dd.led_conn_pins(n) == dd.led_conn_pins(n), "impossible"
+    # cross-board consistency check: every ribbon pin must carry the same
+    # LED_A#/LED_K# net on both boards (the cable is a straight 1:1).
     import re
     chan_net = re.compile(r"^LED_[AK]\d+$")
-    ribbon = {"J1", "J2", "J3", "J4", "J5"}
+    ribbon = {f"J{k}" for k in range(1, 7)}
     ja_led = {(name, r, p) for name, ms in led["nets"].items()
               if chan_net.match(name) for r, p in ms if r in ribbon}
     ja_ctl = {(name, r, p) for name, ms in ctl["nets"].items()
               if chan_net.match(name) for r, p in ms if r in ribbon}
     assert ja_led == ja_ctl, "ribbon pin mismatch between boards!"
-    print("cross-board ribbon consistency: OK")
+    print(f"cross-board ribbon consistency: OK ({len(ja_led)} pin-nets)")
 
 
 if __name__ == "__main__":

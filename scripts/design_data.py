@@ -25,14 +25,36 @@ def ch_rc(n):  # channel -> (row, col) 1-based
     return ((n - 1) // 12 + 1, (n - 1) % 12 + 1)
 
 
-# LED connector map: 6x 40-pin ribbons (IDE-safe), pair order jointly
-# optimized for both boards' placement; PCA outputs geometry-assigned.
-from pin_maps import CONN_MAP, NTC_MAP, PCA_MAP
+# Decoupled ribbon maps: a SLOT (connector Jk + IDE-safe pin-pair) is the
+# logical channel.  Wells and drivers are assigned to slots independently
+# (each board optimized on its own geometry); the cable wires slot->slot.
+from pin_maps import WELL_CONN, DRV_CONN, NTC_MAP, PCA_MAP
 
 
-def led_conn_pins(n):
-    """Return (conn_ref, anode_pin, cathode_pin) for channel n (1..96)."""
-    return CONN_MAP[n]
+def pair_pins(i):
+    """IDE-safe pair index 1..16 -> (anode_pin, cathode_pin)."""
+    return (2 * i - 1, 2 * i) if i <= 9 else (2 * i + 1, 2 * i + 2)
+
+
+def slot2ch(conn_ref, anode_pin):
+    """Ribbon slot (Jk, pinA) -> logical channel 1..96.  Same on both boards,
+    so a well and a driver on the same slot share net LED_A<ch>/LED_K<ch>."""
+    k = int(conn_ref[1:])
+    a = anode_pin
+    i = (a + 1) // 2 if a <= 17 else (a - 1) // 2
+    return (k - 1) * 16 + i
+
+
+def well_channel(w):
+    """Logical channel carrying LED well w."""
+    j, pa, pk = WELL_CONN[w]
+    return slot2ch(j, pa)
+
+
+def drv_channel(d):
+    """Logical channel carrying driver d."""
+    j, pa, pk = DRV_CONN[d]
+    return slot2ch(j, pa)
 
 
 # 4067 mux input pin numbers: I0..I7 = pins 9..2, I8..I15 = pins 23..16
@@ -156,39 +178,41 @@ def build_led_board():
     def net(name, ref, pin):
         nets.setdefault(name, []).append((ref, str(pin)))
 
-    # --- 96 LED/NTC clusters ---
-    for n in range(1, 97):
-        r, c = ch_rc(n)
+    # --- 96 LED/NTC clusters (indexed by grid well w; the logical channel
+    #     carried on the ribbon is well_channel(w), possibly != w) ---
+    for w in range(1, 97):
+        r, c = ch_rc(w)
         # schematic cluster (A1): 55mm x-pitch, 55mm y-pitch
         sx, sy = 35 + (c - 1) * 55, 45 + (r - 1) * 55
         # pcb: 9mm grid, field origin (19.5, 14)
         px, py = 19.5 + (c - 1) * 9.0, 14.0 + (r - 1) * 9.0
+        ch = well_channel(w)
 
         parts += [
-            part(f"LED{n}", LIB["led"], "HL-C3535F15R3GA-ZW 660nm",
+            part(f"LED{w}", LIB["led"], "HL-C3535F15R3GA-ZW 660nm",
                  FP["led"], "C5445086", (sx, sy), (px, py), 0,
-                 desc=f"660nm LED ch{n} (row{r},col{c})"),
-            part(f"TH{n}", LIB["ntc"], "NTC 10k B3434",
+                 desc=f"660nm LED well{w} (row{r},col{c}) -> ch{ch}"),
+            part(f"TH{w}", LIB["ntc"], "NTC 10k B3434",
                  FP["r0603"], "C13564", (sx + 17.78, sy - 5.08),
                  (px + 3.6, py - 2.0), 90,
-                 desc=f"NTC under LED{n}"),
-            part(f"R{n}", LIB["r"], "10k 1%",
+                 desc=f"NTC under LED{w}"),
+            part(f"R{w}", LIB["r"], "10k 1%",
                  FP["r0603"], "C25804", (sx + 17.78, sy + 8.89),
                  (px + 3.6, py + 2.0), 90,
-                 desc=f"NTC divider lower leg ch{n}"),
+                 desc=f"NTC divider lower leg well{w}"),
         ]
-        ja, pa, pk = led_conn_pins(n)
-        net(f"LED_A{n}", f"LED{n}", 1)          # pad 1 = anode ('+' silk)
-        net(f"LED_A{n}", ja, pa)
-        net(f"LED_K{n}", f"LED{n}", 2)          # pad 2 = cathode
-        net(f"LED_K{n}", f"LED{n}", 3)          # pad 3 = thermal, tie to cathode
-        net(f"LED_K{n}", ja, pk)
-        net("+3.3V", f"TH{n}", 1)
-        net(f"NTC{n}", f"TH{n}", 2)
-        net(f"NTC{n}", f"R{n}", 1)
-        mref, mpin = ntc_mux(n)
-        net(f"NTC{n}", mref, mpin)
-        net("GND", f"R{n}", 2)
+        ja, pa, pk = WELL_CONN[w]
+        net(f"LED_A{ch}", f"LED{w}", 1)         # pad 1 = anode ('+' silk)
+        net(f"LED_A{ch}", ja, pa)
+        net(f"LED_K{ch}", f"LED{w}", 2)         # pad 2 = cathode
+        net(f"LED_K{ch}", f"LED{w}", 3)         # pad 3 = thermal, tie to cathode
+        net(f"LED_K{ch}", ja, pk)
+        net("+3.3V", f"TH{w}", 1)
+        net(f"NTC{w}", f"TH{w}", 2)
+        net(f"NTC{w}", f"R{w}", 1)
+        mref, mpin = ntc_mux(w)
+        net(f"NTC{w}", mref, mpin)
+        net("GND", f"R{w}", 2)
 
     # --- 6 muxes + decoupling (bottom strip) ---
     for m in range(1, 7):
@@ -196,7 +220,7 @@ def build_led_board():
         px, py = 24 + (m - 1) * 19, 88
         parts += [
             part(f"U{m}", LIB["mux"], "CD74HC4067M96", FP["mux"], "C496123",
-                 (sx, sy), (px, py), 0, desc=f"NTC mux {m} (ch {16*(m-1)+1}-{16*m})"),
+                 (sx, sy), (px, py), 0, desc=f"NTC mux {m} (16 nearest wells)"),
             part(f"C{m}", LIB["c"], "100nF", FP["c0603"], "C14663",
                  (sx + 25.4, sy - 12.7), (px + 6.4, py - 7.0), 90,
                  desc=f"decoupling U{m}"),
@@ -218,9 +242,9 @@ def build_led_board():
         px = 66 + ((j - 1) % 3) * 60
         py = 26.5 if j <= 3 else 135.3
         parts.append(part(f"J{j}", LIB["conn40"],
-                          f"LED ch {16*(j-1)+1}-{16*j}",
+                          f"LED ribbon {j} (16 ch)",
                           FP["idc40"], "C9043", (sx, sy), (px, py), 90,
-                          desc=f"2x20 IDC ribbon {j} (PCA bank {j})"))
+                          desc=f"2x20 IDC ribbon {j}"))
         for gp in (19, 35, 36, 37, 38, 39, 40):
             net("GND", f"J{j}", gp)
         # pin 20 left unconnected: IDE-cable key compatibility
@@ -259,52 +283,54 @@ def build_control_board():
     def net(name, ref, pin):
         nets.setdefault(name, []).append((ref, str(pin)))
 
-    # --- 96 driver channels ---
-    for n in range(1, 97):
-        r, c = ch_rc(n)
+    # --- 96 driver channels (indexed by driver d; the logical channel it
+    #     drives is drv_channel(d), possibly != d). DIM/SW stay per-driver. ---
+    for d in range(1, 97):
+        r, c = ch_rc(d)
         sx, sy = 45 + (c - 1) * 92, 50 + (r - 1) * 62   # A0 sheet
         px, py = 22 + (c - 1) * 12.0, 40 + (r - 1) * 14.0
+        ch = drv_channel(d)
 
         parts += [
-            part(f"U{n}", LIB["pt4115"], "PT4115", FP["pt4115"], "C347356",
-                 (sx, sy), (px, py), 0, desc=f"buck CC driver ch{n} (row{r},col{c})"),
-            part(f"R{n}", LIB["r"], "0.39R 1%", FP["r0805"], "C2930218",
+            part(f"U{d}", LIB["pt4115"], "PT4115", FP["pt4115"], "C347356",
+                 (sx, sy), (px, py), 0, desc=f"buck CC driver {d} -> ch{ch}"),
+            part(f"R{d}", LIB["r"], "0.39R 1%", FP["r0805"], "C2930218",
                  (sx - 20.32, sy - 7.62), (px - 3.8, py - 4.4), 90,
-                 desc=f"Rsense ch{n} (256mA)"),
-            part(f"L{n}", LIB["l"], "47uH", FP["swpa4030"], "C54731",
+                 desc=f"Rsense drv{d} (256mA)"),
+            part(f"L{d}", LIB["l"], "47uH", FP["swpa4030"], "C54731",
                  (sx + 16.51, sy - 7.62), (px + 3.2, py - 4.4), 0,
-                 desc=f"buck inductor ch{n}"),
-            part(f"D{n}", LIB["dsch"], "SS34", FP["sma"], "C8678",
+                 desc=f"buck inductor drv{d}"),
+            part(f"D{d}", LIB["dsch"], "SS34", FP["sma"], "C8678",
                  (sx + 16.51, sy + 6.35), (px + 2.6, py + 4.2), 180,
-                 desc=f"freewheel ch{n}"),
-            part(f"C{n}", LIB["c"], "2.2uF 50V", FP["c0805"], "C125847",
+                 desc=f"freewheel drv{d}"),
+            part(f"C{d}", LIB["c"], "2.2uF 50V", FP["c0805"], "C125847",
                  (sx - 20.32, sy + 6.35), (px - 4.0, py + 4.2), 90,
-                 desc=f"VIN cap ch{n}"),
-            part(f"R{100 + n}", LIB["r"], "100k", FP["r0603"], "C25803",
+                 desc=f"VIN cap drv{d}"),
+            part(f"R{100 + d}", LIB["r"], "100k", FP["r0603"], "C25803",
                  (sx - 1.27, sy + 12.7), (px, py + 8.8), 0,
-                 desc=f"DIM pulldown ch{n}"),
+                 desc=f"DIM pulldown drv{d}"),
         ]
         # nets
-        net("+24V", f"R{n}", 1)
-        net("+24V", f"C{n}", 1)
-        net("+24V", f"D{n}", 1)                 # cathode to +24V
-        net("+24V", f"U{n}", 5)                 # VIN
-        net(f"LED_A{n}", f"R{n}", 2)            # CSN node
-        net(f"LED_A{n}", f"U{n}", 4)
-        net(f"SW{n}", f"U{n}", 1)
-        net(f"SW{n}", f"L{n}", 1)
-        net(f"SW{n}", f"D{n}", 2)               # anode to SW
-        net(f"LED_K{n}", f"L{n}", 2)
-        net(f"DIM{n}", f"U{n}", 3)
-        net(f"DIM{n}", f"R{100 + n}", 1)
-        net("GND", f"U{n}", 2)
-        net("GND", f"C{n}", 2)
-        net("GND", f"R{100 + n}", 2)
-        ja, pa, pk = led_conn_pins(n)
-        net(f"LED_A{n}", ja, pa)
-        net(f"LED_K{n}", ja, pk)
-        pca_ref, pca_pin = PCA_MAP[n]
-        net(f"DIM{n}", pca_ref, pca_pin)
+        net("+24V", f"R{d}", 1)
+        net("+24V", f"C{d}", 1)
+        net("+24V", f"D{d}", 1)                 # cathode to +24V
+        net("+24V", f"U{d}", 5)                 # VIN
+        net(f"LED_A{ch}", f"R{d}", 2)           # CSN node
+        net(f"LED_A{ch}", f"U{d}", 4)
+        net(f"SW{d}", f"U{d}", 1)
+        net(f"SW{d}", f"L{d}", 1)
+        net(f"SW{d}", f"D{d}", 2)               # anode to SW
+        net(f"LED_K{ch}", f"L{d}", 2)
+        net(f"DIM{d}", f"U{d}", 3)
+        net(f"DIM{d}", f"R{100 + d}", 1)
+        net("GND", f"U{d}", 2)
+        net("GND", f"C{d}", 2)
+        net("GND", f"R{100 + d}", 2)
+        ja, pa, pk = DRV_CONN[d]
+        net(f"LED_A{ch}", ja, pa)
+        net(f"LED_K{ch}", ja, pk)
+        pca_ref, pca_pin = PCA_MAP[d]
+        net(f"DIM{d}", pca_ref, pca_pin)
 
     # --- PCA9685 bank ---
     for k in range(6):
@@ -314,7 +340,7 @@ def build_control_board():
         parts += [
             part(u, LIB["pca"], f"PCA9685PW (0x{0x40 + k:02X})", FP["tssop28"],
                  "C2678753", (sx, sy), (px, py), 0,
-                 desc=f"16ch PWM, channels {16*k+1}-{16*k+16}"),
+                 desc=f"16ch PWM 0x{0x40 + k:02X} (drives its nearest driver cluster)"),
             part(f"C{121 + k}", LIB["c"], "100nF", FP["c0603"], "C14663",
                  (sx + 20.32, sy - 17.78), (px + 6.6, py - 3.0), 90,
                  desc=f"decoupling {u}"),
@@ -482,9 +508,9 @@ def build_control_board():
         px = 36 + ((j - 1) % 3) * 60
         py = 26.5 if j <= 3 else 136.8
         parts.append(part(f"J{j}", LIB["conn40"],
-                          f"LED ch {16*(j-1)+1}-{16*j}",
+                          f"LED ribbon {j} (16 ch)",
                           FP["idc40"], "C9043", (sx, sy), (px, py), 270,
-                          desc=f"2x20 IDC ribbon {j} (PCA bank {j})"))
+                          desc=f"2x20 IDC ribbon {j}"))
         for gp in (19, 35, 36, 37, 38, 39, 40):
             net("GND", f"J{j}", gp)
     parts.append(part("J9", LIB["conn20"], "logic/analog", FP["idc20"],
@@ -494,11 +520,14 @@ def build_control_board():
         net(sig, "J9", p)
 
     # --- test points ---
+    # debug triplet probes driver 1's full channel (DIM + its ribbon A/K)
+    _dch = drv_channel(1)
     tps = [("+24V", (68, 166)), ("+5V", (74, 166)), ("+3.3V", (80, 166)),
            ("GND", (86, 166)), ("GND", (92, 166)), ("SW_5V", (98, 166)),
            ("I2C_SDA", (104, 166)), ("I2C_SCL", (110, 166)),
            ("FAN_SW", (152, 178)),
-           ("DIM1", (68, 178)), ("LED_A1", (74, 178)), ("LED_K1", (80, 178))]
+           ("DIM1", (68, 178)), (f"LED_A{_dch}", (74, 178)),
+           (f"LED_K{_dch}", (80, 178))]
     for i, (tnet, txy) in enumerate(tps, 1):
         parts.append(part(f"TP{i}", LIB["tp"], tnet, FP["tp"], "",
                           (0, 0), txy, 0, desc=f"test point {tnet}"))
