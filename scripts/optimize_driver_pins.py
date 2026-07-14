@@ -97,6 +97,32 @@ for k in range(6):
     for pin, n in zip(pins_sorted, chans_sorted):
         PCA[n] = (ref, pin)
 
+# NTC_MAP: each mux owns 2 LED columns (U1=cols 1-2 ... U6=cols 11-12);
+# input pads and wells zipped in geometric order for a crossing-free fan-in.
+lb = pcbnew.LoadBoard(str(ROOT / "12x8 Led Array 9mm pitch" /
+                           "12x8 Led Array 9mm pitch.kicad_pcb"))
+mux_pads = {}
+for fp in lb.GetFootprints():
+    r = fp.GetReference()
+    if r in (f"U{k}" for k in range(1, 7)):
+        for pad in fp.Pads():
+            mux_pads[(r, pad.GetNumber())] = (
+                tomm(pad.GetPosition().x), tomm(pad.GetPosition().y))
+INPUT_PINS = [str(p) for p in list(range(2, 10)) + list(range(16, 24))]
+col_of = {n: (n - 1) % 12 + 1 for n in range(1, 97)}
+row_of = {n: (n - 1) // 12 + 1 for n in range(1, 97)}
+NTC = {}
+for k in range(1, 7):
+    u = f"U{k}"
+    wells96 = [n for n in range(1, 97) if col_of[n] in (2 * k - 1, 2 * k)]
+    # NTC lines arrive from the array (left of the mux stack): sort pads
+    # by (y, x) and wells by (row, col) - rows map onto pad rows cleanly
+    ins = sorted(INPUT_PINS, key=lambda p: (mux_pads[(u, p)][1],
+                                            mux_pads[(u, p)][0]))
+    wells96.sort(key=lambda n: (row_of[n], col_of[n]))
+    for pin, n in zip(ins, wells96):
+        NTC[n] = (u, int(pin))
+
 print("CONN_MAP = {")
 for n in range(1, 97):
     print(f"    {n}: {CONN[n]},")
@@ -105,4 +131,9 @@ print()
 print("PCA_MAP = {")
 for n in range(1, 97):
     print(f"    {n}: {PCA[n]},")
+print("}")
+print()
+print("NTC_MAP = {")
+for n in range(1, 97):
+    print(f"    {n}: {NTC[n]},")
 print("}")

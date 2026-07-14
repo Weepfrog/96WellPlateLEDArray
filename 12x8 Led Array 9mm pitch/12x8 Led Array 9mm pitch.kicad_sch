@@ -16077,7 +16077,7 @@
 		)
 		(uuid "5653c808-997a-51f6-b049-c0fca697a31e")
 	)
-	(label "NTC2"
+	(label "NTC49"
 		(at 15.24 293.37 180)
 		(effects
 			(font
@@ -16087,7 +16087,7 @@
 		)
 		(uuid "40c3f646-e180-5af9-a2b5-ab25e3f788e0")
 	)
-	(label "NTC14"
+	(label "NTC50"
 		(at 15.24 295.91 180)
 		(effects
 			(font
@@ -16097,7 +16097,7 @@
 		)
 		(uuid "1057b70e-1acc-507a-8de0-39bf69ea54f8")
 	)
-	(label "NTC26"
+	(label "NTC61"
 		(at 15.24 298.45 180)
 		(effects
 			(font
@@ -16107,7 +16107,7 @@
 		)
 		(uuid "bd094f10-3b0a-5d33-84fb-0448bdd16102")
 	)
-	(label "NTC38"
+	(label "NTC62"
 		(at 15.24 300.99 180)
 		(effects
 			(font
@@ -16117,7 +16117,7 @@
 		)
 		(uuid "e0aaf314-03f7-5b3e-a7be-6c77e24ef939")
 	)
-	(label "NTC50"
+	(label "NTC73"
 		(at 15.24 303.53 180)
 		(effects
 			(font
@@ -16127,7 +16127,7 @@
 		)
 		(uuid "b1d6df50-b951-5023-98e7-e10f2df59051")
 	)
-	(label "NTC62"
+	(label "NTC74"
 		(at 15.24 306.07 180)
 		(effects
 			(font
@@ -16137,7 +16137,7 @@
 		)
 		(uuid "f8c64146-51ee-59d4-a4f6-d42cac53b287")
 	)
-	(label "NTC74"
+	(label "NTC85"
 		(at 15.24 308.61 180)
 		(effects
 			(font
@@ -16335,7 +16335,7 @@
 			)
 		)
 	)
-	(label "NTC85"
+	(label "NTC38"
 		(at 60.96 311.15 0)
 		(effects
 			(font
@@ -16345,7 +16345,7 @@
 		)
 		(uuid "d7d0aca9-ac0e-52e1-812f-443d5a717f78")
 	)
-	(label "NTC73"
+	(label "NTC37"
 		(at 60.96 308.61 0)
 		(effects
 			(font
@@ -16355,7 +16355,7 @@
 		)
 		(uuid "5e25345e-cb7f-5d46-a459-5f855fb12214")
 	)
-	(label "NTC61"
+	(label "NTC26"
 		(at 60.96 306.07 0)
 		(effects
 			(font
@@ -16365,7 +16365,7 @@
 		)
 		(uuid "554a9372-86ff-5bf7-9eea-abe2895631c4")
 	)
-	(label "NTC49"
+	(label "NTC25"
 		(at 60.96 303.53 0)
 		(effects
 			(font
@@ -16375,7 +16375,7 @@
 		)
 		(uuid "669f09d7-6d65-5501-a131-0ef6632d856f")
 	)
-	(label "NTC37"
+	(label "NTC14"
 		(at 60.96 300.99 0)
 		(effects
 			(font
@@ -16385,7 +16385,7 @@
 		)
 		(uuid "e9acb173-6d48-51d3-935a-e173b7e1ee23")
 	)
-	(label "NTC25"
+	(label "NTC13"
 		(at 60.96 298.45 0)
 		(effects
 			(font
@@ -16395,7 +16395,7 @@
 		)
 		(uuid "fe866eb7-1fc2-5a6f-914c-203d553dfe1d")
 	)
-	(label "NTC13"
+	(label "NTC2"
 		(at 60.96 295.91 0)
 		(effects
 			(font
@@ -16842,7 +16842,7 @@
 		)
 		(uuid "89a4cde4-7745-50d2-8436-5185253acc79")
 	)
-	(label "NTC4"
+	(label "NTC51"
 		(at 91.44 293.37 180)
 		(effects
 			(font
@@ -16852,7 +16852,7 @@
 		)
 		(uuid "0d27cfa2-781b-5b8d-bc40-eaae415aef50")
 	)
-	(label "NTC16"
+	(label "NTC52"
 		(at 91.44 295.91 180)
 		(effects
 			(font
@@ -16862,7 +16862,7 @@
 		)
 		(uuid "297d40a3-851c-5b2a-a6fe-c37842bcf371")
 	)
-	(label "NTC28"
+	(label "NTC63"
 		(at 91.44 298.45 180)
 		(effects
 			(font
@@ -16872,7 +16872,7 @@
 		)
 		(uuid "b4f0f937-d6ce-55c6-a81e-ba3ab2d72304")
 	)
-	(label "NTC40"
+	(label "NTC64"
 		(at 91.44 300.99 180)
 		(effects
 			(font
@@ -16882,7 +16882,7 @@
 		)
 		(uuid "201b4495-3131-56e5-a08c-9107a9a11914")
 	)
-	(label "NTC52"
+	(label "NTC75"
 		(at 91.44 303.53 180)
 		(effects
 			(font
@@ -16892,7 +16892,7 @@
 		)
 		(uuid "dccb120f-dc99-504d-9e58-5866eef64c27")
 	)
-	(label "NTC64"
+	(label "NTC76"
 		(at 91.44 306.07 180)
 		(effects
 			(font
@@ -16902,7 +16902,7 @@
 		)
 		(uuid "3ba35386-ed51-579d-b9af-5feb254d56de")
 	)
-	(label "NTC76"
+	(label "NTC87"
 		(at 91.44 308.61 180)
 		(effects
 			(font
@@ -17100,7 +17100,7 @@
 			)
 		)
 	)
-	(label "NTC87"
+	(label "NTC40"
 		(at 137.16 311.15 0)
 		(effects
 			(font
@@ -17110,7 +17110,7 @@
 		)
 		(uuid "29dc19a6-07b0-5632-8149-b405e0cf91c7")
 	)
-	(label "NTC75"
+	(label "NTC39"
 		(at 137.16 308.61 0)
 		(effects
 			(font
@@ -17120,7 +17120,7 @@
 		)
 		(uuid "4aba7bdb-008b-598e-bc21-7f4ac1fbdaa4")
 	)
-	(label "NTC63"
+	(label "NTC28"
 		(at 137.16 306.07 0)
 		(effects
 			(font
@@ -17130,7 +17130,7 @@
 		)
 		(uuid "dc6cc98f-ff1f-5473-ab80-2bb294422a72")
 	)
-	(label "NTC51"
+	(label "NTC27"
 		(at 137.16 303.53 0)
 		(effects
 			(font
@@ -17140,7 +17140,7 @@
 		)
 		(uuid "e2fde2f3-3cc0-50c4-96ed-d9781436a3ea")
 	)
-	(label "NTC39"
+	(label "NTC16"
 		(at 137.16 300.99 0)
 		(effects
 			(font
@@ -17150,7 +17150,7 @@
 		)
 		(uuid "c359dae1-c132-5e7d-a1df-054e0adabb28")
 	)
-	(label "NTC27"
+	(label "NTC15"
 		(at 137.16 298.45 0)
 		(effects
 			(font
@@ -17160,7 +17160,7 @@
 		)
 		(uuid "cd22ff95-b1ba-535c-85d2-5931cfa0973c")
 	)
-	(label "NTC15"
+	(label "NTC4"
 		(at 137.16 295.91 0)
 		(effects
 			(font
@@ -17607,7 +17607,7 @@
 		)
 		(uuid "b61b91cd-4717-548e-8b4b-d406472708ca")
 	)
-	(label "NTC6"
+	(label "NTC53"
 		(at 167.64 293.37 180)
 		(effects
 			(font
@@ -17617,7 +17617,7 @@
 		)
 		(uuid "5b55a2cd-23d4-54d9-8ad8-3991e1532cad")
 	)
-	(label "NTC18"
+	(label "NTC54"
 		(at 167.64 295.91 180)
 		(effects
 			(font
@@ -17627,7 +17627,7 @@
 		)
 		(uuid "fb4a3e04-f37d-5f1e-bbd7-9f7b26c698de")
 	)
-	(label "NTC30"
+	(label "NTC65"
 		(at 167.64 298.45 180)
 		(effects
 			(font
@@ -17637,7 +17637,7 @@
 		)
 		(uuid "d537f896-4449-5666-92bd-f8d560851ee4")
 	)
-	(label "NTC42"
+	(label "NTC66"
 		(at 167.64 300.99 180)
 		(effects
 			(font
@@ -17647,7 +17647,7 @@
 		)
 		(uuid "baad6872-275a-54c7-befc-05bc1b547588")
 	)
-	(label "NTC54"
+	(label "NTC77"
 		(at 167.64 303.53 180)
 		(effects
 			(font
@@ -17657,7 +17657,7 @@
 		)
 		(uuid "1ef6d81d-5793-5c9e-9bf4-31baa4fb4717")
 	)
-	(label "NTC66"
+	(label "NTC78"
 		(at 167.64 306.07 180)
 		(effects
 			(font
@@ -17667,7 +17667,7 @@
 		)
 		(uuid "78b9a852-1069-5f23-8736-a7ae06f70a64")
 	)
-	(label "NTC78"
+	(label "NTC89"
 		(at 167.64 308.61 180)
 		(effects
 			(font
@@ -17865,7 +17865,7 @@
 			)
 		)
 	)
-	(label "NTC89"
+	(label "NTC42"
 		(at 213.36 311.15 0)
 		(effects
 			(font
@@ -17875,7 +17875,7 @@
 		)
 		(uuid "48f4542b-0356-5cb6-96b1-9a8680bcfd28")
 	)
-	(label "NTC77"
+	(label "NTC41"
 		(at 213.36 308.61 0)
 		(effects
 			(font
@@ -17885,7 +17885,7 @@
 		)
 		(uuid "fc1a99f9-afba-53c5-8ba2-097d0caf3956")
 	)
-	(label "NTC65"
+	(label "NTC30"
 		(at 213.36 306.07 0)
 		(effects
 			(font
@@ -17895,7 +17895,7 @@
 		)
 		(uuid "d0a08e6e-2529-583a-9074-be06460f872b")
 	)
-	(label "NTC53"
+	(label "NTC29"
 		(at 213.36 303.53 0)
 		(effects
 			(font
@@ -17905,7 +17905,7 @@
 		)
 		(uuid "ba736e73-adf5-522f-9a5e-760cf51b4481")
 	)
-	(label "NTC41"
+	(label "NTC18"
 		(at 213.36 300.99 0)
 		(effects
 			(font
@@ -17915,7 +17915,7 @@
 		)
 		(uuid "5bcd7994-4e7b-5bd1-a5d1-6927e77ce7d6")
 	)
-	(label "NTC29"
+	(label "NTC17"
 		(at 213.36 298.45 0)
 		(effects
 			(font
@@ -17925,7 +17925,7 @@
 		)
 		(uuid "44a3f6f9-62ab-585d-9766-26d936a0dced")
 	)
-	(label "NTC17"
+	(label "NTC6"
 		(at 213.36 295.91 0)
 		(effects
 			(font
@@ -18372,7 +18372,7 @@
 		)
 		(uuid "a23df18e-53df-5c44-b59c-ceb50181d4df")
 	)
-	(label "NTC91"
+	(label "NTC55"
 		(at 243.84 293.37 180)
 		(effects
 			(font
@@ -18382,7 +18382,7 @@
 		)
 		(uuid "df254afc-c5e9-5a37-a96c-12577ec3be0d")
 	)
-	(label "NTC79"
+	(label "NTC56"
 		(at 243.84 295.91 180)
 		(effects
 			(font
@@ -18402,7 +18402,7 @@
 		)
 		(uuid "51c5d1c2-de93-5966-a204-e826646ab3a3")
 	)
-	(label "NTC55"
+	(label "NTC68"
 		(at 243.84 300.99 180)
 		(effects
 			(font
@@ -18412,7 +18412,7 @@
 		)
 		(uuid "ffce3e02-8795-5d78-a75b-c29472e29e69")
 	)
-	(label "NTC43"
+	(label "NTC79"
 		(at 243.84 303.53 180)
 		(effects
 			(font
@@ -18422,7 +18422,7 @@
 		)
 		(uuid "d9417313-82eb-5576-a78f-6d4fb69a203c")
 	)
-	(label "NTC31"
+	(label "NTC80"
 		(at 243.84 306.07 180)
 		(effects
 			(font
@@ -18432,7 +18432,7 @@
 		)
 		(uuid "495e59b7-4efe-56c1-a733-a804d225e985")
 	)
-	(label "NTC19"
+	(label "NTC91"
 		(at 243.84 308.61 180)
 		(effects
 			(font
@@ -18442,7 +18442,7 @@
 		)
 		(uuid "dc018e2c-3227-5cc1-a3f0-b762f4108650")
 	)
-	(label "NTC7"
+	(label "NTC92"
 		(at 243.84 311.15 180)
 		(effects
 			(font
@@ -18630,7 +18630,7 @@
 			)
 		)
 	)
-	(label "NTC8"
+	(label "NTC44"
 		(at 289.56 311.15 0)
 		(effects
 			(font
@@ -18640,7 +18640,7 @@
 		)
 		(uuid "b1606c6f-9f38-558a-a0be-39343d345222")
 	)
-	(label "NTC20"
+	(label "NTC43"
 		(at 289.56 308.61 0)
 		(effects
 			(font
@@ -18660,7 +18660,7 @@
 		)
 		(uuid "48b7c79a-4c2a-519a-9a56-53f7538c278d")
 	)
-	(label "NTC44"
+	(label "NTC31"
 		(at 289.56 303.53 0)
 		(effects
 			(font
@@ -18670,7 +18670,7 @@
 		)
 		(uuid "9bda60c2-08d7-5147-b72a-e11739c8b070")
 	)
-	(label "NTC56"
+	(label "NTC20"
 		(at 289.56 300.99 0)
 		(effects
 			(font
@@ -18680,7 +18680,7 @@
 		)
 		(uuid "5848e021-1018-5e24-ba9f-35cddfd913d7")
 	)
-	(label "NTC68"
+	(label "NTC19"
 		(at 289.56 298.45 0)
 		(effects
 			(font
@@ -18690,7 +18690,7 @@
 		)
 		(uuid "e9337d8e-6f8a-57dc-987d-2ae2fbffb90d")
 	)
-	(label "NTC80"
+	(label "NTC8"
 		(at 289.56 295.91 0)
 		(effects
 			(font
@@ -18700,7 +18700,7 @@
 		)
 		(uuid "e9ff7ade-45c4-553d-9376-2dbf0fffefff")
 	)
-	(label "NTC92"
+	(label "NTC7"
 		(at 289.56 293.37 0)
 		(effects
 			(font
@@ -19137,7 +19137,7 @@
 		)
 		(uuid "901359b6-afb1-5c20-ba4d-edad6af760f2")
 	)
-	(label "NTC94"
+	(label "NTC57"
 		(at 320.04 293.37 180)
 		(effects
 			(font
@@ -19147,7 +19147,7 @@
 		)
 		(uuid "7b923006-efc5-5e3f-8cda-f3973f6fc2c6")
 	)
-	(label "NTC82"
+	(label "NTC58"
 		(at 320.04 295.91 180)
 		(effects
 			(font
@@ -19157,7 +19157,7 @@
 		)
 		(uuid "ee118f91-7668-5639-a656-fa9192f5458e")
 	)
-	(label "NTC70"
+	(label "NTC69"
 		(at 320.04 298.45 180)
 		(effects
 			(font
@@ -19167,7 +19167,7 @@
 		)
 		(uuid "d54fc303-c001-52b6-a724-655c229898cb")
 	)
-	(label "NTC58"
+	(label "NTC70"
 		(at 320.04 300.99 180)
 		(effects
 			(font
@@ -19177,7 +19177,7 @@
 		)
 		(uuid "2aeac7ce-7ae1-54c1-bdc6-92b282bad2e7")
 	)
-	(label "NTC46"
+	(label "NTC81"
 		(at 320.04 303.53 180)
 		(effects
 			(font
@@ -19187,7 +19187,7 @@
 		)
 		(uuid "df34f3c4-6fe4-5524-b1b9-c41efae96a0b")
 	)
-	(label "NTC34"
+	(label "NTC82"
 		(at 320.04 306.07 180)
 		(effects
 			(font
@@ -19197,7 +19197,7 @@
 		)
 		(uuid "6ede4c17-568a-592b-9623-0b3bbdd0cd04")
 	)
-	(label "NTC22"
+	(label "NTC93"
 		(at 320.04 308.61 180)
 		(effects
 			(font
@@ -19207,7 +19207,7 @@
 		)
 		(uuid "2def8c34-ee3e-5bbf-bf47-13f022c541cf")
 	)
-	(label "NTC10"
+	(label "NTC94"
 		(at 320.04 311.15 180)
 		(effects
 			(font
@@ -19395,7 +19395,7 @@
 			)
 		)
 	)
-	(label "NTC9"
+	(label "NTC46"
 		(at 365.76 311.15 0)
 		(effects
 			(font
@@ -19405,7 +19405,7 @@
 		)
 		(uuid "ee74f872-c4cb-5370-b2b4-cbfb4749e8ef")
 	)
-	(label "NTC21"
+	(label "NTC45"
 		(at 365.76 308.61 0)
 		(effects
 			(font
@@ -19415,7 +19415,7 @@
 		)
 		(uuid "e146fedf-a25a-58c3-92f1-2e956e49bee3")
 	)
-	(label "NTC33"
+	(label "NTC34"
 		(at 365.76 306.07 0)
 		(effects
 			(font
@@ -19425,7 +19425,7 @@
 		)
 		(uuid "f7d65bde-8590-5c59-84ca-29f2bf2260ca")
 	)
-	(label "NTC45"
+	(label "NTC33"
 		(at 365.76 303.53 0)
 		(effects
 			(font
@@ -19435,7 +19435,7 @@
 		)
 		(uuid "4e829343-a806-5f6a-b6a1-43069c08063f")
 	)
-	(label "NTC57"
+	(label "NTC22"
 		(at 365.76 300.99 0)
 		(effects
 			(font
@@ -19445,7 +19445,7 @@
 		)
 		(uuid "0e18b433-840b-528e-a9c4-329abfce0ba4")
 	)
-	(label "NTC69"
+	(label "NTC21"
 		(at 365.76 298.45 0)
 		(effects
 			(font
@@ -19455,7 +19455,7 @@
 		)
 		(uuid "1fd447d4-f229-5487-ac4c-7021d4e16797")
 	)
-	(label "NTC81"
+	(label "NTC10"
 		(at 365.76 295.91 0)
 		(effects
 			(font
@@ -19465,7 +19465,7 @@
 		)
 		(uuid "b65ada03-ed2d-5756-950d-fc89b0a7560d")
 	)
-	(label "NTC93"
+	(label "NTC9"
 		(at 365.76 293.37 0)
 		(effects
 			(font
@@ -19902,7 +19902,7 @@
 		)
 		(uuid "c524b53e-b3e4-5489-bdb9-58883e465777")
 	)
-	(label "NTC96"
+	(label "NTC59"
 		(at 396.24 293.37 180)
 		(effects
 			(font
@@ -19912,7 +19912,7 @@
 		)
 		(uuid "e8445e3b-bba9-5ef5-8d1f-8893fb365f4e")
 	)
-	(label "NTC84"
+	(label "NTC60"
 		(at 396.24 295.91 180)
 		(effects
 			(font
@@ -19922,7 +19922,7 @@
 		)
 		(uuid "deb76ccb-31bb-55c2-b6dd-55c0ef8319e0")
 	)
-	(label "NTC72"
+	(label "NTC71"
 		(at 396.24 298.45 180)
 		(effects
 			(font
@@ -19932,7 +19932,7 @@
 		)
 		(uuid "60473a01-0357-5e05-bce2-92e58e7160d6")
 	)
-	(label "NTC60"
+	(label "NTC72"
 		(at 396.24 300.99 180)
 		(effects
 			(font
@@ -19942,7 +19942,7 @@
 		)
 		(uuid "98ed0e3d-43dc-5b4a-b466-36adec05f715")
 	)
-	(label "NTC48"
+	(label "NTC83"
 		(at 396.24 303.53 180)
 		(effects
 			(font
@@ -19952,7 +19952,7 @@
 		)
 		(uuid "804bb9e8-1556-5ed0-84dc-c116a86d00b0")
 	)
-	(label "NTC36"
+	(label "NTC84"
 		(at 396.24 306.07 180)
 		(effects
 			(font
@@ -19962,7 +19962,7 @@
 		)
 		(uuid "fd3b24de-3891-5671-9381-fb5ce3d38461")
 	)
-	(label "NTC24"
+	(label "NTC95"
 		(at 396.24 308.61 180)
 		(effects
 			(font
@@ -19972,7 +19972,7 @@
 		)
 		(uuid "78cbe567-1871-5d92-9fd4-13be57c8f55a")
 	)
-	(label "NTC12"
+	(label "NTC96"
 		(at 396.24 311.15 180)
 		(effects
 			(font
@@ -20160,7 +20160,7 @@
 			)
 		)
 	)
-	(label "NTC11"
+	(label "NTC48"
 		(at 441.96 311.15 0)
 		(effects
 			(font
@@ -20170,7 +20170,7 @@
 		)
 		(uuid "91762c68-21e1-59d0-928a-c8f2f02c571f")
 	)
-	(label "NTC23"
+	(label "NTC47"
 		(at 441.96 308.61 0)
 		(effects
 			(font
@@ -20180,7 +20180,7 @@
 		)
 		(uuid "7b9b008a-90d0-5dae-8c76-8b5011ca690a")
 	)
-	(label "NTC35"
+	(label "NTC36"
 		(at 441.96 306.07 0)
 		(effects
 			(font
@@ -20190,7 +20190,7 @@
 		)
 		(uuid "8fa3ff4e-fb34-58ba-bf92-8bd4c854c757")
 	)
-	(label "NTC47"
+	(label "NTC35"
 		(at 441.96 303.53 0)
 		(effects
 			(font
@@ -20200,7 +20200,7 @@
 		)
 		(uuid "ac7569bb-d1f0-506c-b923-de64bc84a73f")
 	)
-	(label "NTC59"
+	(label "NTC24"
 		(at 441.96 300.99 0)
 		(effects
 			(font
@@ -20210,7 +20210,7 @@
 		)
 		(uuid "bb05f145-252e-5d9c-946f-6b084fb7020f")
 	)
-	(label "NTC71"
+	(label "NTC23"
 		(at 441.96 298.45 0)
 		(effects
 			(font
@@ -20220,7 +20220,7 @@
 		)
 		(uuid "5bcc8f5a-e884-5c60-8f9f-182c4375bbd5")
 	)
-	(label "NTC83"
+	(label "NTC12"
 		(at 441.96 295.91 0)
 		(effects
 			(font
@@ -20230,7 +20230,7 @@
 		)
 		(uuid "3e89e80b-4cbd-5798-94bf-e422bee9276e")
 	)
-	(label "NTC95"
+	(label "NTC11"
 		(at 441.96 293.37 0)
 		(effects
 			(font
@@ -20805,7 +20805,7 @@
 		)
 		(uuid "537228c1-cf35-5daa-b0e9-30f6a3e31fed")
 	)
-	(label "LED_A13"
+	(label "LED_A6"
 		(at 474.98 256.54 180)
 		(effects
 			(font
@@ -20815,7 +20815,7 @@
 		)
 		(uuid "0688f4b7-c717-5ad1-8601-da6fec4ace56")
 	)
-	(label "LED_K13"
+	(label "LED_K6"
 		(at 487.68 256.54 0)
 		(effects
 			(font
@@ -20825,7 +20825,7 @@
 		)
 		(uuid "108ea0d8-4d82-564e-abc5-4ab572880b34")
 	)
-	(label "LED_A6"
+	(label "LED_A7"
 		(at 474.98 259.08 180)
 		(effects
 			(font
@@ -20835,7 +20835,7 @@
 		)
 		(uuid "f6892261-9055-5d47-8f01-4599b94e7441")
 	)
-	(label "LED_K6"
+	(label "LED_K7"
 		(at 487.68 259.08 0)
 		(effects
 			(font
@@ -20845,7 +20845,7 @@
 		)
 		(uuid "fc22601f-9f1e-5027-b731-077acd2c03c3")
 	)
-	(label "LED_A7"
+	(label "LED_A8"
 		(at 474.98 261.62 180)
 		(effects
 			(font
@@ -20855,7 +20855,7 @@
 		)
 		(uuid "e2f82d2c-3eef-5b69-bf4e-2b7bb39c383b")
 	)
-	(label "LED_K7"
+	(label "LED_K8"
 		(at 487.68 261.62 0)
 		(effects
 			(font
@@ -20865,7 +20865,7 @@
 		)
 		(uuid "9eac49e9-6c6a-5a60-b958-c15ff27904de")
 	)
-	(label "LED_A14"
+	(label "LED_A9"
 		(at 474.98 264.16 180)
 		(effects
 			(font
@@ -20875,7 +20875,7 @@
 		)
 		(uuid "8b79506e-b928-57b4-82d6-df451cb79061")
 	)
-	(label "LED_K14"
+	(label "LED_K9"
 		(at 487.68 264.16 0)
 		(effects
 			(font
@@ -20958,7 +20958,7 @@
 		(at 487.68 266.7)
 		(uuid "e27c5ba6-0624-59bb-bd8e-d8db29d6304c")
 	)
-	(label "LED_A8"
+	(label "LED_A10"
 		(at 474.98 269.24 180)
 		(effects
 			(font
@@ -20968,7 +20968,7 @@
 		)
 		(uuid "cee1f367-c047-5cd9-ba31-d828aea629e6")
 	)
-	(label "LED_K8"
+	(label "LED_K10"
 		(at 487.68 269.24 0)
 		(effects
 			(font
@@ -20978,7 +20978,7 @@
 		)
 		(uuid "99b5bc59-ce21-512d-ac5a-d926920ca98d")
 	)
-	(label "LED_A15"
+	(label "LED_A11"
 		(at 474.98 271.78 180)
 		(effects
 			(font
@@ -20988,7 +20988,7 @@
 		)
 		(uuid "847037e5-d446-5e2b-bad3-c377419fd049")
 	)
-	(label "LED_K15"
+	(label "LED_K11"
 		(at 487.68 271.78 0)
 		(effects
 			(font
@@ -20998,7 +20998,7 @@
 		)
 		(uuid "ca7aefd8-9384-54e9-ab01-4c6edb3e86d3")
 	)
-	(label "LED_A9"
+	(label "LED_A12"
 		(at 474.98 274.32 180)
 		(effects
 			(font
@@ -21008,7 +21008,7 @@
 		)
 		(uuid "fec6b863-49c8-537f-a6fa-5427cdf19157")
 	)
-	(label "LED_K9"
+	(label "LED_K12"
 		(at 487.68 274.32 0)
 		(effects
 			(font
@@ -21018,7 +21018,7 @@
 		)
 		(uuid "fbebb9d8-f604-5592-8b4f-88c4c24989f5")
 	)
-	(label "LED_A10"
+	(label "LED_A13"
 		(at 474.98 276.86 180)
 		(effects
 			(font
@@ -21028,7 +21028,7 @@
 		)
 		(uuid "3207e382-6c59-55d0-9aa4-96be1329a253")
 	)
-	(label "LED_K10"
+	(label "LED_K13"
 		(at 487.68 276.86 0)
 		(effects
 			(font
@@ -21038,7 +21038,7 @@
 		)
 		(uuid "18a2cd95-91c1-57db-870b-226b2fb5b2c5")
 	)
-	(label "LED_A16"
+	(label "LED_A14"
 		(at 474.98 279.4 180)
 		(effects
 			(font
@@ -21048,7 +21048,7 @@
 		)
 		(uuid "ab3c7961-1a56-5787-ae6e-f80e465ca201")
 	)
-	(label "LED_K16"
+	(label "LED_K14"
 		(at 487.68 279.4 0)
 		(effects
 			(font
@@ -21058,7 +21058,7 @@
 		)
 		(uuid "90e751be-3a2e-52b7-baeb-1533b4bcc171")
 	)
-	(label "LED_A11"
+	(label "LED_A15"
 		(at 474.98 281.94 180)
 		(effects
 			(font
@@ -21068,7 +21068,7 @@
 		)
 		(uuid "8cdea2ae-a81c-51a9-8a74-0e00d8e4630d")
 	)
-	(label "LED_K11"
+	(label "LED_K15"
 		(at 487.68 281.94 0)
 		(effects
 			(font
@@ -21078,7 +21078,7 @@
 		)
 		(uuid "4927e1c0-bccd-5b42-a9dc-6551145e3dd8")
 	)
-	(label "LED_A12"
+	(label "LED_A16"
 		(at 474.98 284.48 180)
 		(effects
 			(font
@@ -21088,7 +21088,7 @@
 		)
 		(uuid "212e8524-e407-5a2b-9f57-83e84a6d82f1")
 	)
-	(label "LED_K12"
+	(label "LED_K16"
 		(at 487.68 284.48 0)
 		(effects
 			(font
@@ -23784,7 +23784,7 @@
 		)
 		(uuid "a15dc56d-83f9-5d77-80a2-e18212224371")
 	)
-	(label "LED_A61"
+	(label "LED_A54"
 		(at 474.98 383.54 180)
 		(effects
 			(font
@@ -23794,7 +23794,7 @@
 		)
 		(uuid "e0730bc4-5b38-597d-b8f0-c2d0baf4bc99")
 	)
-	(label "LED_K61"
+	(label "LED_K54"
 		(at 487.68 383.54 0)
 		(effects
 			(font
@@ -23804,7 +23804,7 @@
 		)
 		(uuid "c2f88808-6be7-5549-bf43-4d0fdcb2e429")
 	)
-	(label "LED_A54"
+	(label "LED_A55"
 		(at 474.98 386.08 180)
 		(effects
 			(font
@@ -23814,7 +23814,7 @@
 		)
 		(uuid "a3daff8b-9aa0-58c0-b076-12890440ed73")
 	)
-	(label "LED_K54"
+	(label "LED_K55"
 		(at 487.68 386.08 0)
 		(effects
 			(font
@@ -23824,7 +23824,7 @@
 		)
 		(uuid "ef93b2a2-4aab-5c49-b88c-8e146b601266")
 	)
-	(label "LED_A55"
+	(label "LED_A56"
 		(at 474.98 388.62 180)
 		(effects
 			(font
@@ -23834,7 +23834,7 @@
 		)
 		(uuid "1afe84e9-a33f-59ac-81d3-1811a78df292")
 	)
-	(label "LED_K55"
+	(label "LED_K56"
 		(at 487.68 388.62 0)
 		(effects
 			(font
@@ -23844,7 +23844,7 @@
 		)
 		(uuid "0b007a3f-752e-5b5f-a006-74e0614d826b")
 	)
-	(label "LED_A62"
+	(label "LED_A57"
 		(at 474.98 391.16 180)
 		(effects
 			(font
@@ -23854,7 +23854,7 @@
 		)
 		(uuid "a24479e1-75fe-5718-898f-85a7d9f71ea3")
 	)
-	(label "LED_K62"
+	(label "LED_K57"
 		(at 487.68 391.16 0)
 		(effects
 			(font
@@ -23937,7 +23937,7 @@
 		(at 487.68 393.7)
 		(uuid "4814ab0c-a50d-5233-aefb-463cde60720d")
 	)
-	(label "LED_A56"
+	(label "LED_A58"
 		(at 474.98 396.24 180)
 		(effects
 			(font
@@ -23947,7 +23947,7 @@
 		)
 		(uuid "3e4e726c-c12c-5279-bc88-8dd9ed862b00")
 	)
-	(label "LED_K56"
+	(label "LED_K58"
 		(at 487.68 396.24 0)
 		(effects
 			(font
@@ -23957,7 +23957,7 @@
 		)
 		(uuid "bc58dbf2-1d59-57c1-a45e-925cd9ba574d")
 	)
-	(label "LED_A63"
+	(label "LED_A59"
 		(at 474.98 398.78 180)
 		(effects
 			(font
@@ -23967,7 +23967,7 @@
 		)
 		(uuid "df8f5489-8532-5c7a-a3ec-b4b3d72e22bd")
 	)
-	(label "LED_K63"
+	(label "LED_K59"
 		(at 487.68 398.78 0)
 		(effects
 			(font
@@ -23977,7 +23977,7 @@
 		)
 		(uuid "bf8287f6-cf66-5991-ba3f-86a19f748516")
 	)
-	(label "LED_A57"
+	(label "LED_A60"
 		(at 474.98 401.32 180)
 		(effects
 			(font
@@ -23987,7 +23987,7 @@
 		)
 		(uuid "e3d4bcde-4d4b-5a40-b77f-6e633dcfa10c")
 	)
-	(label "LED_K57"
+	(label "LED_K60"
 		(at 487.68 401.32 0)
 		(effects
 			(font
@@ -23997,7 +23997,7 @@
 		)
 		(uuid "168968f5-dc9b-5741-b22b-46e7f20a14dd")
 	)
-	(label "LED_A58"
+	(label "LED_A61"
 		(at 474.98 403.86 180)
 		(effects
 			(font
@@ -24007,7 +24007,7 @@
 		)
 		(uuid "df172653-3535-5ee7-9211-4cc8ebb0a22d")
 	)
-	(label "LED_K58"
+	(label "LED_K61"
 		(at 487.68 403.86 0)
 		(effects
 			(font
@@ -24017,7 +24017,7 @@
 		)
 		(uuid "8a922d2a-2c31-5e40-b07e-bfc2fc492809")
 	)
-	(label "LED_A64"
+	(label "LED_A62"
 		(at 474.98 406.4 180)
 		(effects
 			(font
@@ -24027,7 +24027,7 @@
 		)
 		(uuid "0ff77cf3-7466-5863-a8f8-97082b7ea4ce")
 	)
-	(label "LED_K64"
+	(label "LED_K62"
 		(at 487.68 406.4 0)
 		(effects
 			(font
@@ -24037,7 +24037,7 @@
 		)
 		(uuid "e34ee4ad-9ab2-5982-8dfe-176c630d0890")
 	)
-	(label "LED_A59"
+	(label "LED_A63"
 		(at 474.98 408.94 180)
 		(effects
 			(font
@@ -24047,7 +24047,7 @@
 		)
 		(uuid "19ba7513-62a6-522d-afe1-356b193eb029")
 	)
-	(label "LED_K59"
+	(label "LED_K63"
 		(at 487.68 408.94 0)
 		(effects
 			(font
@@ -24057,7 +24057,7 @@
 		)
 		(uuid "507f3553-e047-5213-aa20-1f9aa11ad378")
 	)
-	(label "LED_A60"
+	(label "LED_A64"
 		(at 474.98 411.48 180)
 		(effects
 			(font
@@ -24067,7 +24067,7 @@
 		)
 		(uuid "04926bdb-6384-5e18-9fd6-ed1ef9b45aee")
 	)
-	(label "LED_K60"
+	(label "LED_K64"
 		(at 487.68 411.48 0)
 		(effects
 			(font
